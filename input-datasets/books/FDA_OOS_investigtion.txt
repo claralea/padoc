@@ -1,0 +1,595 @@
+Investigating Out-of-
+Specification (OOS)
+Test Results for
+Pharmaceutical
+Production
+Guidance for Industry
+U.S. Department of Health and Human Services
+Food and Drug Administration
+Center for Drug Evaluation and Research (CDER)
+May 2022
+Pharmaceutical Quality/Manufacturing Standards
+Current Good Manufacturing Practice (CGMP)
+Revision 1
+Investigating Out-of-
+Specification (OOS) Test
+Results for
+Pharmaceutical Production
+Guidance for Industry
+Additional copies are available from:
+Office of Communications, Division of Drug Information
+Center for Drug Evaluation and Research
+Food and Drug Administration
+10001 New Hampshire Ave., Hillandale Bldg., 4th Floor
+Silver Spring, MD 20993-0002
+Phone: 855-543-3784 or 301-796-3400; Fax: 301-431-6353
+Email: druginfo@fda.hhs.gov
+https://www.fda.gov/drugs/guidance-compliance-regulatory-information/guidances-drugs
+U.S. Department of Health and Human Services
+Food and Drug Administration
+Center for Drug Evaluation and Research (CDER)
+May 2022
+Pharmaceutical Quality/Manufacturing Standards
+Current Good Manufacturing Practice (CGMP)
+Contains Nonbinding Recommendations
+TABLE OF CONTENTS
+I. INTRODUCTION............................................................................................................. 1
+II. BACKGROUND ............................................................................................................... 2
+III. IDENTIFYING AND ASSESSING OOS TEST RESULTS — PHASE I:
+LABORATORY INVESTIGATION .............................................................................. 3
+A. Responsibility of the Analyst ......................................................................................................... 3
+B. Responsibilities of the Laboratory Supervisor ............................................................................ 4
+IV. INVESTIGATING OOS TEST RESULTS — PHASE II: FULL-SCALE OOS
+INVESTIGATION ............................................................................................................ 6
+A. Review of Production ..................................................................................................................... 6
+B. Additional Laboratory Testing ..................................................................................................... 7
+C. 1. Retesting ........................................................................................................................................... 7
+2. Resampling ....................................................................................................................................... 8
+Reporting Testing Results ............................................................................................................. 9
+1. Averaging ......................................................................................................................................... 9
+2. Outlier Tests ................................................................................................................................... 11
+V. CONCLUDING THE INVESTIGATION .................................................................... 12
+A. Interpretation of Investigation Results ...................................................................................... 12
+B. Cautions ........................................................................................................................................ 13
+C. 1. Averaging results from multiple sample preparations from the original sample .......................... 13
+2. Averaging results from same final sample preparation ................................................................. 13
+3. Borderline results that are within specification ............................................................................. 14
+Field Alert Reports ...................................................................................................................... 14
+i
+Contains Nonbinding Recommendations
+Investigating Out-of-Specification (OOS) Test Results for
+Pharmaceutical Production
+Guidance for Industry1
+This guidance represents the current thinking of the Food and Drug Administration (FDA or Agency) on
+this topic. It does not establish any rights for any person and is not binding on FDA or the public. You
+can use an alternative approach if it satisfies the requirements of the applicable statutes and regulations.
+To discuss an alternative approach, contact the FDA office responsible for this guidance as listed on the
+title page.
+I. INTRODUCTION
+This guidance for industry provides the Agency’s current thinking on how to evaluate out-of-
+specification (OOS) test results. For purposes of this document, the term OOS results includes
+all test results that fall outside the specifications or acceptance criteria established in drug
+applications, drug master files (DMFs), official compendia, or by the manufacturer. The term
+also applies to all in-process laboratory tests that are outside of established specifications.2
+This guidance applies to chemistry-based laboratory testing of drugs regulated by CDER. It is
+directed toward traditional drug testing and release methods. These laboratory tests are
+performed on active pharmaceutical ingredients, excipients and other components, in-process
+materials, and finished drug products3 to the extent that current good manufacturing practice
+(CGMP) regulations (21 CFR parts 210 and 211) and the Federal Food, Drug, and Cosmetic Act
+(the Act) (section 501(a)(2)(B)) apply. The principles in this guidance also apply to in-house
+testing of drug product components that are purchased by a firm. This guidance can also be used
+by contract firms performing production and/or laboratory testing responsibilities. Specifically,
+the guidance discusses how to investigate OOS test results, including the responsibilities of
+laboratory personnel, the laboratory phase of the investigation, additional testing that may be
+necessary, when to expand the investigation outside the laboratory, and the final evaluation of all
+test results.
+The Agency, in accordance with its August 2002 “Pharmaceutical CGMPs for the 21st Century”
+initiative, encourages modern approaches to manufacturing, monitoring, and control to enhance
+1 This guidance has been prepared by the Office of Pharmaceutical Quality in the Center for Drug Evaluation and
+Research (CDER). You may submit comments on this guidance at any time. Submit comments to Docket No.
+FDA-1998-D-0019 (available at https://www.regulations.gov/docket/FDA-1998-D-0019).
+2 In certain instances, in-process testing is done solely to determine the need for real-time equipment or system
+adjustments to prevent process drift. This guidance does not address these situations.
+3 Chemistry-based laboratory testing of biotechnology products that are under the jurisdiction of CDER is within the
+scope of this guidance. While this guidance is not intended to address biological assays (e.g., in vivo,
+immunoassays) it does briefly discuss Design and Analysis of Biological Assays (USP<111>).
+1
+Contains Nonbinding Recommendations
+process predictability and efficiency. Process Analytical Technology (PAT) takes a different
+approach to quality assurance by using process controls and in-process data as the release
+specification instead of relying on single laboratory determinations to make batch acceptability
+decisions. This guidance is not intended to address PAT approaches, as routine in-process use of
+these methods might include other considerations. For information on timely in-process testing,
+see the CGMP guidance entitled PAT — A Framework for Innovative Pharmaceutical
+Development, Manufacturing, and Quality Assurance (September 2004).
+The contents of this document do not have the force and effect of law and are not meant to bind
+the public in any way, unless specifically incorporated into a contract. This document is intended
+only to provide clarity to the public regarding existing requirements under the law. FDA
+guidance documents, including this guidance, should be viewed only as recommendations, unless
+specific regulatory or statutory requirements are cited. The use of the word should in Agency
+guidance means that something is suggested or recommended, but not required.
+II. BACKGROUND
+Laboratory testing, which is required by the CGMP regulations (§§ 211.160 and 211.165), is
+necessary to confirm that components, containers and closures, in-process materials, and finished
+products conform to specifications, including stability specifications.
+Testing also supports analytical and process validation efforts.4 General CGMP regulations
+covering laboratory operations can be found in part 211, subparts I (Laboratory Controls) and J
+(Records and Reports). These regulations provide for the establishment of scientifically sound
+and appropriate specifications, standards, and test procedures that are designed to ensure that
+components, containers and closures, in-process materials, and finished drug products conform
+to the established standards. Section 211.165(f) of the CGMP regulations specifies that finished
+drug products that fail to meet established standards, specifications, or other relevant quality
+control criteria must be rejected.
+Both finished pharmaceuticals and active pharmaceutical ingredients (APIs) are to be
+manufactured in accordance with current good manufacturing practice under section
+501(a)(2)(B) of the Act. Current good manufacturing practice for APIs includes the performance
+of scientifically sound raw material testing, in-process monitoring, release and stability testing,
+process validation, and adequate investigations of any OOS result obtained from such testing.
+All citations to part 211 in this document pertain to finished pharmaceuticals, but these
+referenced regulatory requirements are also consistent with Agency guidance on CGMP for APIs
+with respect to laboratory controls, which include out-of-specification investigations. See FDA’s
+4 Specifications must be scientifically sound and appropriate (§ 211.160(b)), test procedures must be validated as to
+their accuracy, sensitivity, specificity, and reproducibility (§ 211.165(e)), and the suitability of the test procedures
+under actual conditions of use must be documented (§ 211.194(a)(2)). For products that are the subjects of new drug
+applications (NDAs), abbreviated new drug applications (ANDAs), or investigational new drug applications (INDs),
+specifications are contained in the application or DMF. Specifications for nonapplication products may be found in
+official compendia or established by the manufacturer.
+2
+Contains Nonbinding Recommendations
+guidance for industry Q7 Good Manufacturing Practice Guidance for Active Pharmaceutical
+Ingredients (September 2016) (ICH Q7) for specific recommendations.5
+The responsibility of a contract testing laboratory in meeting these requirements is equivalent to
+that of a manufacturing firm.
+III. IDENTIFYING AND ASSESSING OOS TEST RESULTS — PHASE I:
+LABORATORY INVESTIGATION
+FDA regulations require that an investigation be conducted whenever an OOS test result is
+obtained (§ 211.192).6 The purpose of the investigation is to determine the cause of the OOS
+result. The source of the OOS result should be identified either as an aberration of the
+measurement process or an aberration of the manufacturing process. Even if a batch is rejected
+based on an OOS result, the investigation is necessary to determine if the result is associated
+with other batches of the same drug product or other products. Batch rejection does not negate
+the need to perform the investigation. The regulations require that a written record of the
+investigation be made, including the conclusions and follow-up (§ 211.192).
+To be meaningful, the investigation should be thorough, timely, unbiased, well-documented, and
+scientifically sound. The first phase of such an investigation should include an initial assessment
+of the accuracy of the laboratory's data. Whenever possible, this should be done before test
+preparations (including the composite or the homogenous source of the aliquot tested) are
+discarded. This way, hypotheses regarding laboratory error or instrument malfunctions can be
+tested using the same test preparations. If this initial assessment indicates that no causative
+errors were made in the analytical method used to arrive at the data, a full-scale OOS
+investigation should be conducted. For contract laboratories, the laboratory should convey its
+data, findings, and supporting documentation to the manufacturing firm’s quality unit (QU). The
+manufacturing firm’s QU should then initiate the Phase 2 (full-scale) OOS investigation,
+whenever no clearly causative laboratory error was identified.
+A. Responsibility of the Analyst
+The first responsibility for achieving accurate laboratory testing results lies with the analyst who
+is performing the test. The analyst should be aware of potential problems that could occur during
+the testing process and should watch for problems that could create inaccurate results.
+In accordance with the CGMP regulations in § 211.160(b)(4), the analyst should ensure that only
+those instruments meeting established performance specifications are used and that all
+instruments are properly calibrated.
+5 We update guidances periodically. To make sure you have the most recent version of a guidance, check the CDER
+guidance page at https://www.fda.gov/drugs/guidance-compliance-regulatory-information/guidances-drugs.
+6 Although the subject of this document is OOS results, much of the guidance may be useful for examining results
+that are out of trend.
+3
+Contains Nonbinding Recommendations
+Certain analytical methods have system suitability requirements, and systems not meeting these
+requirements should not be used. For example, in chromatographic systems, reference standard
+solutions may be injected at intervals throughout chromatographic runs to measure drift, noise,
+and repeatability. If reference standard responses indicate that the system is not functioning
+properly, all of the data collected during the suspect time period should be properly identified
+and should not be used. The cause of the malfunction should be identified and, if possible,
+corrected before a decision is made whether to use any data prior to the suspect period.
+Analysts should check the data for compliance with test specifications before discarding test
+preparations or standard preparations. When unexpected results are obtained and no obvious
+explanation exists, test preparations should be retained, if stable, and the analyst should inform
+the supervisor. An assessment of the accuracy of the results should be started immediately.
+If errors are obvious, such as the spilling of a sample solution or the incomplete transfer of a
+sample composite, the analyst should immediately document what happened. Analysts should
+not knowingly continue an analysis they expect to invalidate at a later time for an assignable
+cause (i.e., analyses should not be completed for the sole purpose of seeing what results can be
+obtained when obvious errors are known).
+B. Responsibilities of the Laboratory Supervisor
+Once an OOS result has been identified, the supervisor's assessment should be objective and
+timely. There should be no preconceived assumptions as to the cause of the OOS result. Data
+should be assessed promptly to ascertain if the results might be attributed to laboratory error, or
+whether the results could indicate problems in the manufacturing process. An immediate
+assessment could include re-examination of the actual solutions, test units, and glassware used in
+the original measurements and preparations, which might provide more credibility for laboratory
+error hypotheses.
+The following steps should be taken as part of the supervisor's assessment:
+1. Discuss the test method with the analyst; confirm analyst knowledge of and
+performance of the correct procedure.
+2. Examine the raw data obtained in the analysis, including chromatograms and
+spectra, and identify anomalous or suspect information.
+3. Verify that the calculations used to convert raw data values into a final test result
+are scientifically sound, appropriate, and correct; also determine if unauthorized
+or unvalidated changes have been made to automated calculation methods.
+4. Confirm the performance of the instruments.
+5. Determine that appropriate reference standards, solvents, reagents, and other
+solutions were used and that they met quality control specifications.
+4
+Contains Nonbinding Recommendations
+6. Evaluate the performance of the test method to ensure that it is performing
+according to the standard expected based on method validation data and historical
+data.
+7. Fully document and preserve records of this laboratory assessment.
+The assignment of a cause for OOS results will be greatly facilitated if the retained sample
+preparations are examined promptly. Hypotheses regarding what might have happened (e.g.,
+dilution error, instrument malfunction) should be tested. Examination of the retained solutions
+should be performed as part of the laboratory investigation.
+Examples:
+• Solutions can be re-injected as part of an investigation where a transient equipment
+malfunction is suspected. Such hypotheses are difficult to prove. However, reinjections
+can provide strong evidence that the problem should be attributed to the instrument,
+rather than the sample or its preparation.
+• For release rate testing of certain specialized dosage form drugs that are not destroyed
+during testing, where possible, examination of the original dosage unit tested might
+determine whether it was damaged during laboratory handling in a way that affected its
+performance. Such damage would provide evidence to invalidate the OOS test result,
+and a retest would be indicated.
+• Further extraction of a dosage unit, where possible, can be performed to determine
+whether it was fully extracted during the original analysis. Incomplete extraction could
+invalidate the test results and should lead to questions regarding validation of the test
+method.
+It is important that each step in the investigation be fully documented. Laboratory management
+should ascertain not only the reliability of the individual value obtained, but also the significance
+these OOS results represent to the laboratory quality assurance program. Laboratory
+management should be especially alert to developing trends. As part of an effective quality
+system, a firm’s upper management should appropriately monitor these trends and ensure that
+any problematic areas are addressed.
+Laboratory error should be relatively rare. Frequent errors suggest a problem that might be due
+to inadequate training of analysts, poorly maintained or improperly calibrated equipment, or
+careless work. Whenever laboratory error is identified, the firm should determine the source of
+that error and take corrective action to prevent recurrence. To ensure full compliance with the
+CGMP regulations, the manufacturer also should maintain adequate documentation of the
+corrective action.
+In summary, when clear evidence of laboratory error exists, laboratory testing results should be
+invalidated. When evidence of laboratory error remains unclear, a full-scale OOS investigation
+should be conducted by the manufacturing firm to determine what caused the unexpected results.
+5
+Contains Nonbinding Recommendations
+OOS test results should not be attributed to analytical error without completing an investigation
+that clearly establishes a laboratory root cause. Both the initial laboratory assessment and the
+following OOS investigation should be documented fully.
+IV. INVESTIGATING OOS TEST RESULTS — PHASE II: FULL-SCALE OOS
+INVESTIGATION
+When the initial assessment does not determine that laboratory error caused the OOS result and
+testing results appear to be accurate, a full-scale OOS investigation using a predefined procedure
+should be conducted. The objective of such an investigation should be to identify the root cause
+of the OOS result and take appropriate corrective action and preventive action.7 A full-scale
+investigation should include a review of production and sampling procedures and will often
+include additional laboratory testing. Such investigations should be given the highest priority.
+Among the elements of this phase is evaluation of the impact of OOS result(s) on already
+distributed batches.
+A. Review of Production
+The investigation should be conducted by the QU and should involve all other departments that
+could be implicated, including manufacturing, process development, maintenance, and
+engineering. In cases where manufacturing occurs off-site (i.e., performed by a contract
+manufacturer or at multiple manufacturing sites), all sites potentially involved should be
+included in the investigation. Other potential problems should be identified and investigated.
+The records and documentation of the manufacturing process should be fully reviewed to
+determine the possible cause of the OOS result(s).
+A full-scale OOS investigation should consist of a timely, thorough, and well-documented
+review. A written record of the review should include the following information.
+1. A clear statement of the reason for the investigation.
+2. A summary of the aspects of the manufacturing process that may have caused the
+problem.
+3. The results of a documentation review, with the assignment of actual or probable
+cause.
+4. The results of a review made to determine if the problem has occurred previously.
+5. A description of corrective actions taken.
+7 Please note that § 211.192 requires a thorough investigation of any discrepancy, including documentation of
+conclusions and follow-up. Implicit in this requirement for investigation is the need to implement corrective actions
+and preventive actions. Corrective action and preventive action are consistent with the principles in ICH guidance
+for industry Q10 Pharmaceutical Quality System (April 2009).
+6
+Contains Nonbinding Recommendations
+If this part of the OOS investigation confirms the OOS result and is successful in identifying its
+root cause, the OOS investigation may be terminated and the product rejected. However, a
+failure investigation that extends to other batches or products that may have been associated with
+the specific failure must be completed (§ 211.192). If any material was reprocessed after
+additional testing, the investigation should include comments and the signatures of appropriate
+personnel, including production and QU personnel.
+OOS results may indicate a flaw in product or process design. For example, a lack of robustness
+in product formulation, inadequate raw material characterization or control, substantial variation
+introduced by one or more unit operations of the manufacturing process, or a combination of
+these factors can be the cause of inconsistent product quality. In such cases, it is essential that
+redesign of the product or process be undertaken to ensure reproducible product quality.8
+B. Additional Laboratory Testing
+A full-scale OOS investigation may include additional laboratory testing beyond the testing
+performed in Phase I. These include (1) retesting a portion of the original sample and (2)
+resampling.
+1. Retesting
+Part of the investigation may involve retesting of a portion of the original sample. The
+sample used for the retesting should be taken from the same homogeneous material that
+was originally collected from the lot, tested, and yielded the OOS results. For a liquid, it
+may be from the original unit liquid product or composite of the liquid product; for a
+solid, it may be an additional weighing from the same sample composite prepared for the
+original test.
+Situations where retesting is indicated include investigating testing instrument
+malfunctions or to identify a possible sample handling problem, for example, a suspected
+dilution error. Decisions to retest should be based on the objectives of the testing and
+sound scientific judgment. It is often important for the predefined retesting plan to
+include retests performed by an analyst other than the one who performed the original
+test. A second analyst performing a retest should be at least as experienced and qualified
+in the method as the original analyst.
+The CGMP regulations require the establishment of specifications, standards, sampling
+plans, test procedures, and other laboratory control mechanisms (§ 211.160).
+FDA inspections have revealed that some firms use a strategy of repeated testing until a
+passing result is obtained, then disregarding the OOS results without scientific
+justification. This practice of “testing into compliance” is unscientific and objectionable
+under CGMP. The maximum number of retests to be performed on a sample should be
+8 OOS results might also be the result of the objectionable practice of making unauthorized or unvalidated changes
+to the manufacturing process.
+7
+Contains Nonbinding Recommendations
+specified in advance in a written standard operating procedure (SOP). The number may
+vary depending upon the variability of the particular test method employed, but should be
+based on scientifically sound principles. The number of retests should not be adjusted
+depending on the results obtained. The firm's predetermined retesting procedures should
+contain a point at which the additional testing ends and the batch is evaluated. If the
+results are unsatisfactory at this point, the batch is suspect and must be rejected or held
+pending further investigation (§ 211.165(f)). Any deviation from this SOP should be rare
+and done in accordance with § 211.160(a), which states that any deviations from written
+specifications, sampling plans, test procedures, or other laboratory control mechanisms
+shall be recorded and justified. In such cases, before starting additional retesting, a
+protocol should be prepared (subject to approval by the QU) that describes the additional
+testing to be performed and specifies the scientific and/or technical handling of the data.
+In the case of a clearly identified laboratory error, the retest results would substitute for
+the original test result. However, all original data must be retained (§ 211.180) and an
+explanation should be recorded. 9 This record should be initialed and dated by the
+involved persons and include a discussion of the error and supervisory comments. (See
+section III of this guidance for more details on a laboratory investigation.)
+If no laboratory or calculation errors are identified in the first test, there is no scientific
+basis for invalidating initial OOS results in favor of passing retest results. All test results,
+both passing and suspect, should be reported10 and considered in batch release decisions.
+2. Resampling
+While retesting refers to analysis of the original, homogenous sample material,
+resampling involves analyzing a specimen from any additional units collected as part of
+the original sampling procedure or from a new sample collected from the batch, should
+that be necessary.
+The original sample from a batch should be sufficiently large to accommodate additional
+testing in the event an OOS result is obtained. In some situations, however, it may be
+appropriate to collect a new sample from the batch. Control mechanisms for examination
+of additional specimens should be in accordance with predetermined procedures and
+sampling strategies (§ 211.165(c)).
+When all data have been evaluated, an investigation might conclude that the original
+sample was prepared improperly and was therefore not representative of the batch quality
+(§ 211.160(b)(3)). Improper sample preparation might be indicated, for example, by
+widely varied results obtained from several aliquots of an original composite (after
+determining there was no error in the performance of the analysis). Resampling should
+be performed by the same qualified, validated methods that were used for the initial
+9 See §§ 211.68 and 211.188. See also FDA guidance for industry Data Integrity and Compliance With Drug
+CGMP (December 2018).
+10 In other words, all data are reported in, for example, quality control reports, batch records, Certificates of
+Analysis, in accordance with §§ 211.188 and 211.192.
+8
+Contains Nonbinding Recommendations
+sample. However, if the investigation determines that the initial sampling method was
+inherently inadequate, a new accurate sampling method must be developed, documented,
+and reviewed and approved by the QU (§§ 211.160 and 211.165(c)).
+C. Reporting Testing Results
+Practices used in reporting and interpretation of test results include (1) averaging and (2) outlier
+tests.
+1. Averaging
+There are both appropriate and inappropriate uses of averaging test data during original
+testing and during an OOS investigation:
+a. Appropriate uses
+Averaging data can be a valid approach, but its use depends upon the sample and its
+purpose. For example, in an optical rotation test, several discrete measurements are
+averaged to determine the optical rotation for a sample, and this average is reported as the
+test result. If the sample can be assumed to be homogeneous, (i.e., an individual sample
+preparation designed to be homogenous), using averages can provide a more accurate
+result. In the case of microbiological assays, the U.S. Pharmacopeia (USP) prefers the use
+of averages because of the innate variability of the biological test system.
+It should be noted that a test might consist of a specific number of replicates to arrive at a
+result. For instance, an HPLC assay result may be determined by averaging the peak
+responses from a number of consecutive, replicate injections from the same preparation
+(usually 2 or 3). The assay result would be calculated using the peak response average.
+This determination is considered one test and one result.11 This is a distinct difference
+from the analysis of different portions from a lot, intended to determine variability within
+the lot, and from multiple full analyses of the same homogenous sample. The use of
+replicates to arrive at a single reportable12 result, and the specific number of replicates
+used, should be specified in the written, test method approved by the QU. Acceptance
+limits for variability among the replicates should also be specified in the method.
+Unexpected variation in replicate determinations should trigger remedial action as
+required by § 211.160(b)(4). If acceptance limits for replicate variability are not met, the
+test results should not be used.
+In some cases, a series of complete tests (full run-throughs of the test procedure), such as
+assays, are part of the test method. It may be appropriate to specify in the test method
+that the average of these multiple assays is considered one test and represents one
+reportable result. In this case, limits on acceptable variability among the individual assay
+11 See section V.B Cautions for further clarification.
+12 The term reportable result as used in this document means a final analytical result. This result is appropriately
+defined in the written approved test method and derived from one full execution of that method, starting from the
+original sample.
+9
+Contains Nonbinding Recommendations
+results should be based on the known variability of the method and should also be
+specified in the test methodology.13 A set of assay results not meeting these limits should
+not be used.
+These appropriate uses of averaging test data should be used during an OOS investigation
+only if they were used during the original testing that produced the OOS result.
+b. Inappropriate uses
+Reliance on averaging has the disadvantage of hiding variability among individual test
+results. For this reason, all individual test results should normally be reported as separate
+values. Where averaging of separate tests is appropriately specified by the test method, a
+single averaged result can be reported as the final test result. In some cases, a statistical
+treatment of the variability of results is reported. For example, in a test for dosage form
+content uniformity, the standard deviation (or relative standard deviation) is reported with
+the individual unit dose test results.
+Averaging can also conceal variations in different portions of a batch, or within a sample.
+For example, the use of averages is inappropriate when performing powder blend/mixture
+uniformity or dosage form content uniformity determinations. In these cases, testing is
+intended to measure variability within the product, and individual results provide the
+information for such an evaluation.
+In the context of additional testing performed during an OOS investigation, averaging the
+result(s) of the original test that prompted the investigation with additional retest or
+resample results obtained during the OOS investigation is not appropriate because it hides
+variability among the individual results. Relying on averages of such data can be
+particularly misleading when some of the results are OOS and others are within
+specifications. It is critical that the laboratory provide all individual results for evaluation
+and consideration by the QU, which is responsible for approving or rejecting, e.g., drug
+products, in-process materials (§ 211.22).
+For example, in an assay of a finished drug with a specification of 90 to 110 percent, an
+initial OOS result of 89 percent followed by additional retest results of 90 percent and 91
+percent would produce an average of 90 percent. While this average would meet
+specification,
+14 the additional test results also tend to confirm the original OOS result.
+However, in another situation with the same specifications, an initial OOS result of 80
+percent followed by additional test results of 85 percent and 105 percent would also
+produce an average of 90 percent but present a much different picture. These results do
+not confirm the original OOS result but show high variability and may not be reliable. In
+both examples, the individual results, not the average, should be used to evaluate the
+quality of the product.
+13 See footnote 11.
+14 When arriving at a batch disposition decision, it is important for a firm to assess whether the low assay value may
+project to a subpotency failure before the product’s labeled expiration date.
+10
+Contains Nonbinding Recommendations
+2. Outlier Tests
+The CGMP regulations require that statistically valid quality control criteria include
+appropriate acceptance and/or rejection levels (§ 211.165(d)). On rare occasions, a value
+may be obtained that is markedly different from the others in a series obtained using a
+validated method. Such a value may qualify as a statistical outlier. An outlier may result
+from a deviation from prescribed test methods, or it may be the result of variability in the
+sample. It should never be assumed that the reason for an outlier is error in the testing
+procedure, rather than inherent variability in the sample being tested.
+Outlier testing is a statistical procedure for identifying from an array those data that are
+extreme. The possible use of outlier tests should be determined in advance. This should
+be written into SOPs for data interpretation and be well documented. The SOPs should
+include the specific outlier test to be applied with relevant parameters specified in
+advance. The SOPs should specify the minimum number of results required to obtain a
+statistically significant assessment from the specified outlier test.
+For biological assays having a high variability, an outlier test may be an appropriate
+statistical analysis to identify those results that are statistically extreme observations. The
+USP describes outlier tests in the general chapter on Design and Analysis of Biological
+Assays (USP<111>). In these cases, the outlier observation is omitted from calculations.
+The USP also states that “arbitrary rejection or retention of an apparently aberrant
+response can be a serious source of bias…the rejection of observations solely on the basis
+of their relative magnitudes, without investigation as to cause, is a procedure to be used
+sparingly” (USP <111>).
+For validated chemical tests with relatively small variance, and if the sample being tested
+can be considered homogeneous (for example, an assay of a composite of a dosage form
+drug to determine strength), an outlier test is only a statistical analysis of the data
+obtained from testing and retesting. It will not identify the cause of an extreme
+observation and, therefore, should not be used to invalidate the suspect result.
+Occasionally, an outlier test may be of some value in understanding how discordant from
+a data set a result is, but can be used solely in an informational capacity in the course of
+an investigation to determine the distance of a result from the mean.15
+Outlier tests have no applicability in cases where the variability in the product is what is
+being assessed, such as for content uniformity, dissolution, or release rate determinations.
+In these applications, a value perceived to be an outlier may in fact be an accurate result
+of a nonuniform product.
+When using these practices during the additional testing performed in an OOS
+investigation, the laboratory will obtain multiple results. It is again critical for the
+laboratory to provide all test results for evaluation and consideration by the QU in its
+15 Outlier testing should not be used to invalidate chemical assays. See United States District Court for the District
+of New Jersey, U.S.A. v. Barr Laboratories, Inc., et al. Civil Action Number 92-1744, OPINION, February 4, 1993.
+11
+Contains Nonbinding Recommendations
+final disposition decision. In addition, when investigation by a contract laboratory16 does
+not determine an assignable cause, all test results should be reported to the customer on
+the certificate of analysis.
+V. CONCLUDING THE INVESTIGATION
+To conclude the investigation, the results should be evaluated, the batch quality should be
+determined, and a release decision should be made by the QU. The relevant SOPs should be
+followed in arriving at this point. Once a batch has been rejected, there is no limit to further
+testing to determine the cause of the failure so that a corrective action can be taken.
+A. Interpretation of Investigation Results
+The QU is responsible for interpreting the results of the investigation. An initial OOS result does
+not necessarily mean the subject batch fails and must be rejected. The OOS result should be
+investigated, and the findings of the investigation, including retest results, should be interpreted
+to evaluate the batch and reach a decision regarding release or rejection (§ 211.165).
+In those instances where an investigation has revealed a cause, and the suspect result is
+invalidated, the result should not be used to evaluate the quality of the batch or lot. Invalidation
+of a discrete test result may be done only upon the observation and documentation of a test event
+that can reasonably be determined to have caused the OOS result.
+In those cases where the investigation indicates an OOS result is caused by a factor affecting the
+batch quality (i.e., an OOS result is confirmed), the result should be used in evaluating the
+quality of the batch or lot. A confirmed OOS result indicates that the batch does not meet
+established standards or specifications and should result in the batch's rejection, in accordance
+with § 211.165(f), and proper disposition. For inconclusive investigations — in cases where an
+investigation (1) does not reveal a cause for the OOS test result and (2) does not confirm the
+OOS result — the OOS result should be given full consideration in the batch or lot disposition
+decision.
+In the first case (OOS confirmed), the investigation changes from an OOS investigation into a
+batch failure investigation, which must be extended to other batches or products that may have
+been associated with the specific failure (§ 211.192).
+In the second case (inconclusive), the QU might still ultimately decide to release the batch. For
+example, a firm might consider release of the product under the following scenario:
+A product has an acceptable composite assay range of 90.0 to 110.0 percent. The initial (OOS)
+assay result is 89.5 percent. Subsequent sample preparations from the original sample yield the
+following retest results: 99.0, 98.9, 99.0, 99.1, 98.8, 99.1, and 99.0 percent. A comprehensive
+laboratory investigation (Phase 1) fails to reveal any laboratory error. Review of events during
+16 The Agency also recommends that OOS investigation reports be provided to the customer.
+12
+Contains Nonbinding Recommendations
+production of the batch reveals no aberrations or indication of unusual process variation.17
+Review of the manufacturing process and product history demonstrates that the process is robust.
+The seven passing retest results are all well within the known limits of variability of the method
+used. Batch results from in-process monitoring, content uniformity, dissolution, and other tests
+are consistent with the passing retest results. After a thorough investigation, a firm’s QU might
+conclude that the initial OOS result did not reflect the true quality of the batch.
+It is noteworthy in this scenario that the original, thorough laboratory investigation failed to find
+any assignable cause. However, if subsequent investigation nonetheless concludes that the
+source of the OOS result was a cause unrelated to the manufacturing process, in response to this
+atypical failure to detect the laboratory deviation, it is essential that the investigation include
+appropriate follow-up and scrutiny to prevent recurrence of the laboratory error(s) that could
+have led to the OOS result.
+As the above example illustrates, any decision to release a batch, in spite of an initial OOS result
+that has not been invalidated, should come only after a full investigation has shown that the OOS
+result does not reflect the quality of the batch. In making such a decision, the QU should always
+err on the side of caution.
+B. Cautions
+1. Averaging results from multiple sample preparations from the original sample
+In cases where a series of assay results (intended to produce a single reportable result) are
+required by the test procedure and some of the individual results are OOS, some are within
+specification, and all are within the known variability of the method, the passing results are no
+more likely to represent the true value for the sample than the OOS results. For this reason, a
+firm should err on the side of caution and treat the average of these values as an OOS result, even
+if that average is within specification. This approach is consistent with the principle outlined in
+the USP General Notices that an official article shall comply with the compendial standard any
+time a compendial test is applied.18 Thus, every individual application of the official test should
+be expected to produce a result that meets specifications.
+2. Averaging results from same final sample preparation
+As noted in the Averaging section (IV.C.1.), there may be cases where the test method specifies
+appropriate acceptance criteria for variability and a pre-defined number of replicates from the
+final diluted sample solution to arrive at a result. For example, an HPLC test method may
+specify both acceptance criteria for variability and that a single reportable result be determined
+by averaging the peak response from a number of consecutive, replicate injections from the same
+17 As an example, evaluation of process variation would determine if established equipment, facility, and process
+control limits were met.
+18 USP, General Notices, Section 7.10, “Test Results, Statistics, and Standards” states “Analytical results observed
+in the laboratory (or calculated from experimental measurements) are compared with stated acceptance criteria to
+determine whether the article conforms to compendial requirements.”
+13
+Contains Nonbinding Recommendations
+test vial. In these cases, and given the acceptance criteria for variability are met, the result of any
+individual replicate in and of itself should not cause the reportable result to be OOS.
+3. Borderline results that are within specification
+An assay result that is low, but within specifications, should also raise a concern. One cause of
+the result could be that the batch was not formulated properly. Batches must be formulated with
+the intent to provide not less than 100 percent of the labeled or established amount of active
+ingredient (§ 211.101(a)). This would also be a situation where the analytical result meets
+specifications, but caution should be used in the release or reject decision.19
+As with all analytical testing conducted to evaluate the quality of a drug, all records pertaining to
+the OOS test result should be retained. Records must be kept of complete data derived from all
+tests performed to ensure compliance with established specifications and standards (§ 211.194).
+C. Field Alert Reports
+For those products that are the subject of an approved new drug application or abbreviated new
+drug application, regulations require submitting within 3 working days a field alert report (FAR)
+of information concerning any failure of a distributed batch to meet any of the specifications
+established in an application (21 CFR 314.81(b)(1)(ii)).20 OOS test results on these products are
+considered to be one kind of "information concerning any failure” described in this regulation.
+Unless the OOS result on the distributed batch is found to be invalid within 3 days, an initial
+FAR should be submitted. A follow-up FAR should be submitted when the OOS investigation is
+completed.
+19 As noted in the ICH guidance for industry Q1E Evaluation of Stability Data (2004), “[i]f the assay value of a
+batch is lower than 100 percent of label claim at the time of batch release, it might fall below the lower acceptance
+criterion before the end of the proposed shelf life.” Appropriate actions must be taken if testing results indicate that a
+batch may fall below assay specifications prior to its expiration date (see § 211.137 and 211.165).
+20 See FDA guidance for industry Field Alert Report Submission Questions and Answers (July 2021).
+14

@@ -1,0 +1,620 @@
+CENTER FOR DRUG EVALUATION AND RESEARCH
+Distributed Manufacturing of Drugs:
+Stakeholder Feedback and Action Plan
+November 2023
+Disclaimer: This paper is for discussion purposes only of stakeholder feedback and is not
+a draft or final guidance. As such, this document is not intended to convey any current or
+future requirements, recommendations, or policy related to distributed manufacturing.
+Executive Summary
+FDA’s Center for Drug Evaluation and Research (CDER) established the
+Framework for Regulatory Advanced Manufacturing Evaluation (FRAME)
+initiative to foster a regulatory framework to support the adoption of advanced
+manufacturing technologies that could benefit patients. FRAME prioritized
+distributed manufacturing (DM) and point-of-care manufacturing (POC) as
+two related technologies that have the potential to advance pharmaceutical
+manufacturing. The discussion paper Distributed Manufacturing and Point-of-Care
+Manufacturing of Drugs published on October 14, 2022 (October 2022 discussion
+paper),1 and the public workshop The Regulatory Framework for Distributed
+and Point-of-Care Pharmaceutical Manufacturing: An Opportunity for DM/POC
+Stakeholder Engagement was held from November 14 to 16, 2022.2 To ensure that
+FDA’s evaluation of the regulatory framework for these technologies is thorough,
+stakeholders were invited to comment on the discussion paper and provide
+feedback through moderated discussions at the public workshop.
+This paper summarizes stakeholder feedback in areas such as terminology,
+operating models, central and host sites, approaches for meeting product
+specifications, comparisons to other regulated products, and international
+harmonization. Stakeholders generally:
+•
+Identified areas in which they seek additional regulatory clarity regarding DM
+technologies for drugs and biological products3
+•
+Seek assurance that regulations and policies are compatible with DM strategies
+for drugs and biological products
+•
+Seek clarified regulatory expectations to facilitate the implementation of DM for
+drugs and biological products
+•
+Seek international harmonization on the regulation of DM technologies to
+facilitate the adoption of DM for drugs and biological products
+1
+2
+3
+For the discussion paper available on CDER’s FRAME initiative website at https://www.fda.gov/media/162157/
+download?attachment, comments were submitted to https://www.regulations.gov, Docket No. FDA-2022-N-2316.
+See CDER’s FRAME workshop website available at https://www.fda.gov/drugs/news-events-human-drugs/fdapqri-
+workshop-regulatory-framework-distributed-and-point-care-pharmaceutical-manufacturing.
+All references to drugs include both human drugs and biological products (including those regulated by CBER), unless
+otherwise specified.
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+2
+In addition to summarizing stakeholder feedback, this paper describes CDER’s
+actions to date and its action plan for the DM regulatory framework in alignment
+with the four FRAME priorities:
+1. Seek and analyze input
+a) Receive input from stakeholders in response to the discussion paper and at
+the public workshop (complete)
+b) Engage participants in the CDER Emerging Technology Program (ETP) and
+the Center for Biologics and Research (CBER) Advanced Technologies
+Team Program (CATT)
+c) Incorporate stakeholder feedback to address risks and clarify regulatory
+expectations (priorities 2 and 3 below)
+2. Address risks to ensure that regulations and policy are compatible with future
+advanced manufacturing technologies
+a) Conduct a comprehensive analysis of regulatory requirements applicable to
+DM strategies
+b) Assess the ability of FDA’s IT systems to receive and store location
+information and inform inspections
+3. Clarify expectations for stakeholders implementing advanced manufacturing
+a) Develop guidance, as appropriate, to clarify areas of regulatory uncertainty
+(three proposed draft guidances in development)4
+b) Evaluate existing policy to enable adoption of suitable DM technologies
+4. Harmonize regulatory approaches
+a) Publish internationally harmonized guidance for industry Q13 Continuous
+Manufacturing of Drug Substances and Drug Products (March 2023),5 as
+many DM units may use continuous manufacturing (complete )
+b) Coordinate with international regulatory partners to promote global adoption
+of DM technologies
+4
+5
+See the document titled CDER Guidance Agenda, New & Revised Draft Guidance Documents Planned for Publication in
+Calendar Year 2023 (July 2023), available at https://www.fda.gov/media/134778/download.
+FDA updates guidances periodically. For the most recent version of a guidance, check the FDA guidance web page at
+https://www.fda.gov/regulatory-information/search-fda-guidance-documents.
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+3
+I. Introduction
+Advanced manufacturing technologies have the potential to improve the reliability
+and robustness of manufacturing processes and supply chains and increase
+timely access to quality medicines. As advanced manufacturing technologies are
+emerging rapidly, FDA aims to foster a regulatory framework that supports the
+adoption of advanced manufacturing technologies to benefit patients, keep pace
+with innovation, and support public health. CDER established the Framework
+for Regulatory Advanced Manufacturing Evaluation (FRAME) initiative to
+provide clarity and reduce uncertainty for stakeholders aiming to use advanced
+manufacturing technologies to produce quality drugs and biological products.6
+FRAME’s goal is to identify potential regulatory areas of consideration and develop
+an action plan to address the regulatory framework for advanced manufacturing
+technologies. FRAME’s four priorities are to:
+1. Seek and analyze input to ensure that FDA’s understanding of advanced
+manufacturing technologies for drugs and biological products is thorough and
+the analysis of the regulatory framework is science- and risk-based
+2. Address risks to ensure that regulations and policy are compatible with future
+advanced manufacturing technologies
+3. Clarify expectations for stakeholders implementing advanced manufacturing
+4. Harmonize regulatory approaches to ensure that global regulatory practice is
+clear to stakeholders implementing advanced manufacturing
+To address the first priority above, FDA engaged stakeholders on distributed
+manufacturing (DM) and POC technologies in two different forums. The first was
+a discussion paper Distributed Manufacturing and Point-of-Care Manufacturing of
+Drugs for public comment in the Federal Register.
+7 The discussion paper presented
+areas of consideration and potential policy development identified by evaluating
+the regulatory framework for DM and POC technologies. The second was a
+6
+7
+All references to drugs include both human drugs and biological products (including those regulated by CBER), unless
+otherwise specified.
+See the document titled Discussion Paper: Distributed Manufacturing and Point-of-Care Manufacturing of Drugs; Request
+for Information and Comments that published in the Federal Register of October 14, 2022 (87 FR 62416).
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+4
+3-day public workshop held with the Product Quality Research Institute (PQRI)
+on The Regulatory Framework for Distributed and Point-of-Care Pharmaceutical
+Manufacturing: An Opportunity for DM/POC Stakeholder Engagement that was
+held from November 14 to 16, 2022.8 The public workshop included presentations
+by stakeholders developing DM and POC technologies and moderated discussion
+sessions for all participants on areas such as terminology, operating models,
+central and host sites, the pharmaceutical quality system (PQS),9 and control
+strategies and specifications.
+The sections of this paper that follow: (1) summarize stakeholder feedback on
+the DM and POC regulatory framework received through public comments on
+the October 2022 discussion paper and at the public workshop; and (2) provide
+a description of FDA’s planned actions to address the regulatory framework
+concerning these advanced manufacturing technologies.
+II. Summary of Stakeholder Feedback
+A. Terminology
+The October 2022 discussion paper included terminology describing DM and POC
+manufacturing, based on preliminary stakeholder engagements10 regarding these
+technologies.
+In written comments and through discussion during the PQRI workshop,
+stakeholders provided the following feedback with respect to the terminology used
+in the October 2022 discussion paper. Stakeholder feedback clarified that not all
+DM units are intended to be mobile (i.e., mobility may not be a defining feature of a
+DM unit).
+Stakeholders noted that the term point-of-care (POC) describes a manufacturing
+location, rather than a manufacturing technology. For example, health care
+providers might understand the term to mean a location where samples are
+collected or a test is performed on a patient. Stakeholders shared that POC
+manufacturing might not always be a subset of DM because, except for some
+8
+9
+10
+See the FDA/PQRI workshop agenda and materials available at https://pqri.org/fda_pqri_poc_dm_workshop/.
+See the internationally harmonized guidance for industry Q10 Pharmaceutical Quality System (April 2009).
+Preliminary stakeholder engagements include a 2021 report titled Innovation in Pharmaceutical Manufacturing on the
+Horizon: Technical Challenges, Regulatory Issues, and Recommendations issued by the National Academies of Sciences,
+Engineering, and Medicine, available at https://nap.nationalacademies.org/catalog/26009/innovations-in-pharmaceutical-
+manufacturing-on-the-horizon-technical-challenges-regulatory, and include industry meetings with ETP and CATT.
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+5
+applications of so-called self-contained distributed manufacturing,
+11 POC
+manufacturing might not be intended to be part of a decentralized manufacturing
+strategy or entail the use of DM units.
+Additionally, stakeholders noted that POC is an existing term used differently in
+several medical product areas. Feedback highlighted existing products that some
+stakeholders consider to be made at POC (e.g., certain radiopharmaceuticals
+covered in 21 CFR part 211 and positron emission tomography (PET) drugs
+covered in part 212 (21 CFR part 212)). Other products that stakeholders
+suggested could be considered to be made at POC include human cellular and
+tissue-based products (HCT/Ps) produced at or near a medical health care facility
+(HCF) accommodating the patients receiving these products or certain medical
+devices that process blood or HCT/Ps. Stakeholders shared the concern that any
+new elements of regulatory framework should avoid disrupting existing POC-
+related articles, processes, and operations.
+B. DM PQSs
+The October 2022 discussion paper presented the following two potential PQS
+approaches for DM: (1) host sites networked and overseen by a centralized PQS,
+and (2) a unit with its own PQS (decentralized PQS).
+Stakeholders supported the reasoning that a centralized PQS model is essential to
+DM for CDER-regulated products, especially to ensure regulatory compliance. (See
+also section II.H below.) Some stakeholders suggested that centralized control over
+remote manufacturing locations could provide quality oversight by sharing real-time
+data and documentation through a digital network across a fleet of DM units. Some
+explained that existing tools, such as cloud-based data management systems and
+digital connections, could be applied to permit a centralized PQS site to oversee
+and ensure consistent drug product quality across all manufacturing locations
+under its control. Stakeholders proposed that a designated person or designated
+people (e.g., fleet administrators) could be responsible for managing DM units
+deployed to different host sites. Feedback suggested that information to support
+that the centralized PQS has adequate oversight of multiple DM units across
+multiple geographical locations could be provided in a regulatory submission and
+assessed through facility evaluation.
+Stakeholders also suggested that a centralized PQS, similar to traditional
+manufacturing locations, might help to ensure site-to-site consistency through
+oversight of starting materials, active pharmaceutical ingredients (APIs), and
+inactive ingredients for each host site. Some proposed that a centralized inventory
+11
+Self-contained distributed manufacturing is not a term that FDA has necessarily adopted, but, for ease of reference, this
+paper will use this term to refer to the subset of manufacturing that stakeholders consider to be a subset of DM.
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+6
+might distribute to host sites appropriately sourced, qualified, and released starting
+materials; APIs; or inactive ingredients. Some feedback also suggested that
+electronic safeguards, such as kitting and barcoding, could help ensure that only
+qualified and released raw/starting materials and validated standard operating
+procedures (SOPs) are used with the manufacturing unit. Some explained
+that the central site could also collect, hold, and test retention and stability
+samples to control the consistency of product attributes across manufacturing
+locations. Stakeholders also stated that deviation, corrective action, and change
+management through a centralized PQS (rather than a decentralized PQS) might
+more effectively ensure product consistency across host sites. Some opined that
+specific mechanisms may be necessary to contemporaneously manage deviations,
+failure investigations, corrective actions, and changes across a network of host
+sites. Stakeholders did not address who, either central or local personnel, would
+need to perform these and other quality system functions.
+Stakeholders indicated that a decentralized PQS model may not be preferable
+for all traditional facilities that manufacture CDER-regulated product due to the
+need for local control over raw and starting materials and product consistency. In
+contrast, some stakeholders explained that both centralized and decentralized
+PQS models may be applicable for some CBER-regulated products. For example,
+starting materials for these products (e.g., autologous T cells) are patient-specific
+and may have inherent variability not applicable to CDER-regulated products; thus,
+different considerations may be needed for their control.
+C. DM Applicants
+Stakeholders noted that the types of DM applicants may differ among CBER- and
+CDER-regulated products. Stakeholders opined that an HCF might be an applicant
+and responsible for complying with CGMP requirements for CBER-regulated
+products, such as HCT/Ps; however, some opined that such a model may be less
+suited for CDER-regulated products. Stakeholders further opined that applicants
+of CDER-regulated products could either own and operate or contract the site
+controlling the centralized PQS, similar to contracting a traditional brick-and-mortar
+contract manufacturing organization.
+D. Operators
+Stakeholders posited that traditional manufacturing personnel12 would likely
+operate most DM units; however, some predicted that self-contained DM
+units might be operated by either traditional manufacturing personnel or those
+affiliated with the HCF hosting the unit. Stakeholders proposed that, in some
+12
+See 21 CFR 211.25.
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+7
+cases, employees of either the applicant or a third-party contractor might operate
+self-contained DM units. Some suggested that operators might be trained and
+overseen by the centralized PQS to be responsible for operating a unit at the
+host site. Multiple stakeholders suggested that the operator of a self-contained
+DM unit for CDER-regulated products would be responsible for ensuring that
+the unit is used appropriately (e.g., per approved instructions for use or user
+manuals) within validated operating conditions and used for completing appropriate
+training. Others suggested that the operator for CBER-regulated products might be
+expected to perform extensive operations that include manipulation of raw
+materials and/or manufacturing equipment and execution of test methods. Some
+explained that the extent of operational and quality responsibilities delegated to the
+unit operator might depend on the features of a given technology and the
+complexity of the product, which in some cases might require an assessment of
+operator performance at host sites.
+Stakeholders stated that a centralized PQS and onboard technology could manage
+operator access, limiting operation to those who are appropriately qualified.
+Stakeholders proposed that manufacturers might establish a standardized training
+strategy to qualify unit operators. Some suggested that such training could be
+communicated electronically to individual operators at host sites and/or through
+augmented reality training. In general, stakeholders held the view that standardized
+training developed and maintained by the centralized PQS can contribute to
+consistent drug product quality and process performance across all manufacturing
+locations.
+E. Establishments
+The October 2022 discussion paper identified that considering a different
+approach for registration and listing of DM units may be needed.13 The discussion
+paper acknowledged that a DM establishment might consist of mobile DM units
+connected or networked to a single, centralized PQS.
+Although stakeholders explained that manufacturers might maintain real-time
+location information for mobile units, which could be detected by a global
+positioning system (GPS), such an approach could potentially raise operational
+questions. For example, some suggested that CDER’s facility catalog may need
+to accommodate an FDA Establishment Identifier number that is able to identify
+DM units. Stakeholders proposed various mechanisms for reporting DM unit
+location changes, such as supplemental applications (e.g., changes being effected
+supplements), annual reports, and annual updates to master files. Feedback
+suggested that any such approach would need to be sufficiently timely or frequent,
+13
+The regulations in 21 CFR 207.1 define establishment as “a place of business under one management at one general
+physical location. . . .”
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+8
+based on the mobility of the technology. Some explained that using existing
+regulatory processes for frequent updates to an application could be a significant
+burden on both the applicant and FDA.
+Stakeholders stated that current regulations may not need to be modified to
+accommodate the registration and listing of stationary DM units; however, some
+explained that manufacturers who operate mobile DM units may be required
+to make multiple and/or frequent updates to the physical address of the unit
+identifying each change in location to facilitate inspection by FDA. Stakeholders
+proposed that manufacturers could register a central site at a fixed location and
+register a fixed location as part of that registration and identify the mobile DM units
+under the control of the centralized PQS. Some stakeholders noted that a similar
+approach is used to register mobile establishments for blood collection.
+F. Changing and Adding Locations of DM Units
+The October 2022 discussion paper acknowledged that, under the existing
+framework, applicants might need to demonstrate bioequivalence and/or generate
+analytical comparability data, conduct method transfer and validation, and generate
+stability data for each new location of a DM unit.
+Stakeholders stated that the need for these data could be prohibitively burdensome
+for applicants because DM units may be deployed to different locations within and/
+or among host sites and may make smaller-than-traditional batch sizes. Although
+drug product quality should be consistent across all DM units, some stakeholders
+opined that there may not be a need for comparability, validation, and stability data
+to support implementation at every new location because the risk to drug product
+quality may be mitigated if units are demonstrated to be cloned or like-for-like.
+However, some stakeholders noted that external factors beyond the DM unit, such
+as environment, utilities, personnel, and associated control procedures, might need
+to be controlled to ensure process performance and drug product quality at new
+manufacturing locations.
+Most stakeholders agreed that the performance of DM units at a new location
+should be evaluated to ensure consistent drug product quality, but many also
+agreed that the process to submit these data in an amendment or a supplement
+to an application could burden applicants making multiple or frequent location
+changes. In addition, they acknowledged that FDA’s assessment workload to
+review such information could drastically increase. As a result, some stakeholders
+proposed alternative approaches wherein data to support new locations could be
+generated during product development and submitted and assessed in an original
+application.
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+9
+One approach proposed by stakeholders centered on the use of existing
+assessment tools that have appropriate supporting data, such as comparability
+protocols and/or identified established conditions, to define criteria that must be
+met following a move to a new location. Another stakeholder proposal advocated
+for incorporating DM unit location moves into the process development studies
+to reduce the data needed to support postapproval moves and/or establish an
+operational envelope (e.g., qualification/validation and environmental parameters,
+utility requirements) within which a DM unit would operate. Some explained
+that there could continue to be a need to perform installation and operational
+qualification at each new manufacturing location. Stakeholders indicated that the
+approaches described above for demonstrating product comparability and process
+consistency could be more challenging for CBER-regulated products, given the
+types of starting materials (e.g., autologous T cells) and their inherent variability.
+Generally, stakeholders opined that the scope and nature of the data and
+information needed to support a new manufacturing location should be informed by
+the capabilities of the DM unit, the potential risk of a new location to drug product
+quality, and operator training.
+Some stakeholders stated that employing dedicated operators who move with a
+unit could reduce the risk to process and equipment performance and drug product
+quality. However, some noted that this type of approach might not be feasible for
+DM units that move frequently and/or over large geographical distances. In these
+scenarios, stakeholders noted that new personnel may need to be trained and
+qualified to operate DM units at each new location.
+G. Inspections
+The October 2022 discussion paper acknowledged that FDA’s establishment
+evaluation and inspection functions could face logistical and resource
+challenges due to: (1) the mobility and dispersion of DM units, (2) an increase in
+manufacturing locations, (3) the intent to manufacture in or near nontraditional host
+sites, and (4) the intent to operate beyond one physical location (i.e., centralized
+PQS and host sites).
+The most commonly proposed inspection model by stakeholders was the
+inspection of a centralized PQS site, conducted on a risk-based frequency
+consistent with FDA’s current procedures for risk-based inspection schedules.
+Stakeholders also encouraged the use of alternative tools (e.g., remote regulatory
+assessments) and advanced technology (e.g., augmented reality glasses) for host
+site assessments.
+Another suggested scenario was for FDA to conduct preapproval or prelicense
+inspections of host sites to support initial DM implementation, and then the
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+10
+centralized PQS site would perform future host site evaluations that FDA could
+review when inspecting the centralized PQS site. Stakeholder rationale for this
+approach was based on the premise that cloned or like-for-like DM units reduce
+risks to drug product quality. Some explained that other factors, such as host site
+environmental and microbial controls, that are external to the DM unit at host sites
+should continue to be subject to FDA evaluation, especially for nontraditional host
+site environments.
+H. Considerations for Meeting Established Specifications
+In general, stakeholders held the view that the intended uses and capabilities of
+self-contained DM units may impact the ability to use traditional tools to control
+quality risks. For example, some posited that future host sites may not contain
+traditional quality control laboratories, and operators may not be traditional
+manufacturing operators (e.g., quality control analysts). Several stakeholders
+explained that rapid, nontraditional approaches to release testing might be
+needed for the viability of self-contained DM units. The most common approach
+that stakeholders proposed was the use of process analytical technology (PAT)
+to enable real-time release testing. Although PAT has been developed for
+manufacturing processes in traditional facilities, stakeholders noted that most of
+these tools have not been miniaturized to the scale required for a self-contained
+DM unit. Some stakeholders also proposed approaches that do not rely on
+real-time or end-product testing, including modeling and digital twins, parametric
+release, and conditional release. Stakeholders postulated that self-contained
+DM units could offer an advanced level of understanding about processes and
+products, which, based on risks, might justify a combination of control approaches.
+Some stakeholders also supported that appropriate testing strategies may be
+product or technology specific, and risk assessments might determine whether
+some uncertainties can only be monitored and controlled through end-product
+testing.
+A particular focus of stakeholders was quality testing for microbial and adventitious
+agents, which typically generate results within 7 to 14 days and could delay the
+administration of product to patients. Stakeholders noted that rapid safety testing
+methods for microbial and adventitious agents have seen limited implementation.
+Therefore, some stakeholders proposed the potential combination of traditional and
+emerging methods, with other approaches, to ensure microbial and adventitious
+agent safety. Some noted that negative-to-date sterility results could permit rapid
+product release, while traditional testing results could provide confirmation or
+lead to initiation of risk mitigation measures. Some stakeholders noted that such
+a process is analogous to the approach used for products with short half-lives
+(e.g., radiopharmaceuticals) for which sterility testing is performed after a dose
+has been administered and protocols are established to address a failed sterility
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+11
+test. Stakeholders also proposed that sterility testing may not be necessary for
+every batch if a DM unit is a fully closed system that is appropriately validated to
+consistently manufacture sterile products.
+Implementation of DM stability programs was an area of consideration for several
+stakeholders who noted that the design of stability programs might depend on a
+given technology and/or product. An example given was drug products intended for
+patient administration within short time frames. Stakeholders seek guidance on the
+stability data (e.g., time-points, methods) needed to support short expiry periods.
+Batch size was a stakeholder consideration for release and stability testing
+strategies. Stakeholders noted that self-contained DM units might be designed
+to produce small batch sizes (even single doses) and noted that destructive
+end-product testing of such batches may not be feasible. Some stakeholders
+proposed that samples produced from runs performed immediately before or
+after a run producing material for patient administration (i.e., sub-batches) might
+be used for release and stability testing. Some noted similarities between such a
+proposed approach and the existing approach used for PET drugs. Stakeholders
+also proposed that samples might be generated by additional process runs (i.e.,
+batches) performed before and/or after the run that produced the dose for patient
+administration, provided that the samples used for release and stability testing are
+representative and predictive of the administered batch.
+The October 2022 discussion paper also posited that applicants who are not
+present at host sites will face challenges with ensuring that any rejected
+manufacturing components are quarantined, disposed of, and investigated.
+To mitigate this issue, stakeholders proposed that a centralized PQS could provide
+oversight and consistency in document management and training, deviation
+identification and handling, investigations, change controls, corrective actions and
+preventive actions (CAPA), and batch releases. Stakeholders proposed several
+approaches to control release of finished products, including using cloud-based
+and other electronic systems (e.g., artificial intelligence) at the centralized PQS
+site to review batch records and data and/or make automated decisions about
+batch disposition (e.g., by using review by exception algorithms). Some noted
+it might be feasible for applicants to perform timely batch review and approval
+through the centralized PQS for all units at host sites (e.g., time zone-specific
+teams), while others ventured that sufficiently robust and appropriately validated
+automated systems might be able to ensure proper batch decisions. Stakeholders
+did not generally address procedures for handling rejected material at host sites
+or the processes by which self-contained DM units might physically detain and/
+or destroy nonconforming products to prevent use. Stakeholders noted that some
+operators may not be traditional manufacturing personnel and the extent of their
+quality responsibilities might be limited by their organization, though some noted
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+12
+that robust process controls might assist in ensuring that only conforming product
+is administered to patients.
+I. Other Regulated Products and Harmonization
+1. Other Regulated Products
+Some stakeholders highlighted similarities among drug products made in self-
+contained DM units and PET drugs and other radiopharmaceuticals, noting that
+such drug products might be made in enclosed, automated systems. Some
+stakeholders observed that PET drug products typically have short half-lives
+and, as a result, the final manufacturing step (e.g., radiolabeling) is performed
+in proximity to patient care. Some noted the unique considerations for ensuring
+quality of PET drugs in this environment and the specific regulations that cover
+these products (i.e., part 212). Stakeholders suggested that some approaches
+used in the regulation of PET drugs could inform the regulation of self-contained
+DM units due to the potential parallels between the manufacturing of PET drugs
+and manufacturing in a self-contained DM unit. For example, some noted that
+processes used to train and qualify manufacturing unit operators and handle
+and investigate nonconformances at PET sites might inform approaches for self-
+contained DM units. Additionally, some noted that digital tools (such as cloud-
+based systems) are currently used to store manufacturing records that a remote
+site can access and use to ensure drug product quality. Several stakeholders
+speculated that the testing and release strategies used in the manufacture of
+PET drugs and other radiopharmaceuticals could be examined for applicability
+to self-contained DM units.
+Some stakeholders cautioned that certain approaches for PET drug
+manufacturing may not be appropriate for DM. One difference noted was that
+PET drugs are a narrow pharmaceutical class with distinct qualities that require
+manufacturing in proximity to patients and for which the HCF is generally the
+applicant who operates a synthesizer and is responsible for quality oversight
+and CGMP compliance. Some also noted that certain manufacturing process
+can be more complex than radiolabeling and might result in higher lot-to-lot
+variability relative to PET drugs.
+Although the October 2022 discussion paper excluded manufacturing units
+intended for drug compounding (i.e., drugs not adhering to the specification
+of an approved regulatory submission), stakeholders noted potential parallels
+between DM and drug compounding. The FRAME initiative continues to focus
+on products that are the subject of approved applications (i.e., products that
+would be marketed under a new drug application, an abbreviated new drug
+application, or a biologics license application).
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+13
+2. International Harmonization
+Stakeholders expressed a desire for international harmonization on
+terminologies and principles to facilitate the adoption of DM. Some suggested
+that harmonization through global regulatory guidelines (e.g., International
+Council for Harmonisation, pharmaceutical inspection convention/
+pharmaceutical inspection co-operation scheme (PIC/S)) could mitigate
+uncertainty associated with deployment of manufacturing units to host sites
+across broad geographical locations. Such an example provided was a
+central site in one regulatory jurisdiction with host sites in other jurisdictions.
+Stakeholders were clear that international collaboration among stakeholders and
+global regulators will be important, as these technologies continue to develop
+and deploy.
+III. Action Plan Summary
+1. Seek and analyze input to ensure that FDA’s understanding of
+DM technologies is thorough and analysis of the regulatory
+framework is science- and risk-based
+Stakeholder Feedback:
+Stakeholders developing DM technologies for drugs and biological products
+have identified areas in which they seek additional regulatory clarity.
+FDA Action:
+•
+•
+•
+Publish Distributed Manufacturing and Point-of-Care Manufacturing of Drugs
+discussion paper for public comment to share information with the public and
+request input on discussion questions related to the regulatory framework.
+STATUS Completed with 60-day comment period that closed on December
+13, 2022
+In partnership with PQRI, hold public workshop on the Regulatory Framework
+for Distributed and Point of Care Pharmaceutical Manufacturing: An
+Opportunity for DM/POC Stakeholder Engagement to discuss stakeholder
+input on these technologies.
+STATUS Completed November 16, 2022
+Engage participants in the CDER Emerging Technology Program (ETP) and
+the Center for Biologics and Research (CBER) Advanced Technologies Team
+Program (CATT) who are developing DM technologies and visit development
+sites.
+STATUS Ongoing
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+14
+•
+Incorporate input and feedback into priorities 2 and 3 below.
+STATUS Ongoing
+2. Address risks to ensure that regulations and policy are
+compatible with future DM technologies
+Stakeholder Feedback:
+Stakeholders seek assurance that regulations and policies are compatible with
+DM strategies for drugs and biological products.
+FDA Action:
+•
+Conduct a comprehensive analysis of regulatory requirements applicable to
+DM strategies for drugs and biological products.
+STATUS Ongoing
+•
+Assess the ability of FDA’s IT systems to receive and store location
+information and inform inspections.
+STATUS Ongoing
+3. Clarify expectations for stakeholders implementing DM
+Stakeholder Feedback:
+Stakeholders seek clarified regulatory expectations to facilitate the
+implementation of DM for drugs and biological products.
+FDA Action:
+•
+Develop guidance, as appropriate, to clarify areas of regulatory uncertainty,
+including the following proposed draft guidances: Considerations for Complying
+with 21 CFR 211.110, Approaches to Meeting CGMP Requirements for
+Distributed Manufacturing, and Advanced Manufacturing Technologies
+Designation Program Designated Technologies in Drug and Biological
+Products.
+14
+STATUS Ongoing
+•
+Evaluate existing policy, incorporating stakeholder feedback, and develop
+guidance, as needed, to enable adoption of suitable DM technologies.
+STATUS Ongoing
+14
+See the document titled CDER Guidance Agenda, New & Revised Draft Guidance Documents Planned for Publication in
+Calendar Year 2023 (July 2023), available at https://www.fda.gov/media/134778/download.
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+15
+4. Harmonize to ensure that global regulatory practice is clear to
+stakeholders implementing DM
+Stakeholder Feedback:
+Stakeholders seek international harmonization on the regulation of DM
+technologies to facilitate the adoption of DM for drugs and biological products.
+FDA Action:
+•
+Publish internationally harmonized guidance for industry Q13 Continuous
+Manufacturing of Drug Substances and Drug Products.15
+STATUS Completed March 1, 2023
+•
+Coordinate with international regulatory partners to promote the global
+adoption of DM technologies.
+STATUS Ongoing
+15
+FDA anticipates that many DM units, including self-contained DM units, will use continuous manufacturing.
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+16
+Appendix: Abbreviations
+Following is a list of abbreviations used in this paper:
+Acronym Explanation
+API Active Pharmaceutical Ingredient
+CAPA Corrective Actions and Preventive Actions
+CATT CBER Advanced Technologies Team
+CBER Center for Biologics Evaluation and Research
+CDER Center for Drug Evaluation and Research
+CFR Code of Federal Regulations
+CGMP Current Good Manufacturing Practice
+DM Distributed Manufacturing
+ETP Emerging Technology Program
+FRAME Framework for Regulatory Advanced Manufacturing
+Evaluation
+GPS Global Positioning System
+HCF Health Care Facility
+HCT/Ps Human Cellular and Tissue-Based Products
+ICH International Council for Harmonisation
+IT Information Technology
+PAT Process Analytical Technology
+PET Positron Emission Tomography
+PIC/S Pharmaceutical Inspection Convention/Pharmaceutical
+Inspection Co-operation Scheme
+POC Point-of-Care Manufacturing
+PQRI Product Quality Research Institute
+PQS Pharmaceutical Quality System
+SOP Standard Operating Procedures
+Distributed Manufacturing of Drugs: Stakeholder Feedback and Action Plan
+17
+U.S. Food and Drug Administration
+www.fda.gov
+Office of Pharmaceutical Quality
+Center for Drug Evaluation and Research
+U.S. Food and Drug Administration
+10903 New Hampshire Avenue
+Silver Spring, Maryland 20993

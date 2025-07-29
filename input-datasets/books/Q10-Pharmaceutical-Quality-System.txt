@@ -1,0 +1,789 @@
+Guidance for Industry
+Q10 Pharmaceutical
+Quality System
+U.S. Department of Health and Human Services
+Food and Drug Administration
+Center for Drug Evaluation and Research (CDER)
+Center for Biologics Evaluation and Research (CBER)
+April 2009
+ICH
+Guidance for Industry
+Q10 Pharmaceutical
+Quality System
+Additional copies are available from:
+Office of Communication
+Division of Drug Information
+Center for Drug Evaluation and Research
+Food and Drug Administration
+10903 New Hampshire Ave.,Bldg. 51, Room 2201
+Silver Spring, MD 20993-0002
+(Tel) 301-796-3400
+http://www.fda.gov/cder/guidance/index.htm
+Office of Communication, Outreach and
+Development, HFM-40
+Center for Biologics Evaluation and Research
+Food and Drug Administration
+1401 Rockville Pike, Rockville, MD 20852-1448
+(Tel) 1-800-835-4709 or 301-827-1800
+http://www.fda.gov/cber/guidelines.htm.
+U.S. Department of Health and Human Services
+Food and Drug Administration
+Center for Drug Evaluation and Research (CDER)
+Center for Biologics Evaluation and Research (CBER)
+April 2009
+ICH
+TABLE OF CONTENTS
+I. INTRODUCTION (1, 1.1)................................................................................................ 1
+II. PHARMACEUTICAL QUALITY MANAGEMENT SYSTEM ................................. 2
+A. Scope (1.2).......................................................................................................................................2
+B. Relationship of ICH Q10 to Regional GMP Requirements, ISO Standards,
+and ICH Q7 (1.3)............................................................................................................................3
+C. Relationship of ICH Q10 to Regulatory Approaches (1.4).........................................................3
+D. ICH Q10 Objectives (1.5) ..............................................................................................................3
+E. Enablers: Knowledge Management and Quality Risk Management (1.6) ............................... 4
+F. Design and Content Considerations (1.7) ....................................................................................4
+G. Quality Manual (1.8)......................................................................................................................5
+III. MANAGEMENT RESPONSIBILITY (2)...................................................................... 5
+A. Management Commitment (2.1)...................................................................................................5
+B. Quality Policy (2.2).........................................................................................................................6
+C. Quality Planning (2.3)....................................................................................................................6
+D. Resource Management (2.4)..........................................................................................................7
+E. Internal Communication (2.5) ......................................................................................................7
+F. Management Review (2.6) ............................................................................................................7
+G. Management of Outsourced Activities and Purchased Materials (2.7)....................................7
+H. Management of Change in Product Ownership (2.8) .................................................................8
+IV. CONTINUAL IMPROVEMENT OF PROCESS PERFORMANCE AND
+PRODUCT QUALITY (3) ............................................................................................... 8
+A. Lifecycle Stage Goals (3.1) ............................................................................................................8
+B. Pharmaceutical Quality System Elements (3.2) ..........................................................................9
+V. CONTINUAL IMPROVEMENT OF THE PHARMACEUTICAL QUALITY
+SYSTEM (4) .................................................................................................................... 13
+A. Management Review of the Pharmaceutical Quality System (4.1)..........................................13
+B. Monitoring of Internal and External Factors That Can Have an Impacton the
+Pharmaceutical Quality System (4.2).........................................................................................13
+C. Outcomes of Management Review and Monitoring (4.3).........................................................14
+VI. GLOSSARY (5)............................................................................................................... 15
+Annex I: Potential Opportunities To Enhance Science- and Risk-Based Regulatory
+Approaches *............................................................................................................... 18
+Annex 2: Diagram of the ICH Q10 Pharmaceutical Quality System Model…..……………19
+i
+Guidance for Industry1
+Q10 Pharmaceutical Quality System
+This guidance represents the Food and Drug Administration's (FDA’s) current thinking on this topic. It
+does not create or confer any rights for or on any person and does not operate to bind FDA or the public.
+You can use an alternative approach if the approach satisfies the requirements of the applicable statutes
+and regulations. If you want to discuss an alternative approach, contact the FDA staff responsible for
+implementing this guidance. If you cannot identify the appropriate FDA staff, call the appropriate
+number listed on the title page of this guidance.
+I. INTRODUCTION (1, 1.1)2
+This internationally harmonized guidance is intended to assist pharmaceutical manufacturers by
+describing a model for an effective quality management system for the pharmaceutical industry,
+referred to as the pharmaceutical quality system. Throughout this guidance, the term
+pharmaceutical quality system refers to the ICH Q10 model.
+ICH Q10 describes one comprehensive model for an effective pharmaceutical quality system that
+is based on International Organization for Standardization (ISO) quality concepts, includes
+applicable good manufacturing practice (GMP) regulations, and complements ICH “Q8
+Pharmaceutical Development” and ICH “Q9 Quality Risk Management.”3 ICH Q10 is a model
+for a pharmaceutical quality system that can be implemented throughout the different stages of a
+product lifecycle. Much of the content of ICH Q10 applicable to manufacturing sites is currently
+specified by regional GMP requirements. ICH Q10 is not intended to create any new
+expectations beyond current regulatory requirements. Consequently, the content of ICH Q10 that
+is additional to current regional GMP requirements is optional.
+1 This guidance was developed within the Expert Working Group (Quality) of the International Conference on
+Harmonisation of Technical Requirements for Registration of Pharmaceuticals for Human Use (ICH) and has been
+subject to consultation by the regulatory parties, in accordance with the ICH process. This document has been
+endorsed by the ICH Steering Committee at Step 4 of the ICH process, June 2008. At Step 4 of the process, the final
+draft is recommended for adoption to the regulatory bodies of the European Union, Japan, and the United States.
+2 Arabic numbers reflect the organizational breakdown of the document endorsed by the ICH Steering Committee at
+Step 4 of the ICH process, June 2008.
+3 These guidances are available on the Internet at http://www.fda.gov/cder/guidance/index.htm. We update
+guidances periodically. To make sure you have the most recent version of a guidance, check the CDER guidance
+page at http://www.fda.gov/cder/guidance/index.htm
+1
+ICH Q10 demonstrates industry and regulatory authorities’ support of an effective
+pharmaceutical quality system to enhance the quality and availability of medicines around the
+world in the interest of public health. Implementation of ICH Q10 throughout the product
+lifecycle should facilitate innovation and continual improvement and strengthen the link between
+pharmaceutical development and manufacturing activities.
+FDA's guidance documents, including this guidance, do not establish legally enforceable
+responsibilities. Instead, guidances describe the Agency’s current thinking on a topic and should
+be viewed only as recommendations, unless specific regulatory or statutory requirements are
+cited. The use of the word should in Agency guidances means that something is suggested or
+recommended, but not required.
+II. PHARMACEUTICAL QUALITY MANAGEMENT SYSTEM
+A. Scope (1.2)
+This guidance applies to the systems supporting the development and manufacture of
+pharmaceutical drug substances (i.e., active pharmaceutical ingredients (APIs)) and drug
+products, including biotechnology and biological products, throughout the product lifecycle.
+The elements of ICH Q10 should be applied in a manner that is appropriate and proportionate to
+each of the product lifecycle stages, recognizing the differences among, and the different goals
+of, each stage (see section IV (3)).
+For the purposes of this guidance, the product lifecycle includes the following technical activities
+for new and existing products:
+• Pharmaceutical Development
+o Drug substance development
+o Formulation development (including container/closure system)
+o Manufacture of investigational products
+o Delivery system development (where relevant)
+o Manufacturing process development and scale-up
+o Analytical method development
+• Technology Transfer
+o New product transfers during development through manufacturing
+o Transfers within or between manufacturing and testing sites for marketed products
+• Commercial Manufacturing
+o Acquisition and control of materials
+o Provision of facilities, utilities, and equipment
+o Production (including packaging and labeling)
+o Quality control and assurance
+o Release
+o Storage
+2
+o Distribution (excluding wholesaler activities)
+• Product Discontinuation
+o Retention of documentation
+o Sample retention
+o Continued product assessment and reporting
+B. Relationship of ICH Q10 to Regional GMP Requirements, ISO Standards,
+and ICH Q7 (1.3)
+Regional GMP requirements, the ICH guidance “Q7 Good Manufacturing Practice Guidance for
+Active Pharmaceutical Ingredients,” and ISO quality management system guidelines form the
+foundation for ICH Q10. To meet the objectives described below, ICH Q10 augments GMPs by
+describing specific quality system elements and management responsibilities. ICH Q10 provides
+a harmonized model for a pharmaceutical quality system throughout the lifecycle of a product
+and is intended to be used together with regional GMP requirements.
+The regional GMPs do not explicitly address all stages of the product lifecycle (e.g.,
+development). The quality system elements and management responsibilities described in this
+guidance are intended to encourage the use of science- and risk-based approaches at each
+lifecycle stage, thereby promoting continual improvement across the entire product lifecycle.
+C. Relationship of ICH Q10 to Regulatory Approaches (1.4)
+Regulatory approaches for a specific product or manufacturing facility should be commensurate
+with the level of product and process understanding, the results of quality risk management, and
+the effectiveness of the pharmaceutical quality system. When implemented, the effectiveness of
+the pharmaceutical quality system can normally be evaluated during a regulatory inspection at
+the manufacturing site. Potential opportunities to enhance science- and risk-based regulatory
+approaches are identified in Annex 1. Regulatory processes will be determined by region.
+D. ICH Q10 Objectives (1.5)
+Implementation of the Q10 model should result in achievement of three main objectives that
+complement or enhance regional GMP requirements.
+1. Achieve Product Realization (1.5.1)
+To establish, implement, and maintain a system that allows the delivery of products with the
+quality attributes appropriate to meet the needs of patients, health care professionals, regulatory
+authorities (including compliance with approved regulatory filings) and other internal and
+external customers.
+2 Establish and Maintain a State of Control (1.5.2)
+3
+To develop and use effective monitoring and control systems for process performance and
+product quality, thereby providing assurance of continued suitability and capability of processes.
+Quality risk management can be useful in identifying the monitoring and control systems.
+3 Facilitate Continual Improvement (1.5.3)
+To identify and implement appropriate product quality improvements, process improvements,
+variability reduction, innovations, and pharmaceutical quality system enhancements, thereby
+increasing the ability to fulfill a pharmaceutical manufacturer’s own quality needs consistently.
+Quality risk management can be useful for identifying and prioritizing areas for continual
+improvement.
+E. Enablers: Knowledge Management and Quality Risk Management (1.6)
+Use of knowledge management and quality risk management will enable a company to
+implement ICH Q10 effectively and successfully. These enablers will facilitate achievement of
+the objectives described in section II.D (1.5) above by providing the means for science- and risk-
+based decisions related to product quality.
+1. Knowledge Management (1.6.1)
+Product and process knowledge should be managed from development through the commercial
+life of the product up to and including product discontinuation. For example, development
+activities using scientific approaches provide knowledge for product and process understanding.
+Knowledge management is a systematic approach to acquiring, analyzing, storing, and
+disseminating information related to products, manufacturing processes, and components.
+Sources of knowledge include, but are not limited to, prior knowledge (public domain or
+internally documented); pharmaceutical development studies; technology transfer activities;
+process validation studies over the product lifecycle; manufacturing experience; innovation;
+continual improvement; and change management activities.
+2. Quality Risk Management (1.6.2)
+Quality risk management is integral to an effective pharmaceutical quality system. It can
+provide a proactive approach to identifying, scientifically evaluating, and controlling potential
+risks to quality. It facilitates continual improvement of process performance and product quality
+throughout the product lifecycle. ICH Q9 provides principles and examples of tools for quality
+risk management that can be applied to different aspects of pharmaceutical quality.
+F. Design and Content Considerations (1.7)
+(a) The design, organization, and documentation of the pharmaceutical quality system
+should be well structured and clear to facilitate common understanding and consistent
+application.
+(b) The elements of ICH Q10 should be applied in a manner that is appropriate and
+proportionate to each of the product lifecycle stages, recognizing the different goals
+4
+and knowledge available for each stage.
+(c) The size and complexity of the company’s activities should be taken into consideration
+when developing a new pharmaceutical quality system or modifying an existing one.
+The design of the pharmaceutical quality system should incorporate appropriate risk
+management principles. While some aspects of the pharmaceutical quality system can
+be company wide and others site specific, the effectiveness of the pharmaceutical
+quality system is normally demonstrated at the site level.
+(d) The pharmaceutical quality system should include appropriate processes, resources,
+and responsibilities to provide assurance of the quality of outsourced activities and
+purchased materials as described in section III.G (2.7).
+(e) Management responsibilities, as described in section III (2), should be identified
+within the pharmaceutical quality system.
+(f) The pharmaceutical quality system should include the following elements, as
+described in section IV (3): process performance and product quality monitoring,
+corrective and preventive action, change management, and management review.
+(g) Performance indicators, as described in section V (4), should be identified and used to
+monitor the effectiveness of processes within the pharmaceutical quality system.
+G. Quality Manual (1.8)
+A Quality Manual or equivalent documentation approach should be established and should
+contain the description of the pharmaceutical quality system. The description should include:
+(a) The quality policy (see section III (2)).
+(b) The scope of the pharmaceutical quality system.
+(c) Identification of the pharmaceutical quality system processes, as well as their
+sequences, linkages, and interdependencies. Process maps and flow charts can be
+useful tools to facilitate depicting pharmaceutical quality system processes in a visual
+manner.
+(d) Management responsibilities within the pharmaceutical quality system (see
+section III (2)).
+III. MANAGEMENT RESPONSIBILITY (2)
+Leadership is essential to establish and maintain a company-wide commitment to quality and for
+the performance of the pharmaceutical quality system.
+A. Management Commitment (2.1)
+(a) Senior management has the ultimate responsibility to ensure an effective
+pharmaceutical quality system is in place to achieve the quality objectives, and that
+5
+roles, responsibilities, and authorities are defined, communicated, and implemented
+throughout the company.
+(b) Management should:
+(1) Participate in the design, implementation, monitoring, and maintenance of an
+effective pharmaceutical quality system.
+(2) Demonstrate strong and visible support for the pharmaceutical quality system
+and ensure its implementation throughout their organization.
+(3) Ensure a timely and effective communication and escalation process exists to
+raise quality issues to the appropriate levels of management.
+(4) Define individual and collective roles, responsibilities, authorities, and inter-
+relationships of all organizational units related to the pharmaceutical quality
+system. Ensure these interactions are communicated and understood at all
+levels of the organization. An independent quality unit/structure with authority
+to fulfill certain pharmaceutical quality system responsibilities is required by
+regional regulations.
+(5) Conduct management reviews of process performance and product quality and
+of the pharmaceutical quality system.
+(6) Advocate continual improvement.
+(7) Commit appropriate resources.
+B. Quality Policy (2.2)
+(a) Senior management should establish a quality policy that describes the overall
+intentions and direction of the company related to quality.
+(b) The quality policy should include an expectation to comply with applicable regulatory
+requirements and should facilitate continual improvement of the pharmaceutical
+quality system.
+(c) The quality policy should be communicated to and understood by personnel at all
+levels in the company.
+(d) The quality policy should be reviewed periodically for continuing effectiveness.
+C. Quality Planning (2.3)
+(a) Senior management should ensure the quality objectives to implement the quality
+policy are defined and communicated.
+(b) Quality objectives should be supported by all relevant levels of the company.
+(c) Quality objectives should align with the company’s strategies and be consistent with
+the quality policy.
+(d) Management should provide the appropriate resources and training to achieve the
+6
+quality objectives.
+(e) Performance indicators that measure progress against quality objectives should be
+established, monitored, communicated regularly, and acted upon as appropriate as
+described in section V.A (4.1) of this document.
+D. Resource Management (2.4)
+(a) Management should determine and provide adequate and appropriate resources
+(human, financial, materials, facilities, and equipment) to implement and maintain the
+pharmaceutical quality system and continually improve its effectiveness.
+(b) Management should ensure that resources are appropriately applied to a specific
+product, process, or site.
+E. Internal Communication (2.5)
+(a) Management should ensure appropriate communication processes are established and
+implemented within the organization.
+(b) Communications processes should ensure the flow of appropriate information between
+all levels of the company.
+(c) Communication processes should ensure the appropriate and timely escalation of
+certain product quality and pharmaceutical quality system issues.
+F. Management Review (2.6)
+(a) Senior management should be responsible for pharmaceutical quality system
+governance through management review to ensure its continuing suitability and
+effectiveness.
+(b) Management should assess the conclusions of periodic reviews of process
+performance and product quality and of the pharmaceutical quality system, as
+described in sections IV (3) and V (4).
+G. Management of Outsourced Activities and Purchased Materials (2.7)
+The pharmaceutical quality system, including the management responsibilities described in this
+section, extends to the control and review of any outsourced activities and quality of purchased
+materials. The pharmaceutical company is ultimately responsible to ensure processes are in place
+to assure the control of outsourced activities and quality of purchased materials. These processes
+should incorporate quality risk management and include:
+(a) Assessing prior to outsourcing operations or selecting material suppliers, the suitability
+and competence of the other party to carry out the activity or provide the material
+7
+using a defined supply chain (e.g., audits, material evaluations, qualification).
+(b) Defining the responsibilities and communication processes for quality-related
+activities of the involved parties. For outsourced activities, this should be included in a
+written agreement between the contract giver and contract acceptor.
+(c) Monitoring and review of the performance of the contract acceptor or the quality of
+the material from the provider, and the identification and implementation of any
+essential improvements.
+(d) Monitoring incoming ingredients and materials to ensure they are from approved
+sources using the agreed supply chain.
+H. Management of Change in Product Ownership (2.8)
+When product ownership changes (e.g., through acquisitions), management should consider the
+complexity of this and ensure:
+(a) The ongoing responsibilities are defined for each company involved
+(b) The essential information is transferred
+IV. CONTINUAL IMPROVEMENT OF PROCESS PERFORMANCE AND
+PRODUCT QUALITY (3)
+This section describes the lifecycle stage goals and the four specific pharmaceutical quality
+system elements that augment regional requirements to achieve the ICH Q10 objectives, as
+defined in section II.D (1.5). It does not restate all regional GMP requirements.
+A. Lifecycle Stage Goals (3.1)
+The goals of each product lifecycle stage are described below.
+1. Pharmaceutical Development (3.1.1)
+The goal of pharmaceutical development activities is to design a product and its manufacturing
+process to consistently deliver the intended performance and meet the needs of patients and
+healthcare professionals, and regulatory authorities and internal customers’ requirements.
+Approaches to pharmaceutical development are described in ICH Q8. The results of exploratory
+and clinical development studies, while outside the scope of this guidance, are inputs to
+pharmaceutical development.
+2. Technology Transfer (3.1.2)
+The goal of technology transfer activities is to transfer product and process knowledge between
+development and manufacturing, and within or between manufacturing sites to achieve product
+8
+realization. This knowledge forms the basis for the manufacturing process, control strategy,
+process validation approach, and ongoing continual improvement.
+3. Commercial Manufacturing (3.1.3)
+The goals of manufacturing activities include achieving product realization, establishing and
+maintaining a state of control, and facilitating continual improvement. The pharmaceutical
+quality system should assure that the desired product quality is routinely met, suitable process
+performance is achieved, the set of controls are appropriate, improvement opportunities are
+identified and evaluated, and the body of knowledge is continually expanded.
+4. Product Discontinuation (3.1.4)
+The goal of product discontinuation activities is to manage the terminal stage of the product
+lifecycle effectively. For product discontinuation, a predefined approach should be used to
+manage activities such as retention of documentation and samples and continued product
+assessment (e.g., complaint handling and stability) and reporting in accordance with regulatory
+requirements.
+B. Pharmaceutical Quality System Elements (3.2)
+The elements described below might be required in part under regional GMP regulations.
+However, the Q10 model’s intent is to enhance these elements to promote the lifecycle approach
+to product quality. These four elements are:
+• Process performance and product quality monitoring system
+• Corrective action and preventive action (CAPA) system
+• Change management system
+• Management review of process performance and product quality
+These elements should be applied in a manner that is appropriate and proportionate to each of the
+product lifecycle stages, recognizing the differences among the stages and the different goals of
+each stage. Throughout the product lifecycle, companies are encouraged to evaluate
+opportunities for innovative approaches to improve product quality.
+Each element is followed by a table of example applications of the element to the stages of the
+pharmaceutical lifecycle.
+1. Process Performance and Product Quality Monitoring System 3.2.1
+Pharmaceutical companies should plan and execute a system for the monitoring of process
+performance and product quality to ensure a state of control is maintained. An effective
+monitoring system provides assurance of the continued capability of processes and controls to
+produce a product of desired quality and to identify areas for continual improvement. The
+process performance and product quality monitoring system should:
+9
+(a) Use quality risk management to establish the control strategy. This can include
+parameters and attributes related to drug substance and drug product materials and
+components, facility and equipment operating conditions, in-process controls, finished
+product specifications, and the associated methods and frequency of monitoring and
+control. The control strategy should facilitate timely feedback/feedforward and
+appropriate corrective action and preventive action.
+(b) Provide the tools for measurement and analysis of parameters and attributes identified
+in the control strategy (e.g., data management and statistical tools).
+(c) Analyze parameters and attributes identified in the control strategy to verify continued
+operation within a state of control.
+(d) Identify sources of variation affecting process performance and product quality for
+potential continual improvement activities to reduce or control variation.
+(e) Include feedback on product quality from both internal and external sources (e.g.,
+complaints, product rejections, nonconformances, recalls, deviations, audits and
+regulatory inspections, and findings).
+(f) Provide knowledge to enhance process understanding, enrich the design space (where
+established), and enable innovative approaches to process validation.
+Table I: Application of Process Performance and Product Quality Monitoring System
+Throughout the Product Lifecycle
+Pharmaceutical
+Development
+Technology
+Transfer
+Commercial
+Manufacturing
+Process and product knowledge generated and process and product monitoring conducted throughout development can be used to establish a control strategy for manufacturing. Monitoring during scale-up activities can provide a preliminary indication of process performance and the successful integration into manufacturing. Knowledge obtained during transfer and
+scale-up activities can
+be useful in further
+developing the control
+strategy.
+A well-defined system for process performance and product quality monitoring should be applied to assure performance within a state of control and to identify improvement
+areas.
+Product
+Discontinuation
+Once manufacturing
+ceases, monitoring
+such as stability testing
+should continue to
+completion of the
+studies. Appropriate
+action on marketed
+product should
+continue to be executed
+according to regional
+regulations.
+2. Corrective Action and Preventive Action (CAPA) System (3.2.2)
+The pharmaceutical company should have a system for implementing corrective actions and
+preventive actions resulting from the investigation of complaints, product rejections,
+nonconformances, recalls, deviations, audits, regulatory inspections and findings, and trends
+from process performance and product quality monitoring. A structured approach to the
+10
+investigation process should be used with the objective of determining the root cause. The level
+of effort, formality, and documentation of the investigation should be commensurate with the
+level of risk, in line with ICH Q9. CAPA methodology should result in product and process
+improvements and enhanced product and process understanding.
+Table II: Application of Corrective Action and Preventive Action System Throughout the
+Product Lifecycle
+Pharmaceutical
+Development
+Technology
+Transfer
+Commercial
+Manufacturing
+Product or process
+variability is explored.
+CAPA methodology is
+useful where corrective
+actions and preventive
+actions are incorporated
+into the iterative design
+and development
+process.
+CAPA can be used as
+an effective system for
+feedback, feedforward,
+and continual
+improvement.
+CAPA should be used,
+and the effectiveness of
+the actions should be
+evaluated.
+Product
+Discontinuation
+CAPA should continue
+after the product is
+discontinued. The
+impact on product
+remaining on the
+market should be
+considered, as well as
+other products that
+might be affected.
+3. Change Management System (3.2.3)
+Innovation, continual improvement, the outputs of process performance and product quality
+monitoring, and CAPA drive change. To evaluate, approve, and implement these changes
+properly, a company should have an effective change management system. There is generally a
+difference in formality of change management processes prior to the initial regulatory
+submission and after submission, where changes to the regulatory filing might be required under
+regional requirements.
+The change management system ensures continual improvement is undertaken in a timely and
+effective manner. It should provide a high degree of assurance there are no unintended
+consequences of the change.
+The change management system should include the following, as appropriate for the stage of the
+lifecycle:
+(a) Quality risk management should be utilized to evaluate proposed changes. The level of
+effort and formality of the evaluation should be commensurate with the level of risk.
+(b) Proposed changes should be evaluated relative to the marketing authorization,
+including design space, where established, and/or current product and process
+understanding. There should be an assessment to determine whether a change to the
+regulatory filing is required under regional requirements. As stated in ICH Q8,
+working within the design space is not considered a change (from a regulatory filing
+perspective). However, from a pharmaceutical quality system standpoint, all changes
+should be evaluated by a company’s change management system.
+(c) Proposed changes should be evaluated by expert teams contributing the appropriate
+11
+Pharmaceutical
+Development
+expertise and knowledge from relevant areas (e.g., Pharmaceutical Development,
+Manufacturing, Quality, Regulatory Affairs, and Medical) to ensure the change is
+technically justified. Prospective evaluation criteria for a proposed change should be
+set.
+(d) After implementation, an evaluation of the change should be undertaken to confirm the
+change objectives were achieved and that there was no deleterious impact on product
+quality.
+Table III: Application of Change Management System Throughout the Product Lifecycle
+Product
+Discontinuation
+Any changes after
+product discontinuation
+should go through an
+appropriate change
+management system.
+Technology
+Transfer
+Commercial
+Manufacturing
+Change is an inherent
+part of the development
+process and should be
+documented; the
+formality of the change
+management process
+should be consistent
+with the stage of
+pharmaceutical
+development.
+The change
+management system
+should provide
+management and
+documentation of
+adjustments made to
+the process during
+technology transfer
+activities.
+A formal change
+management system
+should be in place for
+commercial
+manufacturing.
+Oversight by the
+quality unit should
+provide assurance of
+appropriate science-
+and risk-based
+assessments.
+4. Management Review of Process Performance and Product Quality (3.2.4)
+Management review should provide assurance that process performance and product quality are
+managed over the lifecycle. Depending on the size and complexity of the company, management
+review can be a series of reviews at various levels of management and should include a timely
+and effective communication and escalation process to raise appropriate quality issues to senior
+levels of management for review.
+(a) The management review system should include:
+(1) The results of regulatory inspections and findings, audits and other
+assessments, and commitments made to regulatory authorities
+(2) Periodic quality reviews, that can include:
+(i) Measures of customer satisfaction such as product quality complaints
+and recalls
+(ii) (iii) Conclusions of process performance and product quality monitoring
+The effectiveness of process and product changes including those
+arising from corrective action and preventive actions
+(3) Any follow-up actions from previous management reviews
+(b) The management review system should identify appropriate actions, such as:
+(1) Improvements to manufacturing processes and products
+(2) Provision, training, and/or realignment of resources
+12
+(3) Capture and dissemination of knowledge
+Table IV: Application of Management Review of Process Performance and Product
+Quality Throughout the Product Lifecycle
+Pharmaceutical
+Development
+Technology
+Transfer
+Commercial
+Manufacturing
+Product
+Discontinuation
+Aspects of management
+review can be
+performed to ensure
+adequacy of the product
+and process design.
+Aspects of
+management review
+should be performed to
+ensure the developed
+product and process
+can be manufactured at
+commercial scale.
+Management review
+should be a structured
+system, as described
+above, and should
+support continual
+improvement.
+Management review
+should include such
+items as product
+stability and product
+quality complaints.
+V. CONTINUAL IMPROVEMENT OF THE PHARMACEUTICAL QUALITY
+SYSTEM (4)
+This section describes activities that should be conducted to manage and continually improve the
+pharmaceutical quality system.
+A. Management Review of the Pharmaceutical Quality System (4.1)
+Management should have a formal process for reviewing the pharmaceutical quality system on a
+periodic basis. The review should include:
+(a) Measurement of achievement of pharmaceutical quality system objectives
+(b) Assessment of performance indicators that can be used to monitor the effectiveness of
+processes within the pharmaceutical quality system, such as:
+(1) Complaint, deviation, CAPA and change management processes
+(2) Feedback on outsourced activities
+(3) Self-assessment processes including risk assessments, trending, and audits
+(4) External assessments such as regulatory inspections and findings and customer
+audits
+B. Monitoring of Internal and External Factors That Can Have an Impacton
+the Pharmaceutical Quality System (4.2)
+Factors monitored by management can include:
+(a) Emerging regulations, guidance, and quality issues that can have an impact on the
+Pharmaceutical Quality System
+(b) Innovations that might enhance the pharmaceutical quality system
+(c) Changes in business environment and objectives
+13
+(d) Changes in product ownership
+C. Outcomes of Management Review and Monitoring (4.3)
+The outcome of management review of the pharmaceutical quality system and monitoring of
+internal and external factors can include:
+(a) Improvements to the pharmaceutical quality system and related processes
+(b) Allocation or reallocation of resources and/or personnel training
+(c) Revisions to quality policy and quality objectives
+(d) Documentation and timely and effective communication of the results of the
+management review and actions, including escalation of appropriate issues to senior
+management
+14
+VI. GLOSSARY (5)
+ICH and ISO definitions are used in ICH Q10 where they exist. For the purpose of ICH Q10,
+where the words “requirement”, “requirements,” or “necessary” appear in an ISO definition, they
+do not necessarily reflect a regulatory requirement. The source of the definition is identified in
+parentheses after the definition. Where no appropriate ICH or ISO definition was available, an
+ICH Q10 definition was developed.
+Capability of a Process: Ability of a process to realize a product that will fulfill the
+requirements of that product. The concept of process capability can also be defined in statistical
+terms. (ISO 9000:2005)
+Change Management: A systematic approach to proposing, evaluating, approving,
+implementing, and reviewing changes. (ICH Q10)
+Continual Improvement: Recurring activity to increase the ability to fulfill requirements. (ISO
+9000:2005)
+Control Strategy: A planned set of controls, derived from current product and process
+understanding, that assures process performance and product quality. The controls can include
+parameters and attributes related to drug substance and drug product materials and components,
+facility and equipment operating conditions, in-process controls, finished product specifications,
+and the associated methods and frequency of monitoring and control. (ICH Q10)
+Corrective Action: Action to eliminate the cause of a detected nonconformity or other
+undesirable situation. NOTE: Corrective action is taken to prevent recurrence whereas preventive
+action is taken to prevent occurrence. (ISO 9000:2005)
+Design Space: The multidimensional combination and interaction of input variables (e.g.,
+material attributes) and process parameters that have been demonstrated to provide assurance of
+quality. (ICH Q8)
+Enabler: A tool or process that provides the means to achieve an objective. (ICH Q10)
+Feedback/Feedforward:
+Feedback: The modification or control of a process or system by its results or effects.
+Feedforward: The modification or control of a process using its anticipated results or
+effects. (Oxford Dictionary of English by Oxford University Press, 2003)
+Feedback/feedforward can be applied technically in process control strategies and conceptually
+in quality management. (ICH Q10)
+Innovation: The introduction of new technologies or methodologies. (ICH Q10)
+15
+Knowledge Management: Systematic approach to acquiring, analyzing, storing, and
+disseminating information related to products, manufacturing processes, and components. (ICH
+Q10)
+Outsourced Activities: Activities conducted by a contract acceptor under a written agreement
+with a contract giver. (ICH Q10)
+Performance Indicators: Measurable values used to quantify quality objectives to reflect the
+performance of an organization, process, or system, also known as performance metrics in some
+regions. (ICH Q10)
+Pharmaceutical Quality System (PQS): Management system to direct and control a
+pharmaceutical company with regard to quality. (ICH Q10 based upon ISO 9000:2005)
+Preventive Action: Action to eliminate the cause of a potential nonconformity or other
+undesirable potential situation. NOTE: Preventive action is taken to prevent occurrence whereas
+corrective action is taken to prevent recurrence. (ISO 9000:2005)
+Product Realization: Achievement of a product with the quality attributes appropriate to meet
+the needs of patients, health care professionals, and regulatory authorities (including compliance
+with marketing authorization) and internal customers requirements. (ICH Q10)
+Quality: requirements. (ICH Q9)
+The degree to which a set of inherent properties of a product, system, or process fulfils
+Quality Manual: Document specifying the quality management system of an organization.
+(ISO 9000:2005)
+Quality Objectives: A means to translate the quality policy and strategies into measurable
+activities. (ICH Q10)
+Quality Planning: Part of quality management focused on setting quality objectives and
+specifying necessary operational processes and related resources to fulfill the quality objectives.
+(ISO 9000:2005)
+Quality Policy: Overall intentions and direction of an organization related to quality as formally
+expressed by senior management. (ISO 9000:2005)
+Quality Risk Management: A systematic process for the assessment, control, communication,
+and review of risks to the quality of the drug (medicinal) product across the product lifecycle.
+(ICH Q9)
+Senior Management: Person(s) who direct and control a company or site at the highest levels
+with the authority and responsibility to mobilize resources within the company or site. (ICH Q10
+based in part on ISO 9000:2005)
+16
+State of Control: A condition in which the set of controls consistently provides assurance of
+continued process performance and product quality. (ICH Q10)
+17
+Annex I: Potential Opportunities To Enhance Science- and Risk-Based
+Regulatory Approaches *
+*Note: This annex reflects potential opportunities to enhance regulatory approaches. The actual
+regulatory process will be determined by region.
+Scenario Potential Opportunity
+1. Comply with GMPs Compliance – status quo
+2. Demonstrate effective pharmaceutical quality system, including effective use of quality risk management principles (e.g., ICH Q9 and ICH Q10).
+Opportunity to:
+• increase use of risk-based
+approaches for regulatory
+inspections
+3. Demonstrate product and process
+understanding, including effective
+use of quality risk management
+principles (e.g., ICH Q8 and ICH
+Q9).
+Opportunity to:
+• facilitate science-based
+pharmaceutical quality assessment
+• enable innovative approaches to
+process validation
+• establish real-time release
+mechanisms
+4. Demonstrate effective
+pharmaceutical quality system and
+product and process understanding,
+including the use of quality risk
+management principles (e.g., ICH
+Q8, ICH Q9, and ICH Q10).
+Opportunity to:
+• increase use of risk-based
+approaches for regulatory
+inspections;
+• facilitate science-based
+pharmaceutical quality assessment;
+• optimize science- and risk-based
+postapproval change processes to
+maximize benefits from innovation
+and continual improvement;
+• enable innovative approaches to
+process validation;
+• establish real-time release
+mechanisms.
+18
+Annex 2
+Diagram of the ICH Q10 Pharmaceutical Quality System Model
+ICH Q10 Pharmaceutical Quality System
+Pharmaceutical
+Development
+Technology
+Transfer
+Commercial
+Manufacturing
+Product
+Discontinuation
+Investigational products
+GMP
+PQS
+elements
+Enablers
+Management Responsibilities
+Process Performance & Product Quality Monitoring System
+Corrective Action / Preventive Action (CAPA) System
+Change Management System
+Management Review
+Knowledge Management
+Quality Risk Management
+This diagram illustrates the major features of the ICH Q10 Pharmaceutical Quality System
+(PQS) model. The PQS covers the entire lifecycle of a product including pharmaceutical
+development, technology transfer, commercial manufacturing, and product discontinuation as
+illustrated by the upper portion of the diagram. The PQS augments regional GMPs as illustrated
+in the diagram. The diagram also illustrates that regional GMPs apply to the manufacture of
+investigational products.
+The next horizontal bar illustrates the importance of management responsibilities explained in
+section III (2) to all stages of the product lifecycle. The following horizontal bar lists the PQS
+elements that serve as the major pillars under the PQS model. These elements should be applied
+appropriately and proportionally to each lifecycle stage, recognizing opportunities to identify
+areas for continual improvement.
+The bottom set of horizontal bars illustrates the enablers: knowledge management and quality
+risk management, which are applicable throughout the lifecycle stages. These enablers support
+the PQS goals of achieving product realization, establishing and maintaining a state of control,
+and facilitating continual improvement.
+19

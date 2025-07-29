@@ -1,0 +1,852 @@
+Process Validation
+Compounding Quality Center of Excellence
+Annual Conference
+September 13, 2023
+Neda Hamandi
+Team Lead, Office of Compounding Quality and Compliance
+www.fda.gov
+Disclaimer
+The information in this presentation was obtained from several resources, including but not limited to:
+• eCFR :: 21 CFR Part 211 -- Current Good Manufacturing Practice for Finished Pharmaceuticals
+• FDA Final Guidance for Industry, Process Validation: General Principles and Practices (January 2011)
+• FDA Guidance for Industry PAT – A Framework for Innovative Pharmaceutical Development, Manufacturing, and Quality Assurance
+• FDA Guidance for Industry Q8(R2) Pharmaceutical Development*
+• FDA Guidance for Industry Q9 Quality Risk Management*
+• FDA Guidance for Industry Q10 Pharmaceutical Quality System*
+• FDA Guidance for Industry Quality Systems Approach to Pharmaceutical CGMP regulations
+• Current Good Manufacturing Practice—Guidance for Human Drug Compounding Outsourcing Facilities Under Section 503B of the FD&C
+Act Guidance for Industry | FDA (Draft Guidance)
+• PDA TR60: Process Validation
+* Note: The ICH documents have been adopted by FDA and additional information on ICH documents can be found in FDA guidance for
+industry documents.
+www.fda.gov www.fda.gov
+Agenda
+ Laws, Regulations, and Guidance
+ PV Life Cycle Approach
+ Stages of Process Validation
+Stage 1
+Stage 2
+Stage 3
+ Change Management
+www.fda.gov www.fda.gov
+Process Validation
+PV is defined as the collection and evaluation of data, from the Process
+Design stage through commercial production, which establishes
+scientific evidence that a process is capable of consistently delivering
+quality products.
+PV involves a series of activities taking place over the lifecycle of the
+product and process.
+FDA Final Guidance for Industry, Process Validation: General Principles
+and Practices (January 2011)
+www.fda.gov www.fda.gov
+Laws, Regulations, Guidance, and Best Practices
+Items Descriptions
+Laws (Statutes) The Federal Food, Drug and Cosmetic (FD&C) Act is a federal law (statute) enacted by
+Congress. Federal laws establish the legal framework within which FDA operates. The
+FD&C Act can be found in the United States Code (U.S.C), which contains all general and
+permanent U.S. laws, beginning at 21 U.S.C. 301.
+Regulations FDA develops regulations (e.g., current good manufacturing practice (CGMP)
+requirements) based on the statutes such as the FD&C Act or other laws under which
+FDA operates. FDA regulations are also federal laws, but they are not part of the FD&C
+Act. FDA regulations can be found in Title 21 of the Code of Federal Regulations (CFR).
+Guidance FDA follows the procedures required by its "Good Guidance Practice“ regulation to issue
+FDA guidance. FDA guidance describes the agency’s current thinking on a regulatory
+issue. In general, FDA guidance is not legally binding on the public or FDA.
+Standards and Best Practices Standards are internationally agreed upon principles by experts; best practices are
+procedures or processes shown by research and experience to produce optimal
+results and is established or proposed as a standard suitable for widespread adoption.
+Best practices are recommendations and not legally binding.
+www.fda.gov www.fda.gov
+Process Validation in the Regulations
+§ 211.100 Written procedures; deviations
+a) There shall be written procedures for production and process control
+designed to assure that the drug products have the identity, strength,
+quality, and purity they purport or are represented to possess. Such
+procedures shall include all requirements in this subpart. These written
+procedures, including any changes, shall be drafted, reviewed, and
+approved by the appropriate organizational units and reviewed and
+approved by the quality control unit.
+b) Written production and process control procedures shall be followed in
+the execution of the various production and process control functions
+and shall be documented at the time of performance. Any deviation
+from the written procedures shall be recorded and justified.
+www.fda.gov www.fda.gov
+Stages of Process Validation
+Stage 1
+Process Design
+Evaluate / Confirm
+Stage 2
+Process Qualification
+Changes
+Design of Facilities
+and Qualification of
+Equipment and
+Utilities
+Process
+Performance
+Qualification
+Changes
+Distribute
+Distribute
+Stage 3
+Continued Process Verification
+www.fda.gov www.fda.gov
+General Elements for Successful PV
+1. An integrated team approach to PV, as appropriate to the size and
+scale of your organization, is recommended. Teams are composed of
+experts from a variety of disciplines.
+2. All studies should be planned and conducted according to sound
+scientific principles, appropriately documented, and approved in
+accordance with the established procedure appropriate for the stage
+of the lifecycle.
+3. The degree of control for process operations and process
+parameters should be commensurate with their risk of impacting the
+desired product quality attributes or in-process specifications.
+www.fda.gov www.fda.gov
+Lifecycle Approach to Process Validation
+Stages Parts
+Stage 1
+Process Design
+Part I: Building and Capturing Process
+Knowledge and Understanding
+Part II: Establishing a Strategy for Process Control
+Stage 2
+Process Qualification
+Part I: Design of a Facility and Qualification of
+Utilities and Equipment
+Part II: Process Performance Qualification
+Stage 3
+Continued Process Verification (CPV)
+Initial CPV Planning
+Short Term CPV
+Long Term CPV
+www.fda.gov www.fda.gov
+Lifecycle Approach to Process Validation:
+Stage 1, Process Design
+• Part I: Building and Capturing Process Knowledge and
+Understanding
+• Part II: Establishing a Strategy for Process Control
+www.fda.gov www.fda.gov
+Stage 1, Process Design – Overview
+The goal of this stage is to design a process suitable for commercial
+production that consistently delivers a product that meets its pre-
+defined quality attributes. Process Design defines the commercial
+production process that will be documented in the master production
+and control records.
+It is important to recognize that quality cannot be tested into products
+(i.e., quality is built in by design).
+www.fda.gov www.fda.gov
+Lifecycle Approach to Process Validation
+Stage 1, Process Design
+Part I: Building and Capturing Process Knowledge and Understanding
+www.fda.gov www.fda.gov
+Part I of Stage 1:
+Building and Capturing Process Knowledge and Understanding
+ Establish Quality Target Product Profile (QTPP), Critical Quality
+Attributes (CQA), Critical Process Parameters (CPP), Critical
+Material Attributes (CMA)
+ Perform Quality Risk Management
+ Define the Manufacturing Process
+ Perform Process Characterization
+www.fda.gov www.fda.gov
+Establish QTPP, CQA, CPP, CMA
+Quality Target Product Profile, QTPP, is a summary of the quality characteristics of a
+finished drug product (like purity, sterility, stability, route of administration, dosage form,
+and strength) that ideally will be achieved to ensure the desired quality and strength of the
+drug product.
+A Critical Quality Attribute, CQA, is a physical, chemical, biological, or microbiological
+property or characteristic that must be within an appropriate limit, range, or distribution
+to ensure the desired product quality (ICH Guidance for Industry Q8(R2) Pharmaceutical
+Development).
+A Critical Process Parameter, CPP, is a process parameter whose variability has an impact
+on a CQA, and therefore should be monitored or controlled to ensure the process
+produces the desired quality (ICH Guidance for Industry Q8(R2) Pharmaceutical
+Development).
+Critical Materials: Raw materials (e.g., Bulk Drug Substance (BDS) or excipients), finished
+product containers, and closures are critical materials. Specifications must be established
+for critical materials. These specifications are referred to as Critical Material Attributes
+(CMAs).
+www.fda.gov www.fda.gov
+Relationship Between CMAs, CPPs, and CQAs
+CPPs
+CMAs CQAs
+Manufacturing Unit
+Operation
+Input Materials Output Materials
+or Product
+www.fda.gov www.fda.gov
+Part I of Stage 1:
+Building and Capturing Process Knowledge and Understanding
+(1 of 3)
+ Establish QTPP, CQA, CPP, CMA
+Perform Quality Risk Management
+ Define the Manufacturing Process
+ Perform Process Characterization
+www.fda.gov www.fda.gov
+Quality Risk Management (QRM)
+ QRM is a systematic process for the assessment, control, communication, and review of risks to
+the quality of the drug product across the product lifecycle. The application of risk management
+principles and approaches is instrumental to effective decision-making in selecting the correct
+CQAs and CPPs (PDA TR60).
+ Risk assessment should occur early in the Design Stage and consciously be assessed, controlled, and communicated throughout the lifecycle of the finished drug product.
+ With a lifecycle approach to PV that employs risk-based decision-making throughout the
+lifecycle, the perception of criticality as a continuum rather than a binary state is useful.
+ All attributes and parameters should be evaluated in terms of their roles in the process and
+impact on the product or in-process material and reevaluated as new information becomes
+available.
+ The degree of control over those attributes or parameters should be commensurate with their
+risk to the process and process output. In other words, a higher degree of control is appropriate
+for attributes or parameters that pose a higher risk to the process and process output.
+Higher
+Risk
+Higher Degree of
+Control
+www.fda.gov www.fda.gov
+ICH Q9 Risk Management Framework*
+Initiate QRM Process
+Risk Assessment
+Hazard Identification
+Risk Analysis
+Risk Communication
+Risk Evaluation
+Unacceptable
+Risk Control
+Risk Reduction
+Risk Acceptance
+Risk Management Tools
+Output / Result of the QRM Process
+Risk Review
+Review Events
+*Figure 1: Overview of a typical quality risk management process from Q9(R1) Guidance
+www.fda.gov www.fda.gov
+Part I of Stage 1:
+Building and Capturing Process Knowledge and Understanding
+(3 of 3)
+ Establish QTPP, CQA, CPP, CMA
+ Perform Quality Risk Management
+Define the Manufacturing Process
+ Perform Process Characterization
+www.fda.gov www.fda.gov
+Define the Manufacturing Process
+Level of Detail
+Process requirements, including raw materials and order of operations
+Set points and ranges for the process parameters
+Identification and quantity of all material flows (e.g., additions, wastes, product streams)
+Testing, sampling, and in-process controls (IPCs)
+Hold times and hold conditions for product and additional solutions
+Materials reconciliation
+Estimated step yields and durations
+Sizing for equipment, including such items as mixers or filtration units (e.g., filter surface area, filter volume, and pore size)
+Specific identification (i.e., manufacturer, part number) for manufacturing (e.g., filters) and packaging components (e.g., vials, stoppers)
+Other information necessary to successfully reproduce the process
+ Actual and theoretical yields
+www.fda.gov www.fda.gov
+Part I of Stage 1:
+Building and Capturing Process Knowledge and Understanding
+(2 of 3)
+ Establish QTPP, CQA, CPP, CMA
+ Perform Quality Risk Management
+ Define the Manufacturing Process
+Perform Process Characterization
+www.fda.gov www.fda.gov
+Process Characterization
+ Process Characterization is a set of documented studies in which operational
+parameters are purposely varied to determine their effect on product quality
+attributes and process performance.
+ The output of process design and characterization is a strategy for process control, which is Part II of Stage I of Process Design.
+ Process design and characterization should be conducted in accordance with
+sound scientific methods and principles, including good documentation
+practices (GDP).
+ Process information available from literature sources (e.g., compounding
+formulations or recipes, United States Pharmacopeia (USP) monographs) or
+similar production processes already used can be leveraged to design and
+characterize production processes for new products.
+www.fda.gov www.fda.gov
+Lifecycle Approach to Process Validation (1 of 3)
+Part II: Establishing a Strategy for Process Control
+www.fda.gov www.fda.gov
+Stage 1 Part II: Establishing a Strategy for Process Control
+Categorization of Parameters and Establishment of Control
+Strategy
+ System Classifications / Boundaries (Direct vs. Indirect Impact
+Systems Based on CQAs and CPPs)
+www.fda.gov www.fda.gov
+Process Control Strategy
+A process control strategy is a planned set of controls, derived from
+product and process understanding, which ensures process
+performance and product quality.
+www.fda.gov www.fda.gov
+Elements of a Process Control Strategy
+A robust process control strategy encompasses all unit operations in the process. All product quality
+attributes and process parameters, regardless of whether they are classified as critical, are included
+in a comprehensive process control strategy, which includes the elements detailed below:
+Facility
+Personnel
+Raw Material Controls
+Process Parameters (Set Points and Ranges)
+Process Monitoring (Data Review, Sampling, Testing)
+In-Process and Release Specifications
+Processing Times
+Hold Times
+Containers and Closures Control
+www.fda.gov www.fda.gov
+Process Parameters (Set Points and Ranges)
+Proven Acceptable Range (PAR)
+Normal Operating Range (NOR)
+Set Point
+Observation
+Alert Limit Observation
+Discrepancy
+Discrepancy
+Action Limit
+www.fda.gov www.fda.gov
+Stage 1, Part II: Establishing a Strategy for Process Control
+ Categorization of Parameters and Establishment of Control Strategy
+ System Classifications / Boundaries (Direct vs. Indirect Impact
+Systems Based on CQAs and CPPs)
+www.fda.gov www.fda.gov
+System Classification: Direct and Indirect Impact Systems
+Direct Impact Systems
+Indirect Impact Systems
+• Directly impact CQAs and / or CPPs, and therefore have direct
+impact on process and product quality.MP control.
+• Should be commissioned and qualified.
+Direct Impact System operations are often recorded in batch
+records such as filling equipment and sterilization equipment (e.g.,
+blenders, mixers, filters, autoclaves, depyrogenation ovens).
+• May be referred to as indirect impact, no impact, process non-
+critical, etc.
+• Systems that do not directly impact any CPPs and CQAs and,
+therefore, have no direct relationship to process and product
+quality, and
+• Require less scrutiny.
+• Will only be commissioned.
+Based on need, some processes may be commissioned, but not
+qualified. For example, heating, ventilation, and air conditioning
+(HVAC) for the office space.
+Their data will not be recorded in the batch / production record;
+however, a catastrophic failure on their part could impact the
+Direct Impact Systems they support.
+System Boundaries define at which point the indirect systems end and the direct systems begin.
+www.fda.gov
+Computer and Electronic Systems
+Computerized and electronic systems used for production applications are
+qualified per 21 CFR part 11 and Data Integrity and Compliance with Drug CGMP
+Questions and Answers Final Guidance for Industry and EU Annex 11.
+Qualification criteria include, but are not limited to:
+• Specificity
+• Accuracy
+• Data management
+• Sensitivity
+• Communication
+• Electronic integration requirements of information technology compatibility
+www.fda.gov www.fda.gov
+Summary of Stage 1 Process Design
+The representative list below summarizes the information needed to transition from Stage 1 (Process Design) to Stage 2 (Process Qualification) in the PV lifecycle.
+• Quality Target Product Profile
+(QTPP)
+• Critical Quality Attributes (CQAs)
+• Quality Risk Assessment
+• Critical Process Parameters
+(CPPs)
+• Manufacturing Process Design
+• Analytical Methods
+• Process Characterization
+• Process Validation Master Plan
+• Process Control Strategy
+• Manufacturing Technology
+• Documentation Development
+Process
+Validation
+Process Improvement / Optimization
+Updated
+Master Batch Record
+Master Batch Record
+www.fda.gov
+Change Control
+Lifecycle Approach to Process Validation
+Stage 2: Process Qualification
+• Part I: Design of a Facility and Qualification of Utilities and
+Equipment
+• Part II: Process Performance Qualification
+www.fda.gov www.fda.gov
+Stage 2, Part I
+Design of a Facility and Qualification of Utilities and Equipment
+ Commissioning, Factory Acceptance Test (FAT), and Site Acceptance Test (SAT)
+ Qualification
+(PQ)
+ Installation Qualification (IQ), Operation Qualification (OQ), and Performance Qualification
+www.fda.gov www.fda.gov
+Understanding and Leveraging Commissioning,
+FAT, and SAT
+Commissioning
+Commissioning verifies the facility, utility, and equipment (the “system”) are installed properly, function
+properly, have the proper utilities connected correctly, (e.g., are the fans blowing in the right direction?), are
+accessible (e.g., can I get to sampling points, or can I get the HEPA filter changed if it is installed too close to the
+wall?), and thus was successfully turned over to the end user. Commissioning, when executed properly, is
+important to support the success of the subsequent qualification activities.
+FAT
+FAT provides documented evidence a piece of equipment or system has been adequately tested at the
+manufacturer’s facility and performs to the end user’s expectations prior to delivery to the end user. FAT is not
+mentioned or discussed in the FDA PV guidance, but it provides an opportunity to head off problems by
+finding any issues while it is still in the factory where it can be corrected more easily.
+SAT
+SAT provides documented evidence a piece of equipment or system has not been affected in the
+transportation and has been adequately tested at the end user’s facility and performs to the end user’s
+expectations. SAT is not mentioned or discussed in the FDA PV guidance, but it provides an opportunity to
+arrange for either factory representatives or supplier service personnel to participate in the first start-up and
+tests, and for the receiving site’s personnel to ask them questions.
+www.fda.gov www.fda.gov
+Stage 2, Part I : Design of a Facility and Qualification of
+Utilities and Equipment
+ Commissioning, Factory Acceptance Test (FAT), and Site Acceptance Test (SAT)
+ Qualification
+ Installation Qualification (IQ), Operation Qualification (OQ), and Performance
+Qualification (PQ)
+www.fda.gov www.fda.gov
+Qualification (IQ / OQ / PQ) of Equipment and Systems
+Installation Qualification (IQ)
+IQ provides documented verification all aspects of a facility, utility, or equipment that can affect
+product quality (i.e., critical) adhere to approved specifications as defined in the URS (e.g., materials
+of construction) and are correctly installed.
+Operational Qualification (OQ)
+OQ is the documented verification the facilities, systems, and equipment, as installed or modified,
+operate as intended throughout the anticipated operating ranges.
+Performance Qualification (PQ)
+PQ is the documented evidence that provides a high degree of assurance the equipment and
+systems function accurately and consistently according to predetermined specifications within the
+operating ranges defined in Stage 1 in its operating environment.
+www.fda.gov www.fda.gov
+Qualification Throughout the Lifecycle
+After the successful qualification of the equipment and systems in the manufacturing facility, it is important to ensure
+the equipment and systems are maintained in a state of control and operate in a manner consistent with their qualified
+state throughout the product lifecycle.
+This is done by:
+Preventive Maintenance
+Maintenance is performed routinely according to a defined schedule (e.g., the certification of HEPA filters every six
+months).
+Predictive Maintenance
+Individual(s) assigned the responsibility to maintain equipment take advantage of available information, forecast
+possible failures, and take maintenance action before a failure occurs.
+Calibration
+A calibration program assures data collected from instruments and devices are both precise and accurate within the
+acceptable range. Periodic and annual calibration should be incorporated into the calibration program (may also be part
+of a preventive maintenance program).
+Requalification
+Requalification may be required whenever qualified systems have been changed or modified. The extent and impact of
+the change must be evaluated for their impact on the original qualification. Requalification is also routinely performed
+on a periodic basis to ensure that systems continue to operate in their qualified state throughout the lifecycle of the
+product. How often a system will need to be requalified will depend on the criticality of that system.
+www.fda.gov www.fda.gov
+Summary of PV Stage 2: Part I
+The typical system qualification sequence is displayed in the figure below.
+Engineering
+Installation
+Start-up
+System
+Qualification
+/ Verification
+Step 1: Transfer Process Design requirements and CPP information
+from Stage 1 Process Design
+Step 2: Review to confirm system design (i.e., URS) is aligned with
+Design Perform system risk or
+process requirements
+impact assessment to
+determine which systems
+Construction,
+Fabrication,
+Installation
+Step 3: Perform FAT and SAT to confirm the system meets design
+and system elements are
+specification
+critical to product quality
+Commissioning
+Testing
+Step 4: Perform commissioning studies to confirm systems are in
+reliable working order
+Step 5: Evaluate information obtained during commissioning to
+determine what can be leveraged during qualification
+Step 6: Perform qualification studies (IQ / OQ / PQ) to ensure that
+systems are capable of meeting process requirements
+Develop Qualification
+Protocol, including test
+functions and acceptance
+criteria, based on process
+requirements and system
+capabilities
+Step 7: Evaluate qualification results and release system for PPQ
+www.fda.gov www.fda.gov
+Lifecycle Approach to Process Validation (2 of 3)
+Stage 2: Process Qualification
+Part II: Process Performance Qualification
+www.fda.gov www.fda.gov
+Process Performance Qualification, PPQ
+PPQ combines the qualified facility, utilities, and equipment and trained personnel with the
+commercial manufacturing process, control procedures, and components to produce the PPQ
+batches. The goal of PPQ is to establish scientific evidence that the commercial production process
+is reproducible and will consistently deliver quality products.
+www.fda.gov www.fda.gov
+PV Stage 2, Part II: Process Performance Qualification, PPQ
+Prepare for PPQ
+Readiness
+Assessment
+Prepare for PPQ by reviewing the status of activities required to be completed prior
+to commencement of the PPQ batches.
+Develop Strategy and
+Approach
+Design PPQ based on multiple considerations specific to the manufacturing
+process and determine the number of manufacturing runs and sample plan.
+Design of PPQ
+Compile PPQ
+Protocol
+Document all of the necessary elements in the PPQ protocol, including pre-
+determined acceptance criteria.
+Execute the Process
+Execute PPQ
+Protocol
+Perform the procedures as outlined in the PPQ protocol, including manufacturing
+steps and testing of analytical samples.
+Analyze PPQ Results
+Against Acceptance
+Criteria
+Analyze Results and
+Compile PPQ Report
+Analyze the data obtained during PPQ following statistical methodology and
+acceptance criteria from the PPQ protocol and address deviations and failures.
+www.fda.gov www.fda.gov
+Analyze PPQ Results Against Acceptance Criteria
+Sections of the PPQ Report
+The PPQ report will typically include the following sections:
+• Summary
+• Deviations
+• Methods and Materials
+• Conclusions
+• PPQ Results
+• Approvals
+www.fda.gov www.fda.gov
+Aseptic Process Simulation (Media Fills) Where Does It Fit?
+• An aseptic process simulation (APS) is designed to evaluate whether processes may pose
+a risk to product sterility are adequately controlled.
+• The terms “aseptic process simulation” and “media fills” are often used interchangeably.
+• APS does not equal process validation; it is a component of process validation.
+• APS is narrower in focus than PV in that the goal is primarily microbiological.
+qualification – can product be made that is free from microbial contamination.
+• APS can be done before or after PPQ. There are pros and cons to both.
+• A media fill has to be completed before a firm releases any aseptically filled products.
+• The FDA Compounding Quality Center of Excellence offers a free, self-guided on-line
+course available here: Aseptic Process Simulations.
+www.fda.gov www.fda.gov
+Lifecycle Approach to Process Validation (3 of 3)
+Stage 3: Continued Process Verification
+• Initial CPV Planning
+• Short Term CPV
+• Long Term CPV
+www.fda.gov www.fda.gov
+Stage 3: Continued Process Verification (CPV)
+CPV provides ongoing assurance that during routine production the process
+remains in a state of control.
+Source: FDA Final Guidance for Industry, Process Validation: General Principles and Practices (January 2011)
+www.fda.gov www.fda.gov
+Key Elements of CPV
+• Collect data (e.g., process parameters, test results)
+• Analyze and review data
+• Review trends and evaluate process performance
+• Identify problems and determine whether action must be taken to
+correct undesirable variation in the production, process, deviations,
+or failures
+• Ensure process remains in a state of control throughout the life cycle
+• Incorporate process improvements
+www.fda.gov www.fda.gov
+CPV Overview
+Initial CPV Planning
+Establishes:
+• Data to include for review and analysis
+(e.g., process parameters, testing
+results, batch yields)
+• Elements to measure (e.g., critical
+process parameters (CPPs), in-process
+controls (IPCs), Critical Quality
+Attributes (CQAs), yields)
+• Sampling plans
+• Data collection and reporting
+• Reporting frequency
+• Data analysis methods (e.g., statistical
+tools, trending methods)
+• Action plan to respond to out-of-trend
+results or observed variation
+www.fda.gov
+Overview of CPV (Stage 3)
+Short-term CPV 6
+Includes:
+• Data are collected and reported per
+the plan.
+• Control limits, for any of the
+parameters or elements defined in
+the CPV plan, are created and
+summarized in a short-term CPV
+report.
+• A report and long-term CPV
+planning are outputs.
+Long-term CPV 7
+Includes:
+• Parameters and product attributes
+(e.g., CQAs, CPPs) are monitored
+and trended.
+• Reactions to trends are
+commensurate with the risk
+established throughout the PV
+process.
+• Periodic reporting based upon
+frequency of manufacturing
+Quote
+www.fda.gov www.fda.gov
+Data Collection Plans and Statistical
+Procedures in the PV Lifecyle
+A statistician (or person with
+adequate training in statistical
+process control (SPC))
+techniques) is recommended
+to develop the data collection
+plan and statistical methods /
+procedures used in measuring
+and evaluating process stability
+and process capability.
+Commonly Used Statistical
+Procedures Include:
+• Run Charts
+• Individual Value Plots
+• Tolerance Intervals (TIs)
+• Variance Components
+• SPC Charts (I Charts) and
+Capability Analysis
+www.fda.gov
+Examples of Data Collection Tools: Run Charts
+A run chart is used to study collected data for trends or patterns over a specific
+time period.
+A run chart will help you:
+• Monitor data over time to detect trends,
+shifts, or cycles
+• Compare / measure data before and after
+the implementation of a change or corrective
+action to measure impact
+• Focus attention on important changes (i.e.,
+not normal variation)
+• Track useful information for predicting
+trends.
+X-axis: Units of time by which measurements are made
+Y-axis: Attribute being measured
+Centerline: Mean (or average)
+www.fda.gov
+Examples of Data Collection Tools: Individual Value Plot
+An individual value plot displays the individual values in each sample to assess
+and compare sample data distributions.
+Each circle represents one reported value,
+making it easy to spot outliers and see
+distribution spread.
+For example: Batch to batch and sample
+positions within batch.
+X-axis: Inter and intra batches being measured
+Y-axis: Attribute being measured
+www.fda.gov
+Process Capability
+Ability of a process to produce a product that will fulfill the requirements of
+that product. A capability study is used to determine whether a process is
+capable, which involves collecting samples over a period of time and
+analyzing the samples. There are both complex and simple methods to
+assess capability.
+www.fda.gov www.fda.gov
+Assessing Process Capability in the
+PV Lifecycle
+Example 1 Example 2 Example 3
+Example 1: Example 2:
+Example 3:
+% %
+Specification = 90-110%
+www.fda.gov www.fda.gov
+Control Charts - Examples
+Control Chart
+Strength Values of 30 Lots of Product A Over 1 Year
+120.00
+115.00
+US
+110.00
+105.00
+UCL
+100.00
+Strength
+95.00
+LCL
+90.00
+LS
+85.00
+80.00
+0 5 10 15 20 25 30 35
+www.fda.gov www.fda.gov
+Control Chart
+Strength Values of 30 Lots of Product B Over 1 Year
+120.00
+115.00
+UCL
+US
+110.00
+105.00
+100.00
+Strength
+95.00
+90.00
+LS
+85.00
+80.00
+LCL
+0 5 10 15 20 25 30 35
+PV and Change Management
+www.fda.gov www.fda.gov
+PV and Change Management (cont.)
+ Change management is a systematic approach to proposing, evaluating, approving, implementing, and reviewing changes.*
+ Before changes are implemented, proposed changes should be evaluated by teams composed of people with a diverse background, including ones familiar with the change at issue (e.g., manufacturing, quality) using pre-established
+criteria.
+ A description of the planned change, a well justified rationale for the change, an
+implementation plan, and QU approval must be documented before
+implementation.
+ Depending on how the proposed change might affect product quality and safety,
+additional process design and process qualification activities may be warranted.
+ Quality risk management (QRM) should be utilized to evaluate proposed
+changes.
+*Source: ICH Guidance for Industry Q10 Pharmaceutical Quality System
+www.fda.gov www.fda.gov
+PV Diagram
+Stage 1: Process Design Stage 2: Process Qualification Stage 3: Continued
+Process Verification
+Design
+PPQ Protocol Design,
+Process Design Continued Process
+Process Qualification
+Review
+Execution, and Report
+Verification
+Part II: Establishing a
+Strategy for Process Control
+Part II: Process
+Performance Qualification
+Part I: Building and Capturing
+Process Knowledge and
+Understanding
+Part I: Design of a Facility and
+Qualification of Utilities and
+Equipment
+Initial CPV
+Planning
+Establish QTPP,
+CQA, CPP
+Categorization of
+Parameters and
+Establishment of Control
+Strategy
+Commissioning
+Prepare for PPQ
+Perform Quality
+Risk Assessment
+FAT / SAT
+Define the
+Manufacturing
+Process
+System Classifications /
+Boundaries (Direct vs.
+Indirect Impact Systems
+Based on CQAs and
+CPPs)
+Qualification
+Objectives to be Achieved
+Short-Term CPV
+Design of PPQ
+Execute the
+Process
+(PPQ Protocol)
+Long-Term CPV
+Perform Process
+Characterization
+IQ / OQ / PQ
+PVMP and URS
+Analyze PPQ
+Results Against
+Acceptance
+Criteria
+Manage Process
+Changes
+Risk Management
+Change Management
+Knowledge Management
+www.fda.gov www.fda.gov
+Regulatory Requirements
+Regulatory requirements contained in the CFR include:
+Regulatory Requirements Written Procedures; Deviations Sampling and Testing of In-process Materials and Drug Products Adequate Facilities, Maintenance, and Calibration Control of Microbial Contamination Annual Product Review www.fda.gov www.fda.gov
+CFR
+21 CFR 211.100, and
+211.192
+21 CFR 211.110
+21 CFR 211.42(a), 211.63,
+and 211.68(a)
+21 CFR 211.113
+21 CFR 211.180(e)
+ICH Guidance
+ICH is the International Council for Harmonization of Technical Requirements for Pharmaceuticals for Human
+Use. ICH is a joint effort to align regulations in what has become a global environment. The following ICH
+documents have been adopted in published FDA guidance documents.
+• ICH Q8(R2) Pharmaceutical Development
+This guidance document on pharmaceutical development defines procedures for linking product and process
+development planning to the final commercial process control strategy and quality system.
+• ICH Q9 Quality Risk Management
+This guidance document describes the use of a risk-based approach to pharmaceutical development and
+manufacturing quality. These approaches identify and prioritize those process parameters and product quality
+attributes with the greatest potential to affect product quality.
+• ICH Q10 Pharmaceutical Quality System
+This guidance document is intended to assist pharmaceutical manufacturers by describing a model for an
+effective quality management system for the pharmaceutical industry, referred to as the Pharmaceutical
+Quality System (PQS). To achieve the goals outlined in this guidance document, it is essential to integrate the
+Process Design into the quality system.
+www.fda.gov www.fda.gov
+Knowledge Management
+Knowledge management is a “systematic approach to acquiring,
+analyzing, storing, and disseminating information related to
+products, manufacturing processes, and components.”
+Source: ICH Guidance for Industry Q10 Pharmaceutical Quality System
+Why Is It Important?
+Knowledge management supports how knowledge is acquired, analyzed,
+stored, disseminated, and applied across the PV lifecycle. Information
+should be consistently maintained, either manually or automatically,
+depending on the system used by each firm.
+www.fda.gov www.fda.gov
+Introduction to Legacy Products
+Legacy products are existing products currently on the market for which
+some current PV lifecycle concepts may not have been formally established
+and/or implemented.
+Manufacturers of legacy products can take advantage of the knowledge
+gained from the original process development and qualification work to
+develop a pathway for validation.
+www.fda.gov www.fda.gov
+Pathway for Validating Legacy Products
+Gap Analysis
+A gap analysis helps to reveal
+what elements are
+missing (e.g., CQAs,
+CPPs, control strategy,
+qualification of a piece of
+equipment) and needed to
+complete PV.
+Data Analysis and Risk
+Assessment
+Data analysis should show the
+production process was robust
+and reliably operating in a state
+of control.
+The extent of the validation
+activities to perform will be
+commensurate with the overall
+risk as determined based on
+the gap analysis and risk
+assessment.
+www.fda.gov
+Stage 3: CPV
+Questions?
+www.fda.gov www.fda.gov
+The End

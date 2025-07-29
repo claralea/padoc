@@ -1,0 +1,127 @@
+EQUIP Scenarios/ Study Designs
+Scenario 1: Small Batch Production for Immediate Use:
+Situation: A mobile manufacturing unit produces multiple small batches (e.g., 100
+doses) of an injectable drug for immediate use in a hospital setting during a public
+health emergency.
+Challenge: Traditional stability testing and reserve sample requirements (21 CFR
+211.170) are not feasible due to the small batch size and immediate use.
+Study: Stability of Small Batches of Injectable Drugs in Mobile Manufacturing Units
+Objective: To determine the stability of small batches (e.g., 100 doses) of injectable
+drugs produced in mobile manufacturing units for immediate use.
+Design:
+• A mobile manufacturing unit will produce multiple small batches of an injectable
+drug.
+• Samples from each batch will be stored under various conditions (e.g., room
+temperature, refrigerated, frozen).
+• Samples will be analyzed at regular intervals (e.g., 0, 1, 2, 4, 8, 12 hours) for key
+quality attributes (e.g., potency, purity, sterility).
+• The impact of manufacturing moves on product stability will be evaluated by
+comparing the stability of samples from batches produced before and after a
+move.
+Data Analysis:
+• Stability data will be analyzed to determine the shelf life of the drug product
+under different storage conditions.
+• The effect of manufacturing moves on product stability will be assessed.
+• The data will be used to develop alternative stability data requirements for
+immediate use products.
+Expected Outcome:
+• The study will provide data to support alternative stability data requirements for
+immediate use products produced in mobile manufacturing units.
+• The study will also help to assess the impact of manufacturing moves on product
+stability.
+Scenario 2: Relocation of a Mobile Manufacturing Unit
+Situation: A mobile manufacturing unit, previously qualified and operating at one
+location, is relocated to a new site (e.g., from one hospital to another).
+Challenge: Ensuring continued compliance with cGMP requirements (21 CFR 211)
+after relocation, particularly regarding building and facilities (Subpart C).
+Study: Re-qualification of Mobile Manufacturing Units after Relocation
+Objective: To determine the re-qualification steps necessary after relocation of a mobile
+manufacturing unit.
+Design:
+• A mobile manufacturing unit will be relocated to a new site.
+• The unit will be re-qualified according to a pre-defined protocol.
+• The protocol will include steps to verify the integrity of the unit's structure,
+equipment, and systems.
+• Environmental monitoring will be conducted to assess the impact of the new
+location on the unit's environment.
+Data Analysis:
+• Re-qualification data will be analyzed to determine the effectiveness of the re-
+qualification protocol.
+• The impact of the new location on the unit's environment will be assessed.
+• The data will be used to develop re-qualification requirements for mobile
+manufacturing units.
+Expected Outcome:
+• The study will provide data to support re-qualification requirements for mobile
+manufacturing units.
+• The study will also help to assess the impact of relocation on the unit's
+environment.
+Scenario 3: Rapid Changeover between Different Drug Products
+Situation: A mobile manufacturing unit needs to quickly switch production from one
+drug product to another to address changing needs during a public health emergency.
+Challenge: Meeting cGMP requirements for cleaning validation and preventing cross-
+contamination between products.
+Study: Cleaning Validation for Rapid Changeover between Different Drug Products in
+Mobile Manufacturing Units
+Objective: To determine the cleaning validation data required for rapid changeover
+between different drug products in mobile manufacturing units.
+Design:
+• A mobile manufacturing unit will be used to produce multiple drug products.
+• The unit will be cleaned between each product changeover.
+• Cleaning effectiveness will be assessed using various methods (e.g., visual
+inspection, swabbing, rinse sampling).
+• The impact of cleaning on product quality will be evaluated.
+Data Analysis:
+• Cleaning validation data will be analyzed to determine the effectiveness of
+cleaning procedures.
+• The impact of cleaning on product quality will be assessed.
+• The data will be used to develop cleaning validation requirements for rapid
+changeover in mobile manufacturing units.
+Expected Outcome:
+• The study will provide data to support cleaning validation requirements for rapid
+changeover in mobile manufacturing units.
+• The study will also help to assess the impact of cleaning on product quality.
+Scenario 4: Operator Training for On-Site Personnel
+Situation: On-site personnel (e.g., hospital staff) with limited formal training in
+pharmaceutical manufacturing will operate a mobile manufacturing unit.
+Challenge: Meeting cGMP training requirements (21 CFR 211) for these personnel.
+Study: Operator Training for On-Site Personnel in Mobile Manufacturing Units
+Objective: To determine the type of training program appropriate for on-site personnel
+(e.g., hospital staff) with limited formal training in pharmaceutical manufacturing.
+Design:
+• A training program will be developed for on-site personnel.
+• The program will include both theoretical and practical components.
+• The effectiveness of the training program will be evaluated through assessments
+and performance monitoring.
+Data Analysis:
+• Training data will be analyzed to determine the effectiveness of the training
+program.
+• The impact of training on operator performance will be assessed.
+• The data will be used to develop training requirements for on-site personnel in
+mobile manufacturing units.
+Expected Outcome:
+• The study will provide data to support training requirements for on-site personnel
+in mobile manufacturing units.
+• The study will also help to assess the impact of training on operator performance.
+Scenario 5: Master Production and Control Record (MPCR)
+Management
+Situation: EQUIP-A Pharma utilizes multiple mobile manufacturing units, each capable
+of producing multiple drug products.
+Challenge: Ensuring clarity and compliance in MPCR management.
+Study: MPCR Management in Mobile Manufacturing Units
+Objective: To determine the appropriate approach for MPCR management in mobile
+manufacturing units.
+Design:
+• Different approaches to MPCR management will be evaluated (e.g., unit-specific
+MPCRs, product-specific MPCRs).
+• The effectiveness of each approach will be assessed in terms of clarity,
+compliance, and efficiency.
+Data Analysis:
+• MPCR management data will be analyzed to determine the effectiveness of
+different approaches.
+• The data will be used to develop MPCR management requirements for mobile
+manufacturing units.
+Expected Outcome:
+• The study will provide data to support MPCR management requirements for
+mobile manufacturing units.
+• The study will also help to identify the most effective approach for MPCR
+management in this setting.

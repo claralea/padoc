@@ -1,0 +1,75 @@
+Comprehensive GxP Documenta5on List
+for 21 CFR Part 211 Compliance
+This document provides a comprehensive list of GxP documents required for an aseptic
+pharmaceutical manufacturing facility operating in the state of Texas, in compliance with
+FDA's 21 CFR Part 211. The list encompasses validation lifecycle documentation, quality
+system documents, laboratory control system documents, IT and data integrity records,
+internal audit documentation, periodic reviews, and trending practices.
+1. Valida)on Lifecycle Documenta)on
+• Validation Master Plan (VMP)
+• Process Validation Protocols and Reports (IQ/OQ/PQ)
+• Cleaning Validation Master Plan and Reports
+• Sterilization Validation (e.g., Autoclave, VHP, Gamma, E-beam)
+• Media Fill Study Protocols and Reports
+• Container Closure Integrity Testing (CCIT) Validation
+• Computer System Validation (CSV) Documentation including URS, FRS, IQ/OQ/PQ
+• Traceability Matrix and Risk Assessments
+2. Quality System Documenta)on
+• Quality Manual
+• Standard Operating Procedures (SOPs)
+• Document Control Procedures
+• Change Control Records
+• Deviation and Non-Conformance Reports
+• Corrective and Preventive Actions (CAPA)
+• Management Review Meeting Minutes
+• Quality Agreements with Vendors and CMOs
+• Batch Release and Disposition Records
+3. Laboratory Control System Documenta)on
+• Laboratory SOPs
+• Analytical Method Validation Protocols and Reports
+• Certificates of Analysis (CoAs)
+• Stability Study Protocols and Data
+• Out-of-Specification (OOS) Investigation Reports
+• Environmental and Microbial Monitoring Data
+• Equipment Calibration and Maintenance Logs
+• Reference Standard Documentation
+4. IT & Data Integrity Documenta)on
+• IT Security and Access Control Policy
+• Audit Trail Review Procedures
+• Data Backup and Recovery SOPs
+• System Administration Logs
+• Electronic Signature Authentication Records
+• 21 CFR Part 11 Compliance Assessments
+• Disaster Recovery and Business Continuity Plans
+5. Internal Audits and Self-Inspec)ons
+• Internal Audit Schedules and Plans
+• Audit Checklists and Reports
+• Corrective Action Plans and Follow-Up Records
+• GMP Self-Inspection Reports
+• Regulatory Inspection Readiness Documents
+6. Periodic Reviews and Trending
+• Annual Product Quality Review (APQR) Reports
+• Deviation and CAPA Trending Reports
+• Environmental Monitoring Trending Summaries
+• Equipment Downtime and Failure Logs
+• Training Compliance Metrics
+• Change Control Impact Assessments
+7. Personnel and Training Documenta)on
+• Training Matrix and Curriculum
+• GxP Training Records (Initial and Refresher)
+• Aseptic Technique and Gowning Qualification Records
+• Job Descriptions and Qualification Requirements
+• Operator Observation and Certification Records
+8. Materials and Supply Chain Documenta)on
+• Raw Material Specifications and COAs
+• Vendor Qualification and Audit Records
+• Material Receipt and Quarantine Logs
+• Inventory Management Records
+• Material Dispensing and Reconciliation Logs
+9. Sterility Assurance Program Documenta)on
+• Media Fill Protocols and Reports
+• Cleanroom Qualification Reports
+• Airflow Visualization (Smoke Study) Reports
+• Disinfection Efficacy and Sanitization SOPs
+• Sterile Hold Time Study Documentation
+• Rapid Microbial Method Validation (if applicable)
