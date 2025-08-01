@@ -427,7 +427,7 @@ def get(method="char-split"):
 
 	# Connect to chroma DB
 	# client = chromadb.HttpClient(host=CHROMADB_HOST, port=CHROMADB_PORT)
-	client = chromadb.Client()
+	client = PersistentClient(path="./chroma")
 	# Get a collection object from an existing collection, by name. If it doesn't exist, create it.
 	collection_name = f"{method}-collection"
 
@@ -447,7 +447,7 @@ def agent(method="char-split"):
 
 	# Connect to chroma DB
 	# client = chromadb.HttpClient(host=CHROMADB_HOST, port=CHROMADB_PORT)
-	client = chromadb.Client()
+	client = PersistentClient(path="./chroma") 
 	# Get a collection object from an existing collection, by name. If it doesn't exist, create it.
 	collection_name = f"{method}-collection"
 	# Get the collection
@@ -457,7 +457,7 @@ def agent(method="char-split"):
 	user_prompt_content = Content(
     	role="user",
 		parts=[
-			Part.from_text("Describe where cheese making is important in Pavlos's book?"),
+			Part.from_text("Describe what to include in a deviation report in pharmaceutical manufacturing."),
 		],
 	)
 	

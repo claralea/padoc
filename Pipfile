@@ -6,6 +6,7 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+# Existing packages
 user-agent = "*"
 requests = "*"
 google-cloud-storage = "*"
@@ -16,6 +17,26 @@ langchain = "*"
 llama-index = "*"
 langchain-community = "*"
 chromadb = "*"
+fastapi = "*"
+uvicorn = "*"
+
+# New packages for deviation reporting system
+# AI and Agent packages
+openai = "*"
+smolagents = "*"
+
+# Document generation packages
+weasyprint = "*"
+python-docx = "*"
+
+# Additional utilities that might be needed
+numpy = "*"
+python-multipart = "*"  # For FastAPI file uploads
+aiofiles = "*"  # For async file operations
+pydantic = ">=2.0.0"  # For data validation
+
+# Vertex AI specific
+vertexai = "*"
 
 [requires]
 python_version = "3.12"

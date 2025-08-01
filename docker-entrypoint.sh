@@ -11,3 +11,6 @@ then
 else
   pipenv run python $args
 fi
+
+#echo "Starting FastAPI server..."
+#exec pipenv run uvicorn server:app --host 0.0.0.0 --port 8080
