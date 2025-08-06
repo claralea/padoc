@@ -1,0 +1,24 @@
+### ID
+DAL-DEV-0042
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Facility Monthly Shoe Cleaning Form
+
+### Description
+In July it was observed that the Monthly Shoe cleaning form was not filled out to document June's shoe cleaning.
+
+Shoe Cleaning for July was performed during Monthly Cleanroom cleaning (21JUL2025)
+
+Environmental Monitoring Surface data was reviewed for the facility. During this review timepoints from Jan2025 - Present were reviewed. No significant observations observed (OOS/Alert limit). This deviation does not affect the state of control within the cleanrooms at MCCPMC.
+
+Awaiting Shoe cleaning Log and EM Trend Chart FOR MINOR DEV CLOSURE
+
+### Batch / Lot #
+Main Cleanroom
+

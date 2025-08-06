@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0023
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Atypical Bulk Reconciliation for Lot 10000174
+
+### Description
+Upon performing bulk reconciliation after filling, it was observed that there was a larger volume of bulk waste leftover than anticipated. By performing calculations according to the batch record, bulk yield was calculated to be 107%.
+
+### Batch / Lot #
+10000174
+

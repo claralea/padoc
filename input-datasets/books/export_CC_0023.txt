@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0020
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Incorrect Item Information Documented
+
+### Description
+Incorrect item information entered on Lot # 10000171 for Item # 10002503.
+
+### Batch / Lot #
+10000171
+

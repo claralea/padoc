@@ -1,0 +1,21 @@
+### ID
+DAL-DEV-0004
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Label Counter Discrepancy
+
+### Description
+On 02APR2024 during the label reconciliation for Lot 10000003 it was determined that the label counter utilized to count the number of labels issued by the Quality Unit incorrectly added one to the issued amount.
+
+### Batch / Lot #
+10000003
+
+### Comment
+N/A
+

@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0019
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Late Documentation of Verified By Activities
+
+### Description
+During the Batch Record review for Lot 10000148 it was noted that there were several late &amp;amp;quot;Verified By&amp;amp;quot; entries.
+
+### Batch / Lot #
+10000148
+

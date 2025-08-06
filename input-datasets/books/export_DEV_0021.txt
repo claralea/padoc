@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0022
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Visible particle detected during AQL
+
+### Description
+Visual inspection AQL acceptance criteria not met for lot 10000188
+
+### Batch / Lot #
+10000188
+

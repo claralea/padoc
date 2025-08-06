@@ -1,0 +1,445 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Deviation Report - DEV_20250805_192320</title>
+            <style>
+                
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                max-width: 210mm;
+                margin: 0 auto;
+                padding: 20px;
+                background: white;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 3px solid #0066cc;
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+            }
+
+            .company-logo h1 {
+                color: #0066cc;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .confidential {
+                text-align: right;
+                font-size: 12px;
+                color: #666;
+            }
+
+            .report-title {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .report-title h1 {
+                font-size: 28px;
+                color: #0066cc;
+                margin-bottom: 10px;
+            }
+
+            .report-info {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                font-size: 14px;
+            }
+
+            .section {
+                margin-bottom: 25px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            .section h2 {
+                background: #f8f9fa;
+                color: #333;
+                padding: 12px 15px;
+                margin: 0;
+                border-bottom: 1px solid #ddd;
+                font-size: 18px;
+            }
+
+            /* Original user response boxes (grey) */
+            .original-response-box {
+                padding: 15px;
+                background: #f5f5f5;
+                border: 1px solid #ddd;
+                margin: 10px;
+                border-radius: 5px;
+                border-left: 4px solid #6c757d;
+            }
+
+            .original-response-box p {
+                margin: 5px 0;
+            }
+
+            .original-response-box strong {
+                color: #495057;
+            }
+
+            /* AI Enhancement sections within main sections (green) */
+            .ai-enhancement {
+                margin: 15px;
+                border: 2px solid #28a745;
+                border-radius: 8px;
+                overflow: hidden;
+                background: #f8fff8;
+            }
+
+            .ai-enhancement h3 {
+                background: #28a745;
+                color: white;
+                padding: 8px 12px;
+                margin: 0;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            /* Standalone AI analysis sections */
+            .ai-section {
+                margin-bottom: 20px;
+                border: 2px solid #4CAF50;
+                border-radius: 8px;
+                overflow: hidden;
+                background: #f9fff9;
+            }
+
+            .ai-section h2 {
+                background: #4CAF50;
+                color: white;
+                padding: 12px 15px;
+                margin: 0;
+                font-size: 16px;
+                border-bottom: none;
+            }
+
+            .ai-content {
+                padding: 12px;
+                background: #f8fff8;
+            }
+
+            .ai-content p {
+                color: #333 !important;
+                font-weight: normal !important;
+            }
+
+            .ai-content li {
+                color: #333 !important;
+                font-weight: normal !important;
+            }
+
+            .ai-content ol, .ai-content ul {
+                color: #333 !important;
+                font-weight: normal !important;
+            }
+
+            /* Ensure formatted content is not bold */
+            .formatted-content * {
+                font-weight: normal !important;
+            }
+
+            .info-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .info-table td {
+                padding: 12px 15px;
+                border-bottom: 1px solid #eee;
+                vertical-align: top;
+            }
+
+            .info-table td.label {
+                background: #f8f9fa;
+                font-weight: bold;
+                width: 20%;
+                color: #555;
+            }
+
+            .priority-critical {
+                background: #dc3545;
+                color: white;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+
+            .priority-major {
+                background: #fd7e14;
+                color: white;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+
+            .priority-minor {
+                background: #28a745;
+                color: white;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+
+            .description-box, .actions-box, .risk-box, .investigation-box {
+                padding: 15px;
+                background: #fafafa;
+                border: 1px solid #eee;
+                margin: 10px;
+            }
+
+            .actions-box ul {
+                margin-left: 20px;
+            }
+
+            .actions-box li {
+                margin-bottom: 8px;
+            }
+
+            .footer {
+                margin-top: 40px;
+                padding-top: 20px;
+                border-top: 2px solid #0066cc;
+                text-align: center;
+                font-size: 12px;
+                color: #666;
+            }
+
+            .formatted-content h4 {
+                color: #0066cc;
+                font-size: 16px;
+                margin: 15px 0 8px 0;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 5px;
+            }
+
+            .formatted-content h5 {
+                color: #555;
+                font-size: 14px;
+                margin: 12px 0 6px 0;
+                font-weight: bold;
+            }
+
+            .formatted-content ul {
+                margin: 10px 0 10px 20px;
+            }
+
+            .formatted-content li {
+                margin-bottom: 5px;
+                line-height: 1.5;
+            }
+
+            .formatted-content p {
+                margin: 8px 0;
+                line-height: 1.6;
+            }
+
+            @media print {
+                body {
+                    max-width: none;
+                    margin: 0;
+                    padding: 15px;
+                }
+
+                .footer {
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: white;
+                }
+            }
+        
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <div class="company-logo">
+                    <h1>CostPlus Drug Company</h1>
+                </div>
+                <div class="confidential">
+                    <p>Do not copy and/or distribute without permission.<br>
+                    <strong>CONFIDENTIAL</strong></p>
+                </div>
+            </div>
+
+            <div class="report-title">
+                <h1>Deviation Report</h1>
+                <div class="report-info">
+                    <p><strong>Record ID:</strong> DEV_20250805_192320</p>
+                    <p><strong>Page:</strong> 1 of 1</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Deviation Information</h2>
+                <table class="info-table">
+                    <tr>
+                        <td class="label"><strong>Title:</strong></td>
+                        <td>AQL Visual Inspection Crimp Excursion Lot</td>
+                        <td class="label"><strong>Priority:</strong></td>
+                        <td class="priority-minor">Minor</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Status:</strong></td>
+                        <td>Open</td>
+                        <td class="label"><strong>Deviation Type:</strong></td>
+                        <td>Not specified</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Date of Occurrence:</strong></td>
+                        <td>June 02, 2025</td>
+                        <td class="label"><strong>Department(s):</strong></td>
+                        <td>Not specified</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Batch/Lot Number:</strong></td>
+                        <td>1000255</td>
+                        <td class="label"><strong>Quantity Impacted:</strong></td>
+                        <td>Lot</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Planned Deviation:</strong></td>
+                        <td colspan="3">No</td>
+                    </tr>
+                </table>
+            </div>
+
+            
+            <div class="section">
+                <h2>Deviation Description</h2>
+                <div class="description-box">
+                    <p><strong>Original Description:</strong></p>
+                    <p>On 02JUN2025, during AQL its was observed that Major Process defects criteria
+
+Additional details: criteria for Major Defects.yes</p>
+                </div>
+                <div class="ai-enhancement">
+                    <h3>🤖 AI-Enhanced Technical Analysis</h3>
+                    <div class="ai-content">
+                        <div class="formatted-content"><p style="color: #333; font-weight: normal;">Enhanced Analysis of Deviation</p>
+<p style="color: #333; font-weight: normal;">#1. Technical Assessment with Regulatory Context</p>
+<p style="color: #333; font-weight: normal;">The deviation observed on 02JUN2025 during AQL (Acceptable Quality Level) inspection indicates the presence of major process defects. According to 21 CFR Part 211, any failure to meet specifications must be thoroughly investigated, regardless of whether the batch has been distributed. This regulation emphasizes the need for a comprehensive investigation that extends to other batches and products that may be affected by the identified defect. The JYPharm-3-138 guideline reinforces this by mandating a written record of the investigation, including conclusions and follow-up actions. The Q10 Pharmaceutical Quality System further supports a structured approach to investigations, focusing on identifying root causes and trends in process performance and product quality.</p>
+<p style="color: #333; font-weight: normal;">#2. Potential Quality Impact</p>
+<p style="color: #333; font-weight: normal;">The identification of major process defects can significantly impact product quality and patient safety. Major defects could lead to non-compliance with product specifications, which may affect the efficacy and safety of the drug product. If these defects are systemic, they could indicate underlying issues in the manufacturing process, potentially affecting multiple batches and leading to widespread quality concerns.</p>
+<p style="color: #333; font-weight: normal;">#3. Regulatory Compliance Implications</p>
+<p style="color: #333; font-weight: normal;">Failure to adequately investigate and address the major process defects could result in non-compliance with FDA regulations, leading to potential regulatory actions such as warning letters, product recalls, or enforcement actions. The lack of a thorough investigation could also impact the company’s reputation and its ability to maintain market authorization for its products.</p>
+<p style="color: #333; font-weight: normal;">#4. Key Investigation Points</p>
+<ul>
+<li>Root Cause Analysis: Identify the specific causes of the major process defects observed during AQL.</li>
+<li>Scope of Impact: Determine if the defects are isolated to the batch inspected or if they extend to other batches or products.</li>
+<li>Documentation Review: Ensure that all relevant documentation related to the manufacturing process, quality control measures, and previous deviations is reviewed.</li>
+<li>Corrective and Preventive Actions (CAPA): Develop and implement CAPA to address the identified issues and prevent recurrence.</li>
+<li>Stakeholder Communication: Engage relevant stakeholders, including quality assurance, production, and regulatory affairs, to ensure a coordinated response to the deviation.</li>
+<li>Trend Analysis: Review historical data for trends in process performance and product quality to identify any patterns that may indicate systemic issues.</li>
+</ul>
+<p style="color: #333; font-weight: normal;">This structured approach will ensure compliance with regulatory requirements and safeguard product quality and patient safety.</p></div>
+                    </div>
+                </div></div>
+
+            
+            <div class="section">
+                <h2>Immediate Actions</h2>
+                <div class="original-response-box">
+                    <p><strong>Original Response:</strong></p>
+                    <p>was exceeded, with major process defects during 100% visual inspection also not</p>
+                </div>
+                <div class="ai-enhancement">
+                    <h3>🤖 AI Assessment of Immediate Actions</h3>
+                    <div class="ai-content">
+                        <div class="formatted-content"><p style="color: #333; font-weight: normal;">Immediate Actions to Address the Pharmaceutical Deviation:</p>
+<ol>
+<li>Quarantine Affected Batch: Immediately isolate Batch 1000255 from the production and storage areas to prevent any further distribution or use. Clearly label the batch as "Quarantined - Under Investigation" to ensure no unauthorized access.</li>
+</ol>
+<ol>
+<li>Conduct a Root Cause Analysis (RCA): Assemble a cross-functional team (Quality Assurance, Production, and Quality Control) to initiate a preliminary root cause analysis within the next 24 hours. Document all findings and observations related to the visual inspection defects to identify potential causes.</li>
+</ol>
+<ol>
+<li>Review and Document Inspection Records: Retrieve and review all inspection records related to Batch 1000255, including AQL results, visual inspection criteria, and any deviations noted during the inspection process. Preserve these documents as evidence for further investigation.</li>
+</ol>
+<ol>
+<li>Notify Relevant Stakeholders: Inform all relevant stakeholders, including Quality Assurance, Production Management, and Regulatory Affairs, about the deviation and the immediate actions</li>
+</ol></div>
+                    </div>
+                </div></div>
+
+            
+            <div class="section">
+                <h2>Risk Assessment Information</h2>
+                <div class="original-response-box">
+                    <p><strong>Initial Risk Assessment (User Input):</strong></p>
+                    <p>meeting criteria.Reinspection occurred on 03JUN2025, Lot did not pass the 2nd visual inspection</p>
+                </div>
+                <div class="ai-enhancement">
+                    <h3>🤖 AI Risk Assessment</h3>
+                    <div class="ai-content">
+                        <div class="formatted-content"><p style="color: #333; font-weight: normal;">Risk Assessment for Pharmaceutical Deviation</p>
+<p style="color: #333; font-weight: normal;">Deviation: On 02JUN2025, during AQL, it was observed that Major Process defects criteria</p>
+<p style="color: #333; font-weight: normal;">Type: Visual Inspection</p>
+<p style="color: #333; font-weight: normal;">Quantity Impacted: Lot</p>
+<ol>
+<li>Product Quality Risk: High</li>
+</ol>
+<p style="color: #333; font-weight: normal;">Justification: Major process defects identified during visual inspection indicate significant issues with product integrity or appearance, which can affect the overall quality and efficacy of the pharmaceutical product. Such defects may lead to non-compliance with established quality standards, potentially resulting in product recalls or rejections.</p>
+<ol>
+<li>Patient Safety Risk: Medium</li>
+</ol>
+<p style="color: #333; font-weight: normal;">Justification: While major process defects can compromise product quality, the direct impact on patient safety depends on the nature of the defects. If the defects do not affect the active ingredient or dosage form, the immediate risk to patient safety may be moderate. However, if the defects could lead to improper dosing or contamination, the risk could escalate to high.</p>
+<ol>
+<li>Regulatory Risk: High</li>
+</ol>
+<p style="color: #333; font-weight: normal;">Justification: Regulatory agencies require strict adherence to quality standards. Major deviations can lead to non-compliance with Good Manufacturing Practices (GMP), resulting in potential fines, sanctions, or loss of market authorization. The likelihood</p></div>
+                    </div>
+                </div></div>
+
+            
+
+            
+
+            <div class="section">
+                <h2>Investigation Information</h2>
+                <table class="info-table">
+                    <tr>
+                        <td class="label"><strong>Investigation Assignee:</strong></td>
+                        <td>Not assigned</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Initiator:</strong></td>
+                        <td>Clara-Lea</td>
+                    </tr>
+                </table>
+
+                <div class="investigation-box">
+                    <p><strong>Investigation Results:</strong></p>
+                    <p>Investigation pending.</p>
+
+                    <p><strong>Final Conclusion:</strong></p>
+                    <p>Investigation in progress.</p>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>Report Generated: August 05, 2025 07:26 PM</p>
+                <p>Do not copy and/or distribute without permission. CONFIDENTIAL</p>
+            </div>
+        </body>
+        </html>
+        

@@ -1,0 +1,24 @@
+### ID
+DAL-DEV-0001
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Out of Calibration Summary 3-5-24
+
+### Description
+During the initial Pilot Facility start up there instrument OOT events occurred that raised NCR records in Blue Mountain.
+
+### Batch / Lot #
+N/A
+
+### Comment
+No product or patient impact as the event occurred prior to Facility GMP Commercial Manufacturing Release.
+
+The Blue Mountain NCR Records are NCR-000001-DE through NCR-000015-DE.
+Action
+

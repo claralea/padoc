@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0003
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Visual inspection results did not meet the current acceptance criteria in DAL-SOP-0222 V3
+
+### Description
+On 27Mar2024 it was determined that the initial Production and Quality Unit AQL Visual inspection that was required per BPR 1000003 (Child lot of BPR 10000002) results did not meet the current acceptance criteria in DAL-SOP-0222 V3.
+
+### Batch / Lot #
+10000003
+

@@ -1,0 +1,21 @@
+### ID
+DAL-DEV-0040
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Skipped the step 6.4.12 for Norepinephrine formulation operation, lot 10000311
+
+### Description
+During batch record review it was noted that step 6.4.12 was listed as N/A (not applicable). The step states to initiate mixing of the vessel using an agitator setting of NLT 30% and to ensure proper agitation is observed without aeration of the product. Note: This step occurs prior to addition of any components.
+
+### Batch / Lot #
+10000311
+
+### Comment
+N/A
+

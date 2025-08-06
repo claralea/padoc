@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0021
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Visual Inspection AQL acceptance criteria not met.
+
+### Description
+Visual Inspection AQL acceptance criteria not met.
+
+### Batch / Lot #
+10000171
+

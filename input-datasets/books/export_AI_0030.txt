@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0013
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Facility Power Outage 25SEP2024
+
+### Description
+On 25SEP2024 there was a Facility Power outage at 03:55:57 to 03:56:03 (6sec) WO 000257-2024-DE was created to track the response and trend review.
+
+### Comment
+No critical alarms occurred, Quality Unit notified.
+

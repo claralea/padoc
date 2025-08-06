@@ -1,0 +1,295 @@
+AUDIT REPORT
+11-12 APRIL 2024
+This report was prepared by Todd Buchheit of cGMP Validation and
+contains the observations and recommendations made during a mock
+inspection conducted on 11-12 of the Mark Cuban Cost Plus Drug
+Company, located at 320 S. Walton Street Dallas, TX.
+TABLE OF CONTENTS
+Contents
+Audit Summary __________________________________________________________________________________________ 1
+Details of the Audit ______________________________________________________________________________________ 3
+Findings___________________________________________________________________________________________________ 5
+Recommendations for Improvement ___________________________________________________________________ 9
+Summary ________________________________________________________________________________________________ 12
+Auditor’s Contact Information _________________________________________________________________________ 13
+Company Information __________________________________________________________________________________ 13
+AUDIT SUMMARY
+Audit Summary
+GENERAL OVERVIEW
+cGMP Validation was contracted for the purpose of conducting a Mock FDA inspection of
+the Quality Management System to determine if the activities performed there were
+compliant with 21 CFR Part 211 and 503b FDA Guidance for Human Drug Compounding
+Outsource Facilities. The audit was a two-day assessment which consisted of a facility
+tour, process flow walk-throughs, reviewing documentation, and interviewing employees
+to gain an understanding of how the facility operates and how well they are compliant
+with the FDA regulation and their established SOPs.
+In this report you will find:
+ A full list of the systems reviewed.
+ A list of findings (Observations, Concerns and Opportunities for Improvement).
+ Recommendations for improvement.
+Only areas where observations were noted are discussed in detail.
+SUMMARY OF THE VISIT
+Two days were spent conducting the audit. The primary point of contact during the
+assessment was Matthew Callesen, Head of Quality and Allyson Koger, Production
+Supervisor. Matthew is identified in the organizational chart as having QA responsibility.
+All participants were very professional throughout the audit and very knowledgeable
+about the operations at the Dallas facility. I would like to acknowledge the others who
+participated as their assistance was greatly appreciated and helpful in completing the
+audit, they are as follows:
+ Hasham Altaf – Production Supervisor
+ Daniel Royster – Director of Manufacturing Facilities Supply Chain
+ Mary Policronis – Quality Manager
+ Carvey Patterson – QC Manager
+ Thinh Tran – Senior Manager Facility Maintenance
+ Benjamin Russell – Facility Engineer
+ Bradley Stock – Engineering and Validation Manager
+ Chris Deitz – VP of Facilities and Engineering
+ David Walter – Senior Manager of Automation
+Page 1
+AUDIT SUMMARY
+ Andrew Nunez – Senior Process Engineer
+The full agenda was completed, and the facility tour was comprehensive. My overall
+impression at the end of the audit was that the quality system is appropriate for the size
+of the organization and type of operations conducted. During the audit there were
+several issues noted that the organization should consider addressing as soon as
+possible. These are discussed in detail in the next section of this report.
+Page 2
+DETAILS OF THE AUDIT
+Details of the Audit
+The following areas of the Quality System were reviewed during the audit:
+ Quality Assurance Activities
+o Responsibilities of QA
+o Personnel qualifications
+o personnel responsibilities
+o consultants
+ Facility Design
+o Design and construction features
+o Environmental Controls (Ventilation, air filtration, heating and cooling)
+o Preventative Maintenance Program
+ Control Systems and Procedures for Maintaining Suitable Facilities
+o Building Management Systems
+o Equipment Monitoring Systems
+ Personnel Monitoring
+ Equipment
+o Design, size and location
+o equipment construction
+o cleaning and maintenance
+o automatic, mechanical, and electronic equipment
+o filters
+ Containers and Closures
+o Receipt and storage of untested components, drug product containers, and closures
+o testing and approval or rejection of components, drug product containers, enclosures
+o use of approved components, drug product containers, and closures
+o rejected components, drug product containers and closures
+ Components (503b guidance)
+o Component Supplier Qualification Testing
+o Testing for Finished Product to Be Used as a Source Material for Processing
+ Production and Process Controls
+o Written procedures and deviations
+o charge in of components
+o calculated yield
+o equipment identification
+o sampling and testing of in process materials and drug products
+o time limitations on production
+o control of microbial contamination
+o reprocessing
+ Release Testing
+ Laboratory Controls
+o Testing and release for distribution
+o special testing requirements
+Page 3
+DETAILS OF THE AUDIT
+o reserve samples
+ Stability Testing/Expiration Dating for Compounded Drug Products
+o Stability Program and Beyond-Use Dating
+o Establishing an In-Use Time for Sterile Drug Products
+o In-Use Time and BUDs for Sterile Drug Products
+ Packaging and Labels
+o Materials examination and usage criteria
+o labeling issuance
+o packaging and labeling operations
+o tamper evident packaging requirements for OTC products
+o drug product inspection
+o expiration dating
+ Holding and distribution
+o Warehouse procedures
+o Distribution procedures
+ Reserve Samples
+ records and reports
+o Equipment cleaning and use logs
+o Component, drug product container, closure, and labeling records
+o Master production and control records
+o Batch production and control records
+o Production record review
+o Laboratory records
+o Distribution records
+o Complete files
+Page 4
+FINDINGS
+Findings
+Findings are classified using the following criteria:
+Observation (Major):
+ A condition which, if discovered by regulatory authorities such as the FDA, would
+be considered a violation of the regulation and could result in the issuance of a
+483 observation.
+ A condition which may make a product unfit for use and likely to present a risk to
+the user.
+Observation (Minor):
+ A condition, if uncorrected, might be cited by regulatory authorities as a violation
+of the regulation.
+ Isolated issues that if not corrected, would not cause risk to the user or product,
+but are a deviation from GMPs.
+ Significant numbers of minor findings in one system, which are indicative of a
+systemic failure.
+Opportunity For Improvement:
+ Suggestions, if implemented, will contribute to a higher level of compliance, and
+ensure better alignment with GMPs.
+Page 5
+FINDINGS
+LABELING
+Observation 1 (Major).
+211.125 Labeling Issuance:
+(a)Strict control shall be exercised over labeling issued for use in drug product
+labeling operations.
+(b) Labeling materials issued for a batch shall be carefully examined for identity
+and conformity to the labeling specified in the master or batch production
+records.
+(c) Procedures shall be used to reconcile the quantities of labeling issued, used,
+and returned, and shall require evaluation of discrepancies found between the
+quantity of drug product finished and the quantity of labeling issued when such
+discrepancies are outside narrow preset limits based on historical operating
+data.
+While reviewing how labels are stored at the facility the investigator was shown the
+storage room where the labels are kept. While in the storage room, the investigator
+noticed a label counting device. When asked what its purpose was, it was pointed out
+that this was the device that was used for issuing labels. Its specific purpose was to
+count the number of labels that were being issued for a production work order.
+When the investigator asked if the label counter was validated, the answer was no.
+(f) Procedures shall be written describing in sufficient detail the control
+procedures employed for the issuance of labeling; such written procedures shall
+be followed.
+When entering the labeling room, the investigator noticed that badge access was
+required. The question was asked who was authorized to enter the labeling room
+period specifically who had badge access to the area. It was not known at that
+particular moment, however QA staff provided a list from the security system
+software that showed nearly everyone in the facility had access to the room.
+Page 6
+FINDINGS
+VENDOR QUALIFICATIONS
+Observation 2 (Major).
+Subpart E - Control of Components and Drug Product Containers and Closures
+Sec. 211.80 General requirements.
+(a) There shall be written procedures describing in sufficient detail the receipt,
+identification, storage, handling, sampling, testing, and approval or rejection of
+components and drug product containers and closures; such written procedures
+shall be followed.
+While reviewing the vendor qualification SOP, it was not clear how vendors are
+categorized according to criticality. Looking at the approved suppliers list, an
+examination of the vendor who supplies vials was made to determine if they were
+qualified according to the SOP. A review of the file indicated that the vendor should
+be qualified by performing an audit. The record showed that the vial supplier had not
+been audited, and that the vials were accepted on a COA. This was also true for other
+vendors who were considered critical suppliers.
+RECORDS AND REPORTS
+Observation 3 (Minor).
+Sec. 211.186 Master production and control records.
+(b) Master production and control records shall include:
+(9) Complete manufacturing and control instructions, sampling and testing
+procedures, specifications, special notations, and precautions to be followed.
+In the mixing section of the master batch record the settings for the mixer had only
+the lower RPM limit setting for the mixer, but not an upper RPM limit setting.
+Equipment settings listed in the master batch record should contain the full operating
+range that is allowed to be set by the operator. This range normally comes from the
+equipment validation records.
+Page 7
+FINDINGS
+FACILITIES
+Observation 4 (Minor).
+211.56 Sanitation: Any building used in the manufacture, processing, packing, or
+holding of a drug product shall be maintained in a clean and sanitary condition,
+Any such building shall be free of infestation by rodents, birds, insects, and other
+vermin (other than laboratory animals).
+During the facility tour the investigator noticed the absence of insect light traps
+around the delivery doctors. Insect light traps are in an integral part of a pest control
+program and are key in controlling the intrusion of flying insects.
+Page 8
+RECOMMENDATIONS FOR IMPROVEMENT
+Recommendations for Improvement
+Observation 1 (Major).
+Labeling
+The label counting machine that we looked at needs to be validated. It can be a simple PQ
+where you run three sets of labels and verify that all three sets were counted accurately.
+Make sure you write a protocol for that and approve it before you start any testing period
+record the results in the protocol and then write a final report once you've executed the
+protocol to summarize the results. Once you have all those reports completed, validation
+is considered complete, and you should be fine after that.
+With regard to the label room access, review the list that we had printed out and distill
+that down to only those people that actually need access to that room. That should be no
+more than three to four people at most. Remember, just because someone is a manager
+or officer of the company does not mean they automatically get access. Guard those labels
+like you would guard controlled substances.
+Observation 2 (Major).
+Vendor Qualifications
+Your vendor qualification process is going to need some work. Step one, categorize your
+vendors as category 1, 2 or 3. Category 1 suppliers have direct impact on the product,
+which means these suppliers provide you with materials that go directly into, or touch
+the product. Category 2 suppliers are those suppliers that provide materials that do not
+go directly into the product but are used in the manufacture of your products. An
+example of a category 2 supplier would be a supplier who provides secondary packaging.
+Category 3 suppliers our suppliers that provide everything else that does not go into the
+manufacturer of the product. Example of a category 3 supplier would be a supplier who
+provides janitorial services for the office.
+The next step is to decide how you're going to qualify each of the categories of suppliers.
+Category 1 suppliers typically are qualified by an on-site audit of the facility and
+manufacturing process. Category 2 suppliers can be an audit, but is typically done
+Page 9
+RECOMMENDATIONS FOR IMPROVEMENT
+through some type of survey that is sent to the supplier that they complete and send
+back. Oftentimes you can also ask for certificates such as ISO certificates. Once you've
+categorized the suppliers, and determined how you're going to qualify each category of
+supplier, the next step is to perform the qualifications as per your SOP.
+Observation 3 (Minor).
+Records and Reports
+Production equipment settings should be transferred into the master batch record directly
+from the validation protocol. For example, when the mixer was qualified using a protocol
+as you were incrementally increasing RPMs on the mixer, there should have been a setting
+where the batch would begin properly mix. As the RPMS continued to increased
+incrementally, you would eventually reach an upper limit where the batch was no longer
+in specification, or you reached the upper equipment capability limit. So, the operating
+range would then be the lower limit where the batch first came into specification and the
+upper limit would be where the batch started to go out of specification. Typically, you
+would increase 10% above the lower limit and decrease 10% below the upper limit to give
+yourself a buffer from the actual limits.
+Observation 4 (Minor).
+Facilities
+As I mentioned previously, flying insect light traps are an integral part of a good pest
+control program. When you look for these on the market for purchase, be sure you're
+getting a light trap and not a bug zapper. The difference between the two being that an
+insect trap uses UV lights with a glue board behind it, where the insects stick to the glue
+board. A bug zapper, which is what I’m sure most of you are familiar with, is a device that
+has a light that attracts the insect and then an electrical circuit that electrocutes the insect
+once it makes contact with it. You don't want this because it will cause more
+contamination from exploding insects that fly into the device. So be sure you get a light
+trap and not a zapper.
+Page 10
+RECOMMENDATIONS FOR IMPROVEMENT
+The other key part to installing these devices is to be sure that wherever it is installed it is
+not visible from the outside at night. An example would be you would not want to install it
+on a wall where you could see through an exterior window from the outside and see the
+light trap on the inside. This attracts bugs to your building, so be sure that the light traps
+are not visible from the outside so that you don't attract bugs towards the building. These
+traps should only be catching those pests that penetrate the building when doors are open
+such as a dock door or an entryway. Consult with your pest control company as to where
+the best location for these devices would be, but also be mindful that it is positioned as I
+outlined as not all pest control companies may know this tip.
+Page 11
+SUMMARY
+Summary
+My overall impression at the end of the audit was that the quality system is appropriate
+for the size of the organization, and the staff are very well trained and working in a way
+that is compliant with current good manufacturing practices.
+In total there were four observations, some with multiple parts. The observations were
+significant, especially the labeling observations, which if not corrected could result in
+product mislabeling. Mislabeling is the number one issue leading to recalls. All
+observations should be corrected as soon as possible as each area can have a significant
+impact on product quality.

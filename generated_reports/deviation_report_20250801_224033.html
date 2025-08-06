@@ -1,0 +1,390 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Deviation Report - DEV_20250801_223827</title>
+            <style>
+                
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                max-width: 210mm;
+                margin: 0 auto;
+                padding: 20px;
+                background: white;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 3px solid #0066cc;
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+            }
+
+            .company-logo h1 {
+                color: #0066cc;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .confidential {
+                text-align: right;
+                font-size: 12px;
+                color: #666;
+            }
+
+            .report-title {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .report-title h1 {
+                font-size: 28px;
+                color: #0066cc;
+                margin-bottom: 10px;
+            }
+
+            .report-info {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                font-size: 14px;
+            }
+
+            .section {
+                margin-bottom: 25px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                overflow: hidden;
+            }
+
+            .section h2 {
+                background: #f8f9fa;
+                color: #333;
+                padding: 12px 15px;
+                margin: 0;
+                border-bottom: 1px solid #ddd;
+                font-size: 18px;
+            }
+
+            /* Original user response boxes (grey) */
+            .original-response-box {
+                padding: 15px;
+                background: #f5f5f5;
+                border: 1px solid #ddd;
+                margin: 10px;
+                border-radius: 5px;
+                border-left: 4px solid #6c757d;
+            }
+
+            .original-response-box p {
+                margin: 5px 0;
+            }
+
+            .original-response-box strong {
+                color: #495057;
+            }
+
+            /* AI Enhancement sections within main sections (green) */
+            .ai-enhancement {
+                margin: 15px;
+                border: 2px solid #28a745;
+                border-radius: 8px;
+                overflow: hidden;
+                background: #f8fff8;
+            }
+
+            .ai-enhancement h3 {
+                background: #28a745;
+                color: white;
+                padding: 8px 12px;
+                margin: 0;
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            /* Standalone AI analysis sections */
+            .ai-section {
+                margin-bottom: 20px;
+                border: 2px solid #4CAF50;
+                border-radius: 8px;
+                overflow: hidden;
+                background: #f9fff9;
+            }
+
+            .ai-section h2 {
+                background: #4CAF50;
+                color: white;
+                padding: 12px 15px;
+                margin: 0;
+                font-size: 16px;
+                border-bottom: none;
+            }
+
+            .ai-content {
+                padding: 12px;
+                background: #f8fff8;
+            }
+
+            .info-table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            .info-table td {
+                padding: 12px 15px;
+                border-bottom: 1px solid #eee;
+                vertical-align: top;
+            }
+
+            .info-table td.label {
+                background: #f8f9fa;
+                font-weight: bold;
+                width: 20%;
+                color: #555;
+            }
+
+            .priority-critical {
+                background: #dc3545;
+                color: white;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+
+            .priority-major {
+                background: #fd7e14;
+                color: white;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+
+            .priority-minor {
+                background: #28a745;
+                color: white;
+                padding: 4px 8px;
+                border-radius: 4px;
+                font-weight: bold;
+            }
+
+            .description-box, .actions-box, .risk-box, .investigation-box {
+                padding: 15px;
+                background: #fafafa;
+                border: 1px solid #eee;
+                margin: 10px;
+            }
+
+            .actions-box ul {
+                margin-left: 20px;
+            }
+
+            .actions-box li {
+                margin-bottom: 8px;
+            }
+
+            .footer {
+                margin-top: 40px;
+                padding-top: 20px;
+                border-top: 2px solid #0066cc;
+                text-align: center;
+                font-size: 12px;
+                color: #666;
+            }
+
+            .formatted-content h4 {
+                color: #0066cc;
+                font-size: 16px;
+                margin: 15px 0 8px 0;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 5px;
+            }
+
+            .formatted-content h5 {
+                color: #555;
+                font-size: 14px;
+                margin: 12px 0 6px 0;
+                font-weight: bold;
+            }
+
+            .formatted-content ul {
+                margin: 10px 0 10px 20px;
+            }
+
+            .formatted-content li {
+                margin-bottom: 5px;
+                line-height: 1.5;
+            }
+
+            .formatted-content p {
+                margin: 8px 0;
+                line-height: 1.6;
+            }
+
+            @media print {
+                body {
+                    max-width: none;
+                    margin: 0;
+                    padding: 15px;
+                }
+
+                .footer {
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background: white;
+                }
+            }
+        
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <div class="company-logo">
+                    <h1>CostPlus Drug Company</h1>
+                </div>
+                <div class="confidential">
+                    <p>Do not copy and/or distribute without permission.<br>
+                    <strong>CONFIDENTIAL</strong></p>
+                </div>
+            </div>
+
+            <div class="report-title">
+                <h1>Deviation Report</h1>
+                <div class="report-info">
+                    <p><strong>Record ID:</strong> DEV_20250801_223827</p>
+                    <p><strong>Page:</strong> 1 of 1</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Deviation Information</h2>
+                <table class="info-table">
+                    <tr>
+                        <td class="label"><strong>Title:</strong></td>
+                        <td></td>
+                        <td class="label"><strong>Priority:</strong></td>
+                        <td class="priority-minor">Minor</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Status:</strong></td>
+                        <td>Open</td>
+                        <td class="label"><strong>Deviation Type:</strong></td>
+                        <td>Formulation</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Date of Occurrence:</strong></td>
+                        <td>March 25, 2025</td>
+                        <td class="label"><strong>Department(s):</strong></td>
+                        <td>Manufacturing, QA</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Batch/Lot Number:</strong></td>
+                        <td>10000255</td>
+                        <td class="label"><strong>Quantity Impacted:</strong></td>
+                        <td>10L</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Planned Deviation:</strong></td>
+                        <td colspan="3">No</td>
+                    </tr>
+                </table>
+            </div>
+
+            
+            <div class="section">
+                <h2>Deviation Description</h2>
+                <div class="description-box">
+                    <p><strong>Original Description:</strong></p>
+                    <p>Upon review of DAL-BR-0043, it was observed that the stir plate speed in step
+
+Additional details: 5.4.26. did not meet the speed specified in the final QS instruction (NLT 6). Step</p>
+                </div>
+                <div class="ai-enhancement">
+                    <h3>🤖 AI-Enhanced Technical Analysis</h3>
+                    <div class="ai-content">
+                        <div class="formatted-content"><p>#<h4>Enhanced Analysis of Deviation DAL-BR-0043</h4></p>
+<p>##<h4>1. Technical Assessment with Regulatory Context</p>
+<p>The deviation observed in step 5.4.26, where the stir plate speed did not meet the specified minimum (NLT 6), raises concerns regarding the consistency and reliability of the manufacturing process. According to 21 CFR Part 211, any deviation from established specifications must be thoroughly investigated, regardless of whether the batch has been distributed. The stir speed is critical for ensuring proper mixing and homogeneity of the formulation, which directly affects the quality and efficacy of the final product.</p>
+<p>##<h4>2. Potential Quality Impact</p>
+<p>Failure to adhere to the specified stir speed could lead to inadequate mixing of the active pharmaceutical ingredient (API) and excipients, potentially resulting in:</p>
+<ul>
+<li>Variability in the concentration of the active ingredient, risking sub-potency or super-potency in the final product.</li>
+<li>Impacts on the dissolution profile, which could affect bioavailability and therapeutic effectiveness.</li>
+<li>Increased risk of batch-to-batch variability, leading to inconsistent product quality.</li>
+</ul>
+<p>##<h4>3. Regulatory Compliance Implications</p>
+<p>Non-compliance with established manufacturing procedures, as highlighted in the deviation, could lead to regulatory scrutiny, including potential citations for failure to maintain quality standards as outlined in 21 CFR Part 211. This could result in warning letters, product recalls, or increased inspection frequency by regulatory authorities.</p>
+<p>##<h4>4. Key Investigation Points</p>
+<ul>
+<li>**Root Cause Analysis**: Determine why the stir plate speed was not maintained. Was it due to equipment malfunction, operator error, or lack of training?</li>
+<li>**Impact Assessment**: Evaluate if the deviation affected the quality of the current batch and any other batches produced under similar conditions.</li>
+<li>**Review of Process Controls**: Analyze the robustness of the manufacturing process and whether existing controls are sufficient to prevent recurrence.</li>
+<li>**Documentation Review**: Ensure that all relevant documentation, including batch records and training logs, is complete and accurate.</li>
+<li>**Corrective Actions**: Identify and implement corrective actions to address the deviation and prevent future occurrences, including potential updates to SOPs and training programs.</li>
+</ul>
+<p>This structured approach will ensure compliance with regulatory requirements and maintain product quality integrity.</p></div>
+                    </div>
+                </div></div>
+
+            
+            <div class="section">
+                <h2>Immediate Actions</h2>
+                <div class="original-response-box">
+                    <p><strong>Original Response:</strong></p>
+                    <p>No immediate actions were taken at the time of reporting.</p>
+                </div></div>
+
+            
+            <div class="section">
+                <h2>Risk Assessment Information</h2>
+                <div class="original-response-box">
+                    <p><strong>Initial Risk Assessment (User Input):</strong></p>
+                    <p>No initial risk assessment provided.</p>
+                </div></div>
+
+            
+
+            
+
+            <div class="section">
+                <h2>Investigation Information</h2>
+                <table class="info-table">
+                    <tr>
+                        <td class="label"><strong>Investigation Assignee:</strong></td>
+                        <td>Not assigned</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Initiator:</strong></td>
+                        <td>CL</td>
+                    </tr>
+                </table>
+
+                <div class="investigation-box">
+                    <p><strong>Investigation Results:</strong></p>
+                    <p>Investigation pending.</p>
+
+                    <p><strong>Final Conclusion:</strong></p>
+                    <p>Investigation in progress.</p>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>Report Generated: August 01, 2025 10:40 PM</p>
+                <p>Do not copy and/or distribute without permission. CONFIDENTIAL</p>
+            </div>
+        </body>
+        </html>
+        

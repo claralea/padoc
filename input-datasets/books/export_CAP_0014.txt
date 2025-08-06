@@ -1,0 +1,22 @@
+### ID
+DAL-DEV-0029
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Lot 10000215 Continuous particle Monitoring Instrument Malfunction
+
+### Description
+During Continuous Particle monitoring the particle monitoring instrument cut off. Upon Observation it was noticed that the charging cord was not securely pushed into the back of the Instrument. Instrument was restarted and completed the continuous monitoring through the end of batch.
+
+Started: 0733 - Results passed
+1st Vial Filled: 0757
+Roughly 2 hours and 15 minutes elapsed
+Instrument restarted: 1012 thru End of Batch - All samplings Passed
+
+Batch was evaluated for established release criteria for subvisible particles and visual inspection. - All testing criteria for subvisible particles and visual inspection passed.
+

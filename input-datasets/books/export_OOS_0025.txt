@@ -1,0 +1,22 @@
+### ID
+DAL-DEV-0018
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+DAL-FRM-0197 for sampling filed in an incorrect folder
+
+### Description
+DAL-FRM-0197 is populated with Quality Controls environmental monitoring incubation form. On 29OCT2024, QC staff were unable to find incubation form that matched plates and incubation board within the Quality Control Lab.
+
+DAL-RA-0009 Attached
+
+Form was found after initiation of deviation.
+
+### Batch / Lot #
+N/A
+

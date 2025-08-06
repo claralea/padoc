@@ -1,0 +1,20 @@
+### ID
+DAL-DEV-0041
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Stability Suite &amp;amp;amp; Warehouse Temperature Excursion 26JUN2025 - 30JUN2025
+
+### Description
+On 26JUN2025 stability suite exceeded established temperatures (20-25C). SCADA system showed that the temperature returned to established temperatures. Duration: 1050-1611, 7 hours 21 minutes.
+
+On 27JUN2025 Warehouse exceeded established temperatures (20-25C),  SCADA system showed that the temperature returned to established temperatures. Duration: 1050-1611, XXhours XX minutes.
+
+### Batch / Lot #
+N/A
+

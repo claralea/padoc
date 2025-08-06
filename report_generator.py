@@ -121,15 +121,13 @@ class EnhancedReportGenerator:
         html_path = self.output_dir / f"{base_filename}.html"
         results['html'] = self.generate_html_report(deviation_report, html_path)
 
-        # # Generate PDF
-        # pdf_path = self.output_dir / f"{base_filename}.pdf"
-        # results['pdf'] = self.generate_pdf_report(deviation_report, pdf_path)
+        # Generate PDF
+        pdf_path = self.output_dir / f"{base_filename}.pdf"
+        results['pdf'] = self.generate_pdf_report(deviation_report, pdf_path)
 
-        # # Generate Word
-        # word_path = self.output_dir / f"{base_filename}.docx"
-        # results['word'] = self.generate_word_report(deviation_report, word_path)
-        results['pdf'] = "PDF generation skipped (WeasyPrint dependencies missing)"
-        results['word'] = "Word generation skipped (python-docx not configured)"
+        # Generate Word
+        word_path = self.output_dir / f"{base_filename}.docx"
+        results['word'] = self.generate_word_report(deviation_report, word_path)
     
 
         return results
@@ -448,32 +446,51 @@ class EnhancedReportGenerator:
         if not content:
             return ""
 
-        # Convert markdown-style headers to HTML
-        content = content.replace('## ', '<h4>').replace('\n', '</h4>\n', 1) if '## ' in content else content
-        content = content.replace('### ', '<h5>').replace('\n', '</h5>\n', 1) if '### ' in content else content
-
-        # Convert bullet points to HTML lists
+        # Remove any markdown headers (##, ###) but keep the text
+        content = content.replace('### ', '').replace('## ', '').replace('# ', '')
+        
+        # Convert numbered lists with proper formatting
         lines = content.split('\n')
         formatted_lines = []
         in_list = False
-
+        
         for line in lines:
             stripped = line.strip()
-            if stripped.startswith('- ') or stripped.startswith('• '):
+            
+            # Handle numbered items (1., 2., etc.)
+            import re
+            if re.match(r'^\d+\.', stripped):
                 if not in_list:
+                    formatted_lines.append('<ol>')
+                    in_list = True
+                # Extract the content after the number
+                list_content = re.sub(r'^\d+\.\s*', '', stripped)
+                # Remove any ** markdown bold markers
+                list_content = list_content.replace('**', '')
+                formatted_lines.append(f'<li>{list_content}</li>')
+            # Handle bullet points
+            elif stripped.startswith('- ') or stripped.startswith('• '):
+                if in_list and formatted_lines[-1] == '</ol>':
+                    formatted_lines.pop()  # Remove the </ol>
+                    formatted_lines.append('<ul>')
+                elif not in_list:
                     formatted_lines.append('<ul>')
                     in_list = True
-                formatted_lines.append(f'<li>{stripped[2:].strip()}</li>')
+                bullet_content = stripped[2:].strip().replace('**', '')
+                formatted_lines.append(f'<li>{bullet_content}</li>')
             else:
                 if in_list:
-                    formatted_lines.append('</ul>')
+                    if formatted_lines[-1].startswith('<li>'):
+                        formatted_lines.append('</ol>' if '<ol>' in ''.join(formatted_lines) else '</ul>')
                     in_list = False
                 if stripped:
-                    formatted_lines.append(f'<p>{stripped}</p>')
-
+                    # Remove any ** markdown bold markers and add as regular paragraph
+                    clean_text = stripped.replace('**', '')
+                    formatted_lines.append(f'<p style="color: #333; font-weight: normal;">{clean_text}</p>')
+        
         if in_list:
-            formatted_lines.append('</ul>')
-
+            formatted_lines.append('</ol>' if '<ol>' in ''.join(formatted_lines) else '</ul>')
+        
         return '\n'.join(formatted_lines)
 
     def _get_html_css(self) -> str:
@@ -607,6 +624,26 @@ class EnhancedReportGenerator:
             .ai-content {
                 padding: 12px;
                 background: #f8fff8;
+            }
+
+            .ai-content p {
+                color: #333 !important;
+                font-weight: normal !important;
+            }
+
+            .ai-content li {
+                color: #333 !important;
+                font-weight: normal !important;
+            }
+
+            .ai-content ol, .ai-content ul {
+                color: #333 !important;
+                font-weight: normal !important;
+            }
+
+            /* Ensure formatted content is not bold */
+            .formatted-content * {
+                font-weight: normal !important;
             }
 
             .info-table {

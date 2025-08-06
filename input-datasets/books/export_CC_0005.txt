@@ -1,0 +1,21 @@
+### ID
+DAL-DEV-0038
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Incompatibility between vial labels and Newman labeling machine
+
+### Description
+During the packaging of lot 10000274 Oxytocin Injection, USP 30 USP units/3mL (10 USP units/mL) and Norepinephrine lot 10000296, New in-house labels were used. Oxytocin labels were part number 10000024 and lot number 100038763. Norepinephrine labels were part number 10005423 and lot number 100038868. The labels did not run on the Newman labeling machine using the settings used on the previous labels which and was causing multiple issues such as breaking of the ribbon and undetected labels through Newman labeler rejection sensor.
+
+### Batch / Lot #
+10000274 &amp;amp;amp; 10000296
+
+### Comment
+N/A
+

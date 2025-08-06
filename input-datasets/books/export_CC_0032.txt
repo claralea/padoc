@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0011
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Incorrect BUD printed on Cartons
+
+### Description
+On 06 Sep 2024, during packaging of lot 10000081 it was noted the BUD on the cartons was coded as 25 Dec 2025 instead of 25 Dec 2024. Approximately 500 cartons were printed with the incorrect BUD. Upon noticing the incorrect BUD the line was stopped and Quality was notified. All units with incorrect BUD were reconciled and segregated. The cartons will be removed and the units repackaged with the correct BUD on the carton.
+
+### Batch / Lot #
+10000081
+

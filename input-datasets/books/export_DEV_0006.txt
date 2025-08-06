@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0037
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Late verification on online system challenge form
+
+### Description
+For lot 10000264 Norepinephrine Bitartrate 8mg/8ml, the online challenge test verification on the Newman labeling machine occurred on 25 Apr 2025, subsequent to the completion of vial labeling on 24 Apr 2025.
+
+### Batch / Lot #
+10000264
+

@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0033
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Discolored forceps found during filling
+
+### Description
+During the start of filling of batch 10000245 the operators noticed the forceps exhibited slight discoloration.
+
+### Comment
+N/A
+

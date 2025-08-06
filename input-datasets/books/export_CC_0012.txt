@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0031
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Non Viable Continuous Monitoring Stoppage for Lot 10000262
+
+### Description
+On 21MAR2025, the Lasair particle monitoring equipment and stopped recording results after the first 400L sample was taken on the data printout. Review of the instrument shows that it sampled continuously from 0838 to 1631 on 21MAR2025, however the print out states &amp;amp;quot;invalid&amp;amp;quot; with no alerts or alarms with no particle quantification.
+
+### Batch / Lot #
+10000262
+

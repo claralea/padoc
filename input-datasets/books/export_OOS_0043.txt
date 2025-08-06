@@ -1,0 +1,19 @@
+### ID
+GLB-DEV-0001
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Failed Autoclave Cycle 01NOV20221400
+
+### Description
+On 01 NOV 2022 Autoclave Cycle 01NOV20221400 showed a CODE: 102 Low temp.  The cycle had failed and the parts that were to be steam sterilized, were repouched and reautoclaved.  Autoclave Cycle # GLB-TR-0025.
+On 17 NOV 2022 Cycle 17NOV20221100 (QMS # GLB-TR-0032) produced an error code - Code: 102 Low Temp. Autoclave Cycle # GLB-TR-0032. See Attachments for GLB-DEV-0001 Investigation Report.
+
+### Batch / Lot #
+01NOV20221400
+

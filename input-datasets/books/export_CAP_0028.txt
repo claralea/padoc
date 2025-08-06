@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0015
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Additional Components Needed for Batch
+
+### Description
+Upon filling of Norepinephrine Bitartrate 8mg/8ml Lot 10000096 on 16OCT24, the target number of units for the production order could not be obtained in the validated 8 hour fill time. To enable Production to utilize the remaining bulk Norepinephrine Bitartrate 8mg/8ml product and reach the target units for the production order, the filling of this batch will have a Part 2 filling to occur tomorrow, 17OCT24. This will require additional filling materials: a new filter and pump tubing set.
+
+### Batch / Lot #
+10000096
+

@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0014
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Incorrect Filter Provided by Distributor
+
+### Description
+Upon filling of Norepinephrine Bitartrate 8mg/8ml Lot 10000096 on 15OCT24, it was observed that the filter received for sterile filtration was the incorrect filter (non-sterile vs. sterile). Filling was halted and Quality was notified. At this time, two tubs of 10R vials had been filled, stoppered, and capped. Upon investigation, it was found that non-sterile filters (Cat. No. JKPS020LFLM-GP) were received from the distributor instead of the sterile filters that were purchased (Cat. No. JKPS020LFLM-ETO).
+
+### Batch / Lot #
+10000096
+

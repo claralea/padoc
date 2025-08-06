@@ -1,0 +1,21 @@
+### ID
+DAL-DEV-0028
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Visible particle detected during AQL
+
+### Description
+Visible floating particle detected during the AQL for lot 10000208 which resulted in failure of AQL inspection per the criteria mentioned in DAL-SOP-0222.
+
+### Batch / Lot #
+10000208
+
+### Comment
+N/A
+

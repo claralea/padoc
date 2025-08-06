@@ -1,0 +1,21 @@
+### ID
+DAL-DEV-0012
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Facility Power Outage 23SEP2024
+
+### Description
+On 23SEP2024 there was a Facility Power outage at ~725 AM and the duration was less than one minute.
+
+### Batch / Lot #
+10000083
+
+### Comment
+The backup generators activated as expected. No commercial activities were in progress, Media challenge DAL-PQ-0034 was about to start. Engineering will assess the facility trends to determine if there was any facility impact due to the outage and evaluate root cause.
+

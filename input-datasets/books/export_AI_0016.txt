@@ -1,0 +1,18 @@
+### ID
+DAL-DEV-0027
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+Norepinephrine lot not matching sales order
+
+### Description
+Norepinephrine lot didn't match sales orders. Was discovered as SAP was stating to pull from certain Lots, but there was not enough physical quantity of that Lot.
+
+### Batch / Lot #
+10000186/1000187
+

@@ -1,0 +1,26 @@
+### ID
+DAL-DEV-0024
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+WFI Skid Pump Failure
+
+### Description
+On 06FEB2025 at roughly 0720 It was observed that the WFI skid pump was not operational. Review of system alarms showed that the pump stopped on 05FEB2025 at 1550.  This stoppage is believed to be due to the brine tank filling with water, which in turn caused the water softener to stop. With the insufficient water level in the holding tank the WFI skid pump alerted and cut off. 
+
+Work order (MWO-000364-2025-DE) was issued on 06FEB2025 to fix the pump and bring the WFI system back online.
+
+Per the system recovery standard operating procedure, dictates an extended Full system ozonation if incident lasted over 4 hours. Extended ozonation completed at 1700 on 06FEB2025. System was released back into full operations
+
+Trends and Alerts are attached. Per Engineering assessment the WFI system is back within qualified parameters
+
+Water sample was taken in the Formulation at productions POU. Weekly environmental WFI samples and additional Sample post WFI release, passed all established specifications.
+
+### Comment
+Impacted facility water which stops production activities (Formulation) until the problem and system are released per Standard operating procedures.
+

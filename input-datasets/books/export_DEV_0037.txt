@@ -1,0 +1,12 @@
+### ID
+DAL-DEV-0006
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+AQL Failure Visual Inspection Lot 10000025 25JUN2024
+

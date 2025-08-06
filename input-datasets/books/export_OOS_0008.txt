@@ -1,0 +1,21 @@
+### ID
+DAL-DEV-0035
+
+### Project
+Deviation
+
+### Type
+Deviation
+
+### Title
+WFI Malfunction 29MAR2025
+
+### Description
+On 29MAR2025, it was observed that the WFI skid pump was not operational on Monday, 31MAR2025. Review of system showed that a water valve was not fully closed, which drained the holding tank. Once the tank water level was below established levels the WFI system cut off to reduce any possible damage.
+
+Per the system recovery standard operating procedure no ozonation was required as tank did not fully empty
+
+Trends and Alerts are attached. Per Engineering assessment the WFI system was restored to operation within qualified parameters.
+
+Water sample was taken in the Formulation at productions POU. Weekly environmental WFI samples and additional Sample post WFI release, passed all established specifications.
+
