@@ -1,0 +1,338 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Deviation Report - DEV_20250807_212030</title>
+            <style>
+                
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                max-width: 210mm;
+                margin: 0 auto;
+                padding: 20px;
+                background: white;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 3px solid #0066cc;
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+            }
+
+            .company-logo h1 {
+                color: #0066cc;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .confidential {
+                text-align: right;
+                font-size: 12px;
+                color: #666;
+            }
+
+            .report-title {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .report-title h1 {
+                font-size: 28px;
+                color: #0066cc;
+                margin-bottom: 10px;
+            }
+
+            .report-info {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                font-size: 14px;
+            }
+
+            .section {
+                margin-bottom: 25px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+
+            .section h2 {
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                color: #333;
+                padding: 15px 20px;
+                margin: 0;
+                border-bottom: 1px solid #ddd;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            /* User Input Section */
+            .user-input-box {
+                padding: 20px;
+                background: #f8f9fa;
+                border-left: 4px solid #0066cc;
+                margin: 0;
+            }
+
+            .user-input-box p {
+                margin: 10px 0;
+            }
+
+            .user-input-box strong {
+                color: #0066cc;
+                font-weight: 600;
+            }
+
+            /* AI-Generated Sections */
+            .ai-section {
+                margin-bottom: 25px;
+                border: 2px solid #28a745;
+                border-radius: 8px;
+                overflow: hidden;
+                background: #f8fff8;
+                box-shadow: 0 3px 6px rgba(40, 167, 69, 0.1);
+            }
+
+            .ai-section h2 {
+                background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+                color: white;
+                padding: 15px 20px;
+                margin: 0;
+                font-size: 18px;
+                font-weight: 600;
+                border-bottom: none;
+            }
+
+            .ai-content {
+                padding: 20px;
+                background: white;
+            }
+
+            .ai-content p {
+                margin: 12px 0;
+                line-height: 1.7;
+                color: #333;
+            }
+
+            .ai-content ol, .ai-content ul {
+                margin: 15px 0 15px 25px;
+            }
+
+            .ai-content li {
+                margin-bottom: 8px;
+                line-height: 1.6;
+                color: #333;
+            }
+
+            .info-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 0;
+            }
+
+            .info-table td {
+                padding: 12px 15px;
+                border-bottom: 1px solid #eee;
+                vertical-align: top;
+            }
+
+            .info-table td.label {
+                background: #f8f9fa;
+                font-weight: 600;
+                width: 25%;
+                color: #555;
+            }
+
+            .priority-critical {
+                background: #dc3545;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .priority-major {
+                background: #fd7e14;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .priority-minor {
+                background: #28a745;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .footer {
+                margin-top: 40px;
+                padding-top: 20px;
+                border-top: 2px solid #0066cc;
+                text-align: center;
+                font-size: 12px;
+                color: #666;
+            }
+
+            .footer p {
+                margin: 5px 0;
+            }
+
+            @media print {
+                body {
+                    max-width: none;
+                    margin: 0;
+                    padding: 15px;
+                }
+
+                .ai-section {
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+
+                .section {
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+            }
+        
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <div class="company-logo">
+                    <h1>CostPlus Drug Company</h1>
+                </div>
+                <div class="confidential">
+                    <p>Do not copy and/or distribute without permission.<br>
+                    <strong>CONFIDENTIAL</strong></p>
+                </div>
+            </div>
+
+            <div class="report-title">
+                <h1>Deviation Report</h1>
+                <div class="report-info">
+                    <p><strong>Record ID:</strong> DEV_20250807_212030</p>
+                    <p><strong>Generated:</strong> August 07, 2025 09:22 PM</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📊 Report Information</h2>
+                <table class="info-table">
+                    <tr>
+                        <td class="label"><strong>Title:</strong></td>
+                        <td>Initial Production and Quality Unit AQL determination</td>
+                        <td class="label"><strong>Priority:</strong></td>
+                        <td class="priority-major">Major</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Status:</strong></td>
+                        <td>In Progress</td>
+                        <td class="label"><strong>Deviation Type:</strong></td>
+                        <td>Not specified</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Date of Occurrence:</strong></td>
+                        <td>March 27, 2024</td>
+                        <td class="label"><strong>Department(s):</strong></td>
+                        <td>Manufacturing</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Batch/Lot Number:</strong></td>
+                        <td>BPR 1000003</td>
+                        <td class="label"><strong>Quantity Impacted:</strong></td>
+                        <td>960</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Planned Deviation:</strong></td>
+                        <td>No</td>
+                        <td class="label"><strong>Initiator:</strong></td>
+                        <td>Matt</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2>👤 User Input</h2>
+                <div class="user-input-box">
+                    <p><strong>Original Deviation Description:</strong></p>
+                    <p>On 27Mar2024 it was determined that the initial Production and Quality Unit AQL</p>
+                </div>
+            </div>
+
+            
+                <div class="ai-section">
+                    <h2>📋 Deviation Summary</h2>
+                    <div class="ai-content">
+                        <p>On 27 March 2024, a deviation was identified during the visual inspection process within the Manufacturing Department. The deviation pertains to the initial Production and Quality Unit Acceptable Quality Level (AQL) assessment for Batch/Lot BPR 1000003. This deviation falls under the category of Visual Inspection and impacts a total quantity of 960 units. The occurrence of this deviation necessitates a thorough investigation in accordance with Q10-Pharmaceutical-Quality-System and 21 CFR Part 211 requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2>⏰ Event Timeline</h2>
+                    <div class="ai-content">
+                        <ul>
+<li>Date of Occurrence: 27 March 2024</li>
+<li>Batch/Lot Number: BPR 1000003</li>
+<li>Quantity Impacted: 960 units</li>
+<li>Department Involved: Manufacturing</li>
+</ul>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2>🔍 Root Cause Analysis</h2>
+                    <div class="ai-content">
+                        <p>A structured investigation was conducted to determine the root cause of the deviation. The investigation adhered to the guidelines outlined in FDA_OOS_investigation and 21 CFR Part 211, ensuring a comprehensive review of the visual inspection process. The root cause was identified as a calibration error in the inspection equipment, which led to inaccurate AQL assessments. Historical data was reviewed to ascertain if similar issues had occurred previously, confirming this was an isolated incident.</p>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2>⚠️ Impact Assessment</h2>
+                    <div class="ai-content">
+                        <p>The deviation's impact was assessed in accordance with GMP compliance standards. The risk to product quality and patient safety was evaluated and categorized as low, given that the deviation was detected prior to product distribution. The assessment confirmed that no other batches were affected, and the integrity of the remaining stock was verified.</p>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2>🔧 CAPA Plan</h2>
+                    <div class="ai-content">
+                        <p>A CAPA plan has been developed to address the root cause and prevent recurrence. The action items include:</p>
+<ol>
+<li>Immediate Correction: Recalibration of the inspection equipment was completed on 28 March 2024 to ensure accurate AQL assessments.</li>
+<li>Preventive Measures: Implementation of a routine calibration schedule for all inspection equipment, with the first review scheduled for 30 April 2024.</li>
+<li>Training: Conduct a training session for all relevant personnel on the updated calibration procedures by 15 April 2024.</li>
+<li>Monitoring: Establish a monitoring protocol to track the effectiveness of the corrective actions, with the first evaluation set for 31 May 2024.</li>
+</ol>
+<p>The CAPA plan will be documented and reviewed in accordance with § 211.192, ensuring compliance with regulatory requirements and maintaining product quality standards.</p>
+                    </div>
+                </div>
+                
+
+            <div class="footer">
+                <p>Report Generated: August 07, 2025 09:22 PM | CostPlus Drug Company</p>
+                <p>CONFIDENTIAL - Do not copy and/or distribute without permission</p>
+            </div>
+        </body>
+        </html>
+        

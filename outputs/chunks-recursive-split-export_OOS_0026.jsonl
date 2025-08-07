@@ -1,0 +1,8 @@
+{"chunk":"### ID\nDAL-DEV-0017\n\n### Project\nDeviation\n\n### Type\nDeviation\n\n### Title\nMissed Verification on the autoclave load","book":"export_OOS_0026"}
+{"chunk":"### Description","book":"export_OOS_0026"}
+{"chunk":"On 14 oct 2024 the Tuttnauer autoclave was used to sterilize small ancillary parts for Nor-epinephrine lot 10000096 (batch record DAL-BR-0009) using the validated sterilization cycle","book":"export_OOS_0026"}
+{"chunk":". Technician (position ID 100049) was qualified and trained to load the autoclave as per the validated cycle and documented their performance in the &amp;amp;quot;performed by&amp;amp;quot; section","book":"export_OOS_0026"}
+{"chunk":". However, as they were the only associate in the room at the time and the cycle was already loaded they proceeded to initiate the load without a verification signature. Two signatures are required based on the current version of the From, DAL-FRM-0039.","book":"export_OOS_0026"}
+{"chunk":"Upon completion of the cycle, which met the validated parameters, the associate removed the load and unfortunately missed obtaining a verification of the load prior to removing the items.","book":"export_OOS_0026"}
+{"chunk":"The associate has also loaded the autoclave successfully previously during the ORABS media simulations and the correctness of the load was verified with no issues.\nThe missing verified by signature was detected during QA batch record review. Upon detection a deviation was initiated.\n\n### Batch \/ Lot #\n10000096","book":"export_OOS_0026"}
+{"chunk":"### Comment\nHeightened awareness training was performed emphasizing obtaining the verification signature to avoid recurrence. Reference DAL-TRN-0096.","book":"export_OOS_0026"}

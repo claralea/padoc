@@ -1,0 +1,7 @@
+{"chunk":"### ID\nDAL-DEV-0024\n\n### Project\nDeviation\n\n### Type\nDeviation\n\n### Title\nWFI Skid Pump Failure","book":"export_CAP_0019"}
+{"chunk":"### Description","book":"export_CAP_0019"}
+{"chunk":"On 06FEB2025 at roughly 0720 It was observed that the WFI skid pump was not operational. Review of system alarms showed that the pump stopped on 05FEB2025 at 1550.  This stoppage is believed to be due to the brine tank filling with water, which in turn caused the water softener to stop","book":"export_CAP_0019"}
+{"chunk":". With the insufficient water level in the holding tank the WFI skid pump alerted and cut off.","book":"export_CAP_0019"}
+{"chunk":"Work order (MWO-000364-2025-DE) was issued on 06FEB2025 to fix the pump and bring the WFI system back online.\n\nPer the system recovery standard operating procedure, dictates an extended Full system ozonation if incident lasted over 4 hours. Extended ozonation completed at 1700 on 06FEB2025. System was released back into full operations","book":"export_CAP_0019"}
+{"chunk":"Trends and Alerts are attached. Per Engineering assessment the WFI system is back within qualified parameters\n\nWater sample was taken in the Formulation at productions POU. Weekly environmental WFI samples and additional Sample post WFI release, passed all established specifications.","book":"export_CAP_0019"}
+{"chunk":"### Comment\nImpacted facility water which stops production activities (Formulation) until the problem and system are released per Standard operating procedures.","book":"export_CAP_0019"}

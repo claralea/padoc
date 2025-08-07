@@ -1,0 +1,7 @@
+{"chunk":"### ID\nDAL-DEV-0025\n\n### Project\nDeviation\n\n### Type\nDeviation\n\n### Title\nLot 10000186 Packaging","book":"export_AI_0018"}
+{"chunk":"### Description","book":"export_AI_0018"}
+{"chunk":"On 06FEB2025, during the packaging step 7.4.1 per DAL-SOP-0130, the grading scale for print Integrity was consistently resulting in failing Grades of C,D, and F. Process Engineer and Packaging lead identified that the ink cartridge and print head are going out. The print head is causing linear striations within the QR code","book":"export_AI_0018"}
+{"chunk":". The QR is also printed on the vial that corresponds to a Distinct GTIN number, the QR is still able to be read visually and when scanned displaying the correct corresponding information. Management instructed the operator to turn off the grading for print integrity of the QR code to complete the packaging process","book":"export_AI_0018"}
+{"chunk":". The risk to the printed integrity variable data is Low, as the print integrity of the QR code is primarily for when the cartons have a serialized barcode in the place of the QR code to ensure that the serialization is legible and accurate per regulatory guidelines","book":"export_AI_0018"}
+{"chunk":". DAL-AI-0037 has been generated to Update DAL-SOP-0130 to reflect updated Grading parameters. Updates do not affect the qualified state of the Rotzinger Serialization Equipment.","book":"export_AI_0018"}
+{"chunk":"### Batch \/ Lot #\n10000186","book":"export_AI_0018"}

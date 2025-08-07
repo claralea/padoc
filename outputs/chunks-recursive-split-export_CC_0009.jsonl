@@ -1,0 +1,5 @@
+{"chunk":"### ID\nDAL-DEV-0034\n\n### Project\nDeviation\n\n### Type\nDeviation\n\n### Title\nStir plate speed not met final QS 10000255","book":"export_CC_0009"}
+{"chunk":"### Description","book":"export_CC_0009"}
+{"chunk":"Upon review of DAL-BR-0043, it was observed that the stir plate speed in step 5.4.26. did not meet the speed specified in the final QS instruction (NLT 6). Step 5.4.26. occurs after dissolution of all powders and is the step to &amp;amp;quot;Q.S.&amp;amp;quot; WFI to the final target weight","book":"export_CC_0009"}
+{"chunk":". After QS, the bulk was mixed for the required time at a speed of 5.","book":"export_CC_0009"}
+{"chunk":"The production technician indicated that due to the previous step speeds of &amp;amp;quot;5&amp;amp;quot;, they incorrectly continued use of of &amp;amp;quot;5&amp;amp;quot; for the final Q.S. No anomalies were observed during mixing and all components were already dissolved during the previous seps.\n\n### Batch \/ Lot #\n10000255","book":"export_CC_0009"}

@@ -1,0 +1,336 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Deviation Report - DEV_20250807_190125</title>
+            <style>
+                
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                max-width: 210mm;
+                margin: 0 auto;
+                padding: 20px;
+                background: white;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 3px solid #0066cc;
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+            }
+
+            .company-logo h1 {
+                color: #0066cc;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .confidential {
+                text-align: right;
+                font-size: 12px;
+                color: #666;
+            }
+
+            .report-title {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .report-title h1 {
+                font-size: 28px;
+                color: #0066cc;
+                margin-bottom: 10px;
+            }
+
+            .report-info {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                font-size: 14px;
+            }
+
+            .section {
+                margin-bottom: 25px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+
+            .section h2 {
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                color: #333;
+                padding: 15px 20px;
+                margin: 0;
+                border-bottom: 1px solid #ddd;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            /* User Input Section */
+            .user-input-box {
+                padding: 20px;
+                background: #f8f9fa;
+                border-left: 4px solid #0066cc;
+                margin: 0;
+            }
+
+            .user-input-box p {
+                margin: 10px 0;
+            }
+
+            .user-input-box strong {
+                color: #0066cc;
+                font-weight: 600;
+            }
+
+            /* AI-Generated Sections */
+            .ai-section {
+                margin-bottom: 25px;
+                border: 2px solid #28a745;
+                border-radius: 8px;
+                overflow: hidden;
+                background: #f8fff8;
+                box-shadow: 0 3px 6px rgba(40, 167, 69, 0.1);
+            }
+
+            .ai-section h2 {
+                background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+                color: white;
+                padding: 15px 20px;
+                margin: 0;
+                font-size: 18px;
+                font-weight: 600;
+                border-bottom: none;
+            }
+
+            .ai-content {
+                padding: 20px;
+                background: white;
+            }
+
+            .ai-content p {
+                margin: 12px 0;
+                line-height: 1.7;
+                color: #333;
+            }
+
+            .ai-content ol, .ai-content ul {
+                margin: 15px 0 15px 25px;
+            }
+
+            .ai-content li {
+                margin-bottom: 8px;
+                line-height: 1.6;
+                color: #333;
+            }
+
+            .info-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 0;
+            }
+
+            .info-table td {
+                padding: 12px 15px;
+                border-bottom: 1px solid #eee;
+                vertical-align: top;
+            }
+
+            .info-table td.label {
+                background: #f8f9fa;
+                font-weight: 600;
+                width: 25%;
+                color: #555;
+            }
+
+            .priority-critical {
+                background: #dc3545;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .priority-major {
+                background: #fd7e14;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .priority-minor {
+                background: #28a745;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .footer {
+                margin-top: 40px;
+                padding-top: 20px;
+                border-top: 2px solid #0066cc;
+                text-align: center;
+                font-size: 12px;
+                color: #666;
+            }
+
+            .footer p {
+                margin: 5px 0;
+            }
+
+            @media print {
+                body {
+                    max-width: none;
+                    margin: 0;
+                    padding: 15px;
+                }
+
+                .ai-section {
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+
+                .section {
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+            }
+        
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <div class="company-logo">
+                    <h1>CostPlus Drug Company</h1>
+                </div>
+                <div class="confidential">
+                    <p>Do not copy and/or distribute without permission.<br>
+                    <strong>CONFIDENTIAL</strong></p>
+                </div>
+            </div>
+
+            <div class="report-title">
+                <h1>Deviation Report</h1>
+                <div class="report-info">
+                    <p><strong>Record ID:</strong> DEV_20250807_190125</p>
+                    <p><strong>Generated:</strong> August 07, 2025 07:02 PM</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📊 Report Information</h2>
+                <table class="info-table">
+                    <tr>
+                        <td class="label"><strong>Title:</strong></td>
+                        <td>(10 USP units/mL) and Norepinephrine lot 10000296, New in-house labels were</td>
+                        <td class="label"><strong>Priority:</strong></td>
+                        <td class="priority-major">Major</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Status:</strong></td>
+                        <td>In Progress</td>
+                        <td class="label"><strong>Deviation Type:</strong></td>
+                        <td>Not specified</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Date of Occurrence:</strong></td>
+                        <td>Not specified</td>
+                        <td class="label"><strong>Department(s):</strong></td>
+                        <td>Not specified</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Batch/Lot Number:</strong></td>
+                        <td>The labels did not run on the Newman labeling machine using the settings used on</td>
+                        <td class="label"><strong>Quantity Impacted:</strong></td>
+                        <td>the previous labels which and was causing multiple issues such as breaking of the</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Planned Deviation:</strong></td>
+                        <td>No</td>
+                        <td class="label"><strong>Initiator:</strong></td>
+                        <td>Clara-Lea</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section">
+                <h2>👤 User Input</h2>
+                <div class="user-input-box">
+                    <p><strong>Original Deviation Description:</strong></p>
+                    <p>During the packaging of lot 10000274 Oxytocin Injection, USP 30 USP units/3mL</p>
+                </div>
+            </div>
+
+            
+                <div class="ai-section">
+                    <h2>📋 Deviation Summary</h2>
+                    <div class="ai-content">
+                        <p>During the packaging process of Oxytocin Injection, USP 30 USP units/3mL, lot number 10000274, there was a failure in the labeling process on the Newman labeling machine. The issue involved the labels not running correctly, leading to multiple issues such as ribbon breakage and undetected labels through the Newman labeler rejection sensor.</p>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2>⏰ Event Timeline</h2>
+                    <div class="ai-content">
+                        <ul>
+<li>Date of Occurrence: Not explicitly provided.</li>
+<li>Batch/Lot Affected: Oxytocin labels with part number 10000024 and lot number 100038763.</li>
+<li>Equipment Involved: Newman labeling machine.</li>
+<li>Identification of Issue: The issue was identified during the packaging process when labels failed to run correctly on the Newman labeling machine.</li>
+</ul>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2>🔍 Root Cause Analysis</h2>
+                    <div class="ai-content">
+                        <p>The root cause of the deviation was the use of incorrect settings on the Newman labeling machine, which were not suitable for the Oxytocin labels. The settings used were those intended for Norepinephrine labels (part number 10005423 and lot number 100038868), leading to operational failures such as ribbon breakage and undetected labels.</p>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2>⚠️ Impact Assessment</h2>
+                    <div class="ai-content">
+                        <p>The deviation impacted the labeling process of Oxytocin Injection, USP 30 USP units/3mL, potentially affecting the correct identification and traceability of the product. This could lead to compliance issues with labeling regulations and pose a risk to product quality and patient safety if not addressed.</p>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2>🔧 CAPA Plan</h2>
+                    <div class="ai-content">
+                        <ul>
+<li>Immediate Correction: Adjust the settings on the Newman labeling machine to those appropriate for the Oxytocin labels. Re-run the affected batch to ensure proper labeling.</li>
+<li>Root Cause Mitigation: Conduct a review of the labeling machine settings protocol to ensure that correct settings are used for each product type. Implement a double-check system before starting the labeling process.</li>
+<li>Preventive Action: Train operators on the importance of verifying machine settings before use. Update the Standard Operating Procedures (SOPs) to include a checklist for machine settings verification.</li>
+<li>Monitoring and Review: Implement a monitoring system to track labeling machine performance and conduct regular audits to ensure compliance with the updated SOPs. Conduct a follow-up review to assess the effectiveness of the CAPA plan.</li>
+</ul>
+                    </div>
+                </div>
+                
+
+            <div class="footer">
+                <p>Report Generated: August 07, 2025 07:02 PM | CostPlus Drug Company</p>
+                <p>CONFIDENTIAL - Do not copy and/or distribute without permission</p>
+            </div>
+        </body>
+        </html>
+        

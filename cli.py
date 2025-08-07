@@ -186,14 +186,34 @@ def chunk(method="char-split"):
 			print("Number of chunks:", len(text_chunks))
 
 		elif method == "recursive-split":
-			chunk_size = 350
-			chunk_overlap = 20
-			# Init the splitter
-			text_splitter = RecursiveCharacterTextSplitter(chunk_size = chunk_size, chunk_overlap=chunk_overlap, separators=["\n\n", "\n", ".", " ", ""])
+			# chunk_size = 350
+			# chunk_overlap = 20
+			# # Init the splitter
+			# text_splitter = RecursiveCharacterTextSplitter(chunk_size = chunk_size, chunk_overlap=chunk_overlap, separators=["\n\n", "\n", ".", " ", ""])
 
-			# Perform the splitting
-			text_chunks = text_splitter.create_documents([input_text])
-			text_chunks = [doc.page_content for doc in text_chunks]
+			# # Perform the splitting
+			# text_chunks = text_splitter.create_documents([input_text])
+			# text_chunks = [doc.page_content for doc in text_chunks]
+			# print("Number of chunks:", len(text_chunks))
+
+			def smart_chunk(input_text, min_chunk_length=600):
+				if len(input_text) <= min_chunk_length:
+					print("Short document, no chunking applied.")
+					return [input_text]
+				else:
+					print("Long document, applying chunking.")
+					chunk_size = 350
+					chunk_overlap = 20
+					text_splitter = RecursiveCharacterTextSplitter(
+						chunk_size=chunk_size,
+						chunk_overlap=chunk_overlap,
+						separators=["\n\n", "\n", ".", " ", ""]
+					)
+					chunks = text_splitter.create_documents([input_text])
+					return [doc.page_content for doc in chunks]
+
+			# Example usage
+			text_chunks = smart_chunk(input_text)
 			print("Number of chunks:", len(text_chunks))
 		
 		elif method == "semantic-split":
@@ -201,7 +221,6 @@ def chunk(method="char-split"):
 			text_splitter = SemanticChunker(embedding_function=generate_text_embeddings)
 			# Perform the splitting
 			text_chunks = text_splitter.create_documents([input_text])
-			
 			text_chunks = [doc.page_content for doc in text_chunks]
 			print("Number of chunks:", len(text_chunks))
 
@@ -360,7 +379,7 @@ def query(method="char-split"):
 	collection = client.get_collection(name=collection_name)
 
 	# Your custom query
-	user_query = "Batch Production Records"
+	user_query = "Immediate actions after Lasair particle monitoring equipment stopped recording results"
 
 	# Embed with Vertex AI
 	query_embedding_inputs = [TextEmbeddingInput(task_type='RETRIEVAL_DOCUMENT', text=user_query)]
@@ -391,7 +410,11 @@ def chat(method="char-split"):
 	# Get a collection object from an existing collection, by name. If it doesn't exist, create it.
 	collection_name = f"{method}-collection"
 
-	query = "What is the best practice for batch production records?"
+	#query = "What is the best practice for batch production records?"
+	#query = "What happened with Lot 10000262?"
+	query = "Was any equipment operated without dual signoff?"
+	#query = "What is gouda cheese?"
+
 	query_embedding = generate_query_embedding(query)
 	print("Query:", query)
 	print("Embedding values:", query_embedding)
