@@ -1,0 +1,402 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Deviation Report - DEV_20250808_043331</title>
+            <style>
+                
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                max-width: 210mm;
+                margin: 0 auto;
+                padding: 20px;
+                background: white;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 3px solid #0066cc;
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+            }
+
+            .company-logo h1 {
+                color: #0066cc;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .confidential {
+                text-align: right;
+                font-size: 12px;
+                color: #666;
+            }
+
+            .report-title {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .report-title h1 {
+                font-size: 28px;
+                color: #0066cc;
+                margin-bottom: 10px;
+            }
+
+            .report-info {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                font-size: 14px;
+            }
+
+            .section {
+                margin-bottom: 25px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                overflow: hidden;
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+
+            .section h2 {
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                color: #333;
+                padding: 15px 20px;
+                margin: 0;
+                border-bottom: 1px solid #ddd;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            /* User Input Section - Gray Theme */
+            .user-input-section {
+                border: 1px solid #999;
+                background: #f5f5f5;
+            }
+
+            .user-input-header {
+                background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%) !important;
+                color: white !important;
+                padding: 15px 20px;
+                margin: 0;
+                border-bottom: 1px solid #999;
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+            .user-input-box {
+                padding: 20px;
+                background: #fafafa;
+                margin: 0;
+                border-left: 4px solid #6c757d;
+            }
+
+            .full-description {
+                color: #495057;
+                font-size: 15px;
+                line-height: 1.8;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                max-width: 100%;
+                padding: 15px;
+                background: white;
+                border-radius: 5px;
+                box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+            }
+
+            /* AI-Generated Container */
+            .ai-generated-container {
+                margin-top: 30px;
+                padding: 20px;
+                background: #f0f8ff;
+                border-radius: 10px;
+                border: 2px solid #0066cc;
+            }
+
+            .ai-main-header {
+                color: #0066cc;
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                border-bottom: 2px solid #0066cc;
+            }
+
+            /* AI-Generated Sections - Blue Theme */
+            .ai-section {
+                margin-bottom: 25px;
+                border: 1px solid #0066cc;
+                border-radius: 8px;
+                overflow: hidden;
+                background: white;
+                box-shadow: 0 3px 6px rgba(0, 102, 204, 0.1);
+            }
+
+            .ai-header {
+                background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%) !important;
+                color: white !important;
+                padding: 15px 20px;
+                margin: 0;
+                font-size: 18px;
+                font-weight: 600;
+                border-bottom: none;
+            }
+
+            .ai-content {
+                padding: 20px;
+                background: white;
+            }
+
+            .ai-content p {
+                margin: 12px 0;
+                line-height: 1.7;
+                color: #333;
+                font-size: 14px;
+            }
+
+            .ai-content ol, .ai-content ul {
+                margin: 15px 0 15px 25px;
+            }
+
+            .ai-content li {
+                margin-bottom: 8px;
+                line-height: 1.6;
+                color: #333;
+                font-size: 14px;
+            }
+
+            .info-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 0;
+            }
+
+            .info-table td {
+                padding: 12px 15px;
+                border-bottom: 1px solid #eee;
+                vertical-align: top;
+            }
+
+            .info-table td.label {
+                background: #f8f9fa;
+                font-weight: 600;
+                width: 25%;
+                color: #555;
+            }
+
+            .priority-critical {
+                background: #dc3545;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .priority-major {
+                background: #fd7e14;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .priority-minor {
+                background: #28a745;
+                color: white;
+                padding: 6px 12px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .footer {
+                margin-top: 40px;
+                padding-top: 20px;
+                border-top: 2px solid #0066cc;
+                text-align: center;
+                font-size: 12px;
+                color: #666;
+            }
+
+            .footer p {
+                margin: 5px 0;
+            }
+
+            @media print {
+                body {
+                    max-width: none;
+                    margin: 0;
+                    padding: 15px;
+                }
+
+                .ai-section {
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+
+                .section {
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+                
+                .full-description {
+                    page-break-inside: auto;
+                }
+            }
+        
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <div class="company-logo">
+                    <h1>CostPlus Drug Company</h1>
+                </div>
+                <div class="confidential">
+                    <p>Do not copy and/or distribute without permission.<br>
+                    <strong>CONFIDENTIAL</strong></p>
+                </div>
+            </div>
+
+            <div class="report-title">
+                <h1>Deviation Report</h1>
+                <div class="report-info">
+                    <p><strong>Record ID:</strong> DEV_20250808_043331</p>
+                    <p><strong>Generated:</strong> August 08, 2025 04:33 AM</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📊 Report Information</h2>
+                <table class="info-table">
+                    <tr>
+                        <td class="label"><strong>Title:</strong></td>
+                        <td>Discoloration of forceps during filling of batch 10000245</td>
+                        <td class="label"><strong>Priority:</strong></td>
+                        <td class="priority-major">Major</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Status:</strong></td>
+                        <td>In Progress</td>
+                        <td class="label"><strong>Deviation Type:</strong></td>
+                        <td>Equipment</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Date of Occurrence:</strong></td>
+                        <td>March 13, 2025</td>
+                        <td class="label"><strong>Department(s):</strong></td>
+                        <td>QA</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Batch/Lot Number:</strong></td>
+                        <td>10000245</td>
+                        <td class="label"><strong>Quantity Impacted:</strong></td>
+                        <td>678</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Planned Deviation:</strong></td>
+                        <td>Yes</td>
+                        <td class="label"><strong>Initiator:</strong></td>
+                        <td>cl</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section user-input-section">
+                <h2 class="user-input-header">👤 User Input - Original Deviation Description</h2>
+                <div class="user-input-box">
+                    <div class="full-description">
+                        On 13 March 2025 during the start of filling of batch 10000245 the operators noticed the forceps exhibited slight discoloration. This deviation was planned to test the material
+                    </div>
+                </div>
+            </div>
+
+            <div class="ai-generated-container">
+                <h2 class="ai-main-header">🤖 AI-Generated Analysis</h2>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">📋 Deviation Summary</h2>
+                    <div class="ai-content">
+                        <p>On March 13, 2025, during the initiation of the filling process for batch 10000245, operators observed a slight discoloration on the forceps. This deviation was part of a planned test for the material. The impacted quantity is 678 units. The deviation is currently under investigation by the QA department to determine the root cause and assess any potential impact on product quality.</p>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">⏰ Event Timeline</h2>
+                    <div class="ai-content">
+                        <ul>
+<li>March 13, 2025: Operators noticed slight discoloration on the forceps during the start of filling batch 10000245.</li>
+</ul>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">🔍 Root Cause Analysis</h2>
+                    <div class="ai-content">
+                        <p>Root cause investigation focuses on the following areas based on the deviation details:</p>
+<ul>
+<li>Equipment: The forceps used during the filling process require review of cleaning and maintenance procedures to ensure compliance with established protocols.</li>
+<li>Material: The material of the forceps needs verification for potential chemical reactions or degradation that could cause discoloration.</li>
+</ul>
+<p>Investigation will use Fishbone diagram to identify the root cause.</p>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">⚠️ Impact Assessment</h2>
+                    <div class="ai-content">
+                        <ul>
+<li>Product Quality: The discoloration on the forceps may introduce contamination risk, potentially affecting product sterility.</li>
+<li>Batch Disposition: The batch requires additional testing for contamination and sterility assurance.</li>
+<li>Risk Level: Classified as Major due to potential impact on product sterility and patient safety.</li>
+<li>Other Batches: No immediate risk identified for other batches, as this deviation is specific to the equipment used in batch 10000245.</li>
+</ul>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">🔧 CAPA Plan</h2>
+                    <div class="ai-content">
+                        <p>Immediate Actions (24-48 hours):</p>
+<ul>
+<li>Quarantine batch 10000245 to prevent distribution until further testing is complete.</li>
+<li>Stop use of the discolored forceps and remove them from the production area.</li>
+<li>Collect samples from the batch for sterility and contamination testing.</li>
+</ul>
+<p>Corrective Actions (address this event):</p>
+<ul>
+<li>Recalibrate and inspect all forceps to ensure they meet quality standards before use.</li>
+<li>Conduct a thorough cleaning of the equipment involved in the filling process.</li>
+<li>Retrain operators on the importance of equipment inspection before use.</li>
+</ul>
+<p>Preventive Actions (prevent recurrence):</p>
+<ul>
+<li>Revise SOP to include mandatory inspection of equipment for discoloration before each use.</li>
+<li>Implement additional in-process control checks for equipment condition during production.</li>
+<li>Establish a regular maintenance schedule for all equipment to prevent similar issues.</li>
+</ul>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="footer">
+                <p>Report Generated: August 08, 2025 04:33 AM | CostPlus Drug Company</p>
+                <p>CONFIDENTIAL - Do not copy and/or distribute without permission</p>
+            </div>
+        </body>
+        </html>
+        

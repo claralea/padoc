@@ -6,6 +6,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, Optional, List
 import openai
+import re
 
 # Add imports from your existing code
 from cli import (
@@ -190,15 +191,14 @@ Thank you, {name}!
             chosen = dept_map[d_raw]
         out["department"] = chosen or out["department"]
         
-        # Coerce planned deviation to boolean or None
+        # Coerce planned deviation - DEFAULT TO FALSE unless explicitly stated
         v = str(out["is_planned_deviation"]).strip().lower()
         if v in ("true", "yes", "y", "planned"):
             out["is_planned_deviation"] = True
-        elif v in ("false", "no", "n", "unplanned"):
+        else:
+            # DEFAULT TO FALSE for any other value including None, empty, "null", etc.
             out["is_planned_deviation"] = False
-        elif v in ("", "none", "null", "n/a", "na"):
-            out["is_planned_deviation"] = None
-        
+
         return out
 
     def _is_missing(self, value: Any) -> bool:
@@ -308,7 +308,7 @@ Thank you, {name}!
         "batch_lot_number": "Batch or lot number if mentioned (look for patterns like LOT#, Batch#, or similar)",
         "quantity_impacted": "Quantity impacted if mentioned (include units)",
         "department": "One of: Manufacturing, QA, QC, Warehouse, R&D, Engineering, Regulatory, Quality",
-        "is_planned_deviation": "true or false if mentioned, otherwise null"
+        "is_planned_deviation": "ONLY set to true if the description explicitly states this was a 'planned deviation' or 'planned change' or 'approved deviation'. Otherwise return false."
     }}
 
     Use the terminology and formats from the past examples. Only extract what is clearly stated. Use null for missing information.
@@ -438,10 +438,11 @@ Thank you, {name}!
         "batch_lot_number": "Batch or lot number if mentioned",
         "quantity_impacted": "Quantity impacted if mentioned",
         "department": "One of: Manufacturing, QA, QC, Warehouse, R&D, Engineering, Regulatory, Quality",
-        "is_planned_deviation": "true or false if mentioned, otherwise null"
+        "is_planned_deviation": "ONLY set to true if the description explicitly states this was a 'planned deviation' or 'planned change' or 'approved deviation'. Otherwise return false."
     }}
 
     Only extract what is clearly stated. Use null for missing information.
+    For is_planned_deviation: Default to false unless explicitly stated as planned.
     """
         
         try:
@@ -470,8 +471,8 @@ Thank you, {name}!
         """Check which required fields are missing"""
         required_fields = [
             "title", "deviation_type", "date_of_occurrence",
-            "batch_lot_number", "quantity_impacted", "department",
-            "is_planned_deviation"
+            "batch_lot_number", "quantity_impacted", "department"
+            #"is_planned_deviation"
         ]
         
         missing = []
@@ -491,8 +492,8 @@ Thank you, {name}!
             "date_of_occurrence": "**When did this deviation occur?** (MM/DD/YYYY format)",
             "batch_lot_number": "**What is the batch/lot number affected?**\n(If not applicable, type 'N/A')",
             "quantity_impacted": "**What quantity was impacted?**\n(e.g., '500 tablets', '2 liters', 'entire batch')",
-            "department": f"**Which department is involved?**\nOptions: {', '.join(self.departments)}",
-            "is_planned_deviation": "**Is this a planned deviation?** (yes/no)"
+            "department": f"**Which department is involved?**\nOptions: {', '.join(self.departments)}"
+            #"is_planned_deviation": "**Is this a planned deviation?** (yes/no)"
         }
         
         return questions.get(field, f"Please provide information for: {field}")
@@ -620,6 +621,9 @@ Thank you, {name}!
 
         full_description = self.current_session["data"].get("description", "No description provided")
 
+        is_planned = extracted.get('is_planned_deviation', False)
+        planned_text = "Yes" if is_planned is True else "No"
+
         
         return f"""
 ✅ **Deviation Report Ready**
@@ -631,7 +635,7 @@ Thank you, {name}!
 • Batch/Lot: {extracted.get('batch_lot_number', 'N/A')}
 • Quantity: {extracted.get('quantity_impacted', 'N/A')}
 • Department: {extracted.get('department', 'N/A')}
-• Planned: {extracted.get('is_planned_deviation', 'N/A')}
+• Planned Deviation: {planned_text}
 
 **Your Full Description:** 
 {full_description}
@@ -752,8 +756,6 @@ Then list ONLY the relevant categories (pick only those that apply):
 - If process issue: "**Process**: [Specific process step mentioned] needs evaluation of [specific parameters mentioned or implied by the deviation]"
 - If human factors indicated: "**Personnel**: Review [specific action mentioned] for compliance with [relevant SOP implied by the deviation]"
 - If material issue: "**Material**: [Specific material mentioned] requires verification of [specific concern based on deviation]"
-
-End with ONE sentence: "Investigation will use [5-Why analysis/Fault Tree/Fishbone diagram] to identify the root cause."
 
 Keep this section under 200 words. Be specific to what actually happened, not generic.
 
@@ -879,8 +881,12 @@ The reports include:
         report.deviation_info.department = DeviationDataValidator.parse_departments(dept_str)
         
         # Planned deviation
-        planned_str = extracted.get("is_planned_deviation", "false")
-        report.deviation_info.is_planned_deviation = str(planned_str).lower() in ['true', 'yes', 'y']
+        planned_value = extracted.get("is_planned_deviation")
+        if planned_value is True:
+            report.deviation_info.is_planned_deviation = True
+        else:
+            # Default to False for any other value
+            report.deviation_info.is_planned_deviation = False
         
         # Set default values
         report.deviation_info.priority = Priority.MAJOR
