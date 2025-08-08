@@ -617,6 +617,9 @@ Thank you, {name}!
         self.current_session["data"]["regulatory_context"] = regulatory_context
         
         extracted = self.current_session["data"]["extracted"]
+
+        full_description = self.current_session["data"].get("description", "No description provided")
+
         
         return f"""
 ✅ **Deviation Report Ready**
@@ -630,8 +633,11 @@ Thank you, {name}!
 • Department: {extracted.get('department', 'N/A')}
 • Planned: {extracted.get('is_planned_deviation', 'N/A')}
 
+**Your Full Description:** 
+{full_description}
+
 **AI-Generated Report Preview:**
-{ai_report[:500]}...
+{ai_report[:1500]}...
 
 **Type 'yes' to generate the complete reports (PDF, Word, HTML) or 'no' to cancel.**
 """
@@ -694,64 +700,98 @@ Thank you, {name}!
         description = self.current_session["data"]["description"]
         extracted = self.current_session["data"]["extracted"]
         
-        # Search for similar past deviations
-        similar_deviations = self._search_similar_deviations(
-            deviation_type=extracted.get('deviation_type', ''),
-            description=description,
-            department=extracted.get('department', '')
-        )
+        # Search for similar past deviations if you have the RAG enhancement
+        if hasattr(self, '_search_similar_deviations'):
+            similar_deviations = self._search_similar_deviations(
+                deviation_type=extracted.get('deviation_type', ''),
+                description=description,
+                department=extracted.get('department', '')
+            )
+            past_reports_context = similar_deviations.get('formatted_context', '')[:1000]
+        else:
+            past_reports_context = ""
         
         # Get regulatory context
         search_query = f"{extracted.get('deviation_type', '')} deviation CAPA root cause GMP requirements"
         regulatory_context = self.rag_system.search_with_context(search_query, filters=None)
         reg_text = regulatory_context.get('formatted', '')[:1000]
         
-        # Extract language patterns from past reports
-        language_patterns = similar_deviations.get('language_patterns', {})
-        past_reports_context = similar_deviations.get('formatted_context', '')
-        
-        # Build enhanced prompt with past deviation examples
         prompt = f"""
-    You are writing a deviation report for a pharmaceutical manufacturing facility. 
-    Use the language style and terminology from these similar past deviation reports as your guide.
+You are documenting a deviation that has occurred in a pharmaceutical manufacturing facility.
 
-    PAST DEVIATION REPORTS FOR LANGUAGE REFERENCE:
-    {past_reports_context}
+DEVIATION INFORMATION:
+Description: {description}
+- Batch/Lot: {extracted.get('batch_lot_number', 'Not specified')}
+- Quantity Impacted: {extracted.get('quantity_impacted', 'Not specified')}
+- Date of Occurrence: {extracted.get('date_of_occurrence', 'Not specified')}
+- Department: {extracted.get('department', 'Not specified')}
+- Deviation Type: {extracted.get('deviation_type', 'Not specified')}
 
-    LANGUAGE PATTERNS TO FOLLOW:
-    - Opening phrases used in past reports: {'; '.join(language_patterns.get('opening_phrases', [''])[:2])}
-    - Root cause language examples: {'; '.join(language_patterns.get('root_cause_language', [''])[:2])}
-    - CAPA language examples: {'; '.join(language_patterns.get('capa_language', [''])[:2])}
+Relevant Regulatory Context:
+{reg_text}
 
-    CURRENT DEVIATION TO DOCUMENT:
-    Description: {description}
+Previous Similar Deviations (for language reference):
+{past_reports_context}
 
-    Additional Information:
-    - Batch/Lot: {extracted.get('batch_lot_number', 'Not specified')}
-    - Quantity Impacted: {extracted.get('quantity_impacted', 'Not specified')}
-    - Date of Occurrence: {extracted.get('date_of_occurrence', 'Not specified')}
-    - Department: {extracted.get('department', 'Not specified')}
-    - Deviation Type: {extracted.get('deviation_type', 'Not specified')}
+Generate a comprehensive deviation report with the following sections:
 
-    Relevant Regulatory Requirements:
-    {reg_text}
+1. **Deviation Summary**
+Write a clear, factual summary of what has occurred. Include the batch/lot number, quantity impacted, when it was identified, and by whom (if mentioned). Use past tense for what happened, present tense for current status. Maximum 3-4 sentences.
 
-    INSTRUCTIONS:
-    1. Mirror the professional language and structure from the past deviation reports
-    2. Use similar terminology and phrasing patterns
-    3. Maintain the same level of technical detail and GMP compliance language
-    4. Include specific references to batch numbers, quantities, and dates where provided
-    5. Follow the same format for root cause analysis and CAPA as shown in examples
+2. **Event Timeline**
+Create a chronological timeline based ONLY on information provided in the description. Use past tense. Format as bullet points with dates/times if provided. Do not add assumed events.
 
-    Format your response with these sections:
-    1. **Deviation Summary** - Use language similar to past reports
-    2. **Event Timeline** - Include all specific dates and batch information
-    3. **Root Cause Analysis** - Follow the analytical approach from examples
-    4. **Impact Assessment** - Use similar risk language and categorization
-    5. **Corrective and Preventive Action (CAPA) Plan** - Mirror the action item structure from past reports
+3. **Root Cause Analysis**
+Write in PRESENT TENSE. Be CONCISE and SPECIFIC to this deviation.
+Based on the description, identify 3-4 most likely areas for investigation using Ishikawa categories:
 
-    Be factual, use the exact terminology from past reports, and maintain consistency with GMP documentation standards shown in the examples.
-    """
+Start with: "Root cause investigation focuses on the following areas based on the deviation details:"
+
+Then list ONLY the relevant categories (pick only those that apply):
+- If equipment is mentioned: "**Equipment**: [Specific equipment mentioned] requires review of [specific relevant checks based on the problem described]"
+- If process issue: "**Process**: [Specific process step mentioned] needs evaluation of [specific parameters mentioned or implied by the deviation]"
+- If human factors indicated: "**Personnel**: Review [specific action mentioned] for compliance with [relevant SOP implied by the deviation]"
+- If material issue: "**Material**: [Specific material mentioned] requires verification of [specific concern based on deviation]"
+
+End with ONE sentence: "Investigation will use [5-Why analysis/Fault Tree/Fishbone diagram] to identify the root cause."
+
+Keep this section under 200 words. Be specific to what actually happened, not generic.
+
+4. **Impact Assessment**
+Write in PRESENT TENSE. Be CONCISE and SPECIFIC to this deviation.
+
+Structure as 4-5 bullet points covering ONLY relevant impacts:
+- **Product Quality**: [Specific quality concern based on the deviation - e.g., "Mixing speed deviation may affect content uniformity"]
+- **Batch Disposition**: [Specific statement about the affected batch - e.g., "The batch requires additional testing for X"]
+- **Risk Level**: Based on the specific deviation described, classify as Critical/Major/Minor with ONE sentence rationale
+- **Other Batches**: ONLY if relevant - identify specific risk to other batches based on the deviation nature
+
+Do not include generic statements. Each point must relate directly to the specific deviation described.
+Keep this section under 200 words.
+
+5. **Corrective and Preventive Action (CAPA) Plan**
+Be SPECIFIC and ACTIONABLE based on the deviation described.
+
+**Immediate Actions** (24-48 hours):
+- List 2-3 specific actions directly addressing the deviation (e.g., "Quarantine batch X", "Stop equipment Y", "Sample for testing Z")
+
+**Corrective Actions** (address this event):
+- List 2-3 specific actions based on the deviation (e.g., "Reprocess batch using correct parameters", "Recalibrate equipment X", "Retrain operator on specific procedure")
+
+**Preventive Actions** (prevent recurrence):
+- List 2-3 specific long-term actions that directly prevent this type of deviation (e.g., "Add automated alarm for parameter X", "Revise SOP to include double verification", "Implement additional in-process control at step Y")
+
+Each action must be directly related to the specific deviation. No generic statements.
+Keep this section under 150 words.
+
+CRITICAL INSTRUCTIONS:
+- Be concise - entire report should be under 800 words
+- Every statement must relate directly to the specific deviation described
+- Do not include generic GMP statements that could apply to any deviation
+- Do not invent information not provided in the description
+- Use specific batch numbers, equipment names, parameters mentioned in the description
+- If information is not provided, do not make assumptions
+"""
         
         try:
             response = self.openai_client.chat.completions.create(
@@ -763,8 +803,9 @@ Thank you, {name}!
             
             generated_report = response.choices[0].message.content
             
-            # Store the similar deviations for reference
-            self.current_session["data"]["similar_deviations"] = similar_deviations
+            # Store the similar deviations for reference if available
+            if hasattr(self, '_search_similar_deviations'):
+                self.current_session["data"]["similar_deviations"] = similar_deviations
             
             return generated_report
             

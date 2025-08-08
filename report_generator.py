@@ -2,6 +2,7 @@
 
 import os
 import json
+import html
 from datetime import datetime
 from typing import Dict, Any, Optional, List
 from pathlib import Path
@@ -176,7 +177,7 @@ class SimplifiedReportGenerator:
         ai_content = getattr(report.ai_generated, 'enhanced_description', '')
         ai_sections = self._extract_ai_sections(ai_content)
 
-        # Build AI sections HTML
+        # Build AI sections HTML with blue headers
         ai_sections_html = ""
         
         section_order = ["Deviation Summary", "Event Timeline", "Root Cause Analysis", "Impact Assessment", "CAPA Plan"]
@@ -193,12 +194,22 @@ class SimplifiedReportGenerator:
                 icon = section_icons.get(section_name, "🤖")
                 ai_sections_html += f"""
                 <div class="ai-section">
-                    <h2>{icon} {section_name}</h2>
+                    <h2 class="ai-header">{icon} {section_name}</h2>
                     <div class="ai-content">
                         {self._format_ai_content(ai_sections[section_name])}
                     </div>
                 </div>
                 """
+
+        # Get FULL user description - not truncated
+        full_user_description = report.deviation_info.description or 'No description provided.'
+        
+        # Format the description to preserve line breaks
+        formatted_user_description = html.escape(full_user_description)
+        formatted_user_description = formatted_user_description.replace('\n', '<br>')
+        formatted_user_description = formatted_user_description.replace('\r\n', '<br>')
+        formatted_user_description = formatted_user_description.replace('\r', '<br>')
+
 
         html_template = f"""
         <!DOCTYPE html>
@@ -266,15 +277,19 @@ class SimplifiedReportGenerator:
                 </table>
             </div>
 
-            <div class="section">
-                <h2>👤 User Input</h2>
+            <div class="section user-input-section">
+                <h2 class="user-input-header">👤 User Input - Original Deviation Description</h2>
                 <div class="user-input-box">
-                    <p><strong>Original Deviation Description:</strong></p>
-                    <p>{report.deviation_info.description or 'No description provided.'}</p>
+                    <div class="full-description">
+                        {formatted_user_description}
+                    </div>
                 </div>
             </div>
 
-            {ai_sections_html}
+            <div class="ai-generated-container">
+                <h2 class="ai-main-header">🤖 AI-Generated Analysis</h2>
+                {ai_sections_html}
+            </div>
 
             <div class="footer">
                 <p>Report Generated: {generated_date} | {self.company_name}</p>
@@ -338,7 +353,7 @@ class SimplifiedReportGenerator:
         return '\n'.join(formatted_lines)
 
     def _get_html_css(self) -> str:
-        """Get CSS styles for HTML report"""
+        """Get CSS styles for HTML report with blue AI headers and gray user section"""
         return """
             * {
                 margin: 0;
@@ -413,36 +428,73 @@ class SimplifiedReportGenerator:
                 font-weight: 600;
             }
 
-            /* User Input Section */
-            .user-input-box {
-                padding: 20px;
-                background: #f8f9fa;
-                border-left: 4px solid #0066cc;
+            /* User Input Section - Gray Theme */
+            .user-input-section {
+                border: 1px solid #999;
+                background: #f5f5f5;
+            }
+
+            .user-input-header {
+                background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%) !important;
+                color: white !important;
+                padding: 15px 20px;
                 margin: 0;
-            }
-
-            .user-input-box p {
-                margin: 10px 0;
-            }
-
-            .user-input-box strong {
-                color: #0066cc;
+                border-bottom: 1px solid #999;
+                font-size: 18px;
                 font-weight: 600;
             }
 
-            /* AI-Generated Sections */
-            .ai-section {
-                margin-bottom: 25px;
-                border: 2px solid #28a745;
-                border-radius: 8px;
-                overflow: hidden;
-                background: #f8fff8;
-                box-shadow: 0 3px 6px rgba(40, 167, 69, 0.1);
+            .user-input-box {
+                padding: 20px;
+                background: #fafafa;
+                margin: 0;
+                border-left: 4px solid #6c757d;
             }
 
-            .ai-section h2 {
-                background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
-                color: white;
+            .full-description {
+                color: #495057;
+                font-size: 15px;
+                line-height: 1.8;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                max-width: 100%;
+                padding: 15px;
+                background: white;
+                border-radius: 5px;
+                box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+            }
+
+            /* AI-Generated Container */
+            .ai-generated-container {
+                margin-top: 30px;
+                padding: 20px;
+                background: #f0f8ff;
+                border-radius: 10px;
+                border: 2px solid #0066cc;
+            }
+
+            .ai-main-header {
+                color: #0066cc;
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                border-bottom: 2px solid #0066cc;
+            }
+
+            /* AI-Generated Sections - Blue Theme */
+            .ai-section {
+                margin-bottom: 25px;
+                border: 1px solid #0066cc;
+                border-radius: 8px;
+                overflow: hidden;
+                background: white;
+                box-shadow: 0 3px 6px rgba(0, 102, 204, 0.1);
+            }
+
+            .ai-header {
+                background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%) !important;
+                color: white !important;
                 padding: 15px 20px;
                 margin: 0;
                 font-size: 18px;
@@ -459,6 +511,7 @@ class SimplifiedReportGenerator:
                 margin: 12px 0;
                 line-height: 1.7;
                 color: #333;
+                font-size: 14px;
             }
 
             .ai-content ol, .ai-content ul {
@@ -469,6 +522,7 @@ class SimplifiedReportGenerator:
                 margin-bottom: 8px;
                 line-height: 1.6;
                 color: #333;
+                font-size: 14px;
             }
 
             .info-table {
@@ -546,6 +600,10 @@ class SimplifiedReportGenerator:
                     page-break-inside: avoid;
                     break-inside: avoid;
                 }
+                
+                .full-description {
+                    page-break-inside: auto;
+                }
             }
         """
 
@@ -561,14 +619,18 @@ class SimplifiedReportGenerator:
                 font-size: 11pt;
             }
 
+            .full-description {
+                page-break-inside: auto;
+                font-size: 10pt;
+            }
+
             .ai-section, .section {
                 page-break-inside: avoid;
                 break-inside: avoid;
             }
 
             .ai-content {
-                page-break-inside: avoid;
-                break-inside: avoid;
+                page-break-inside: auto;
             }
 
             h1, h2, h3 {
@@ -583,8 +645,8 @@ class SimplifiedReportGenerator:
         """
 
     def _add_word_content(self, doc, report: DeviationReport):
-        """Add content to Word document"""
-        from docx.shared import Inches
+        """Add content to Word document with improved formatting"""
+        from docx.shared import Inches, RGBColor, Pt
         from docx.enum.text import WD_ALIGN_PARAGRAPH
 
         # Add header
@@ -619,12 +681,26 @@ class SimplifiedReportGenerator:
             cells[2].text = col2
             cells[3].text = val2
 
-        # User Input Section
-        doc.add_heading('👤 User Input', level=1)
-        doc.add_paragraph('Original Deviation Description:', style='Heading 2')
-        doc.add_paragraph(report.deviation_info.description or 'No description provided.')
+        # User Input Section with gray background
+        user_heading = doc.add_heading('👤 User Input - Original Deviation Description', level=1)
+        # Make heading gray
+        for run in user_heading.runs:
+            run.font.color.rgb = RGBColor(108, 117, 125)  # Gray color
+        
+        # Add full description with gray text
+        user_para = doc.add_paragraph()
+        user_run = user_para.add_run(report.deviation_info.description or 'No description provided.')
+        user_run.font.color.rgb = RGBColor(73, 80, 87)  # Darker gray for text
+        user_run.font.size = Pt(11)
+        
+        # Add spacing
+        doc.add_paragraph()
 
-        # AI-Generated Sections
+        # AI-Generated Sections with blue headers
+        ai_heading = doc.add_heading('🤖 AI-Generated Analysis', level=1)
+        for run in ai_heading.runs:
+            run.font.color.rgb = RGBColor(0, 102, 204)  # Blue color
+        
         ai_content = getattr(report.ai_generated, 'enhanced_description', '')
         ai_sections = self._extract_ai_sections(ai_content)
 
@@ -640,7 +716,13 @@ class SimplifiedReportGenerator:
         for section_name in section_order:
             if section_name in ai_sections and ai_sections[section_name]:
                 icon = section_icons.get(section_name, "🤖")
-                doc.add_heading(f'{icon} {section_name}', level=1)
+                
+                # Add section heading with blue color
+                section_heading = doc.add_heading(f'{icon} {section_name}', level=2)
+                for run in section_heading.runs:
+                    run.font.color.rgb = RGBColor(0, 102, 204)  # Blue color
+                
+                # Add section content
                 doc.add_paragraph(ai_sections[section_name])
 
         # Add footer
