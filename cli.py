@@ -411,8 +411,8 @@ def chat(method="char-split"):
 	collection_name = f"{method}-collection"
 
 	#query = "What is the best practice for batch production records?"
-	#query = "What happened with Lot 10000262?"
-	query = "Was any equipment operated without dual signoff?"
+	query = "What happened with Lot 10000295 "
+	#query = "Was any equipment operated without dual signoff?"
 	#query = "What is gouda cheese?"
 
 	query_embedding = generate_query_embedding(query)

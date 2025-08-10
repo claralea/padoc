@@ -1,0 +1,437 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Deviation Report - DEV_20250808_144448</title>
+            <style>
+                
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+                line-height: 1.6;
+                color: #2c3e50;
+                max-width: 210mm;
+                margin: 0 auto;
+                padding: 20px;
+                background: #ffffff;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 2px solid #e1e8ed;
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+            }
+
+            .company-logo h1 {
+                color: #34495e;
+                font-size: 22px;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+            }
+
+            .confidential {
+                text-align: right;
+                font-size: 11px;
+                color: #95a5a6;
+                letter-spacing: 0.3px;
+            }
+
+            .report-title {
+                text-align: center;
+                margin-bottom: 35px;
+            }
+
+            .report-title h1 {
+                font-size: 26px;
+                color: #2c3e50;
+                margin-bottom: 10px;
+                font-weight: 300;
+                letter-spacing: 1px;
+            }
+
+            .report-info {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                font-size: 13px;
+                color: #7f8c8d;
+            }
+
+            .section {
+                margin-bottom: 20px;
+                border: 1px solid #e1e8ed;
+                border-radius: 3px;
+                overflow: hidden;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+            }
+
+            .section h2 {
+                background: #fafbfc;
+                color: #2c3e50;
+                padding: 14px 20px;
+                margin: 0;
+                border-bottom: 1px solid #e1e8ed;
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 0.3px;
+            }
+
+            /* User Input Section - Minimalist Light Gray */
+            .user-input-section {
+                border: 1px solid #e8eaec;
+                background: #ffffff;
+            }
+
+            .user-input-header {
+                background: #f8f9fa !important;
+                color: #6c757d !important;
+                padding: 14px 20px;
+                margin: 0;
+                border-bottom: 1px solid #e8eaec;
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 0.3px;
+            }
+
+            .user-input-box {
+                padding: 20px;
+                background: #fafbfc;
+                margin: 0;
+                /* Removed the thick border-left */
+            }
+
+            .full-description-container {
+                width: 100%;
+                overflow: visible;
+            }
+
+            .description-label {
+                color: #95a5a6;
+                font-weight: 500;
+                margin-bottom: 12px;
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .full-description {
+                color: #5a6c7d;
+                font-size: 14px;
+                line-height: 1.8;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                max-width: 100%;
+                padding: 16px;
+                background: #ffffff;
+                border-radius: 2px;
+                border: 1px solid #e8eaec;
+                min-height: 80px;
+                overflow: visible;
+            }
+
+            /* AI-Generated Container - Minimalist */
+            .ai-generated-container {
+                margin-top: 25px;
+                padding: 0;
+                background: transparent;
+                border-radius: 0;
+                border: none;
+            }
+
+            .ai-main-header {
+                color: #34495e;
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #e1e8ed;
+                letter-spacing: 0.3px;
+            }
+
+            /* AI-Generated Sections - Subtle Blue */
+            .ai-section {
+                margin-bottom: 20px;
+                border: 1px solid #d4dce4;
+                border-radius: 3px;
+                overflow: hidden;
+                background: #ffffff;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+            }
+
+            .ai-header {
+                background: #516179 !important;
+                color: white !important;
+                padding: 14px 20px;
+                margin: 0;
+                font-size: 16px;
+                font-weight: 500;
+                border-bottom: none;
+                letter-spacing: 0.3px;
+            }
+
+            .ai-content {
+                padding: 20px;
+                background: #ffffff;
+            }
+
+            .ai-content p {
+                margin: 12px 0;
+                line-height: 1.7;
+                color: #4a5568;
+                font-size: 14px;
+            }
+
+            .ai-content ol, .ai-content ul {
+                margin: 15px 0 15px 20px;
+            }
+
+            .ai-content li {
+                margin-bottom: 8px;
+                line-height: 1.6;
+                color: #4a5568;
+                font-size: 14px;
+            }
+
+            .info-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 0;
+            }
+
+            .info-table td {
+                padding: 12px 15px;
+                border-bottom: 1px solid #f0f3f5;
+                vertical-align: top;
+                font-size: 14px;
+            }
+
+            .info-table td.label {
+                background: #fafbfc;
+                font-weight: 500;
+                width: 25%;
+                color: #6c757d;
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 0.3px;
+            }
+
+            .priority-critical {
+                background: #e74c3c;
+                color: white;
+                padding: 4px 10px;
+                border-radius: 2px;
+                font-weight: 500;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .priority-major {
+                background: #e67e22;
+                color: white;
+                padding: 4px 10px;
+                border-radius: 2px;
+                font-weight: 500;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .priority-minor {
+                background: #27ae60;
+                color: white;
+                padding: 4px 10px;
+                border-radius: 2px;
+                font-weight: 500;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .footer {
+                margin-top: 40px;
+                padding-top: 20px;
+                border-top: 1px solid #e1e8ed;
+                text-align: center;
+                font-size: 11px;
+                color: #95a5a6;
+                letter-spacing: 0.3px;
+            }
+
+            .footer p {
+                margin: 5px 0;
+            }
+
+            @media print {
+                body {
+                    max-width: none;
+                    margin: 0;
+                    padding: 15px;
+                }
+
+                .ai-section {
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+
+                .section {
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+                
+                .full-description {
+                    page-break-inside: auto;
+                }
+            }
+        
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <div class="company-logo">
+                    <h1>CostPlus Drug Company</h1>
+                </div>
+                <div class="confidential">
+                    <p>Do not copy and/or distribute without permission.<br>
+                    <strong>CONFIDENTIAL</strong></p>
+                </div>
+            </div>
+
+            <div class="report-title">
+                <h1>Deviation Report</h1>
+                <div class="report-info">
+                    <p><strong>Record ID:</strong> DEV_20250808_144448</p>
+                    <p><strong>Generated:</strong> August 08, 2025 02:45 PM</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📊 Report Information</h2>
+                <table class="info-table">
+                    <tr>
+                        <td class="label"><strong>Title:</strong></td>
+                        <td>Norepinephrine lot discrepancy with sales orders</td>
+                        <td class="label"><strong>Priority:</strong></td>
+                        <td class="priority-major">Major</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Status:</strong></td>
+                        <td>In Progress</td>
+                        <td class="label"><strong>Deviation Type:</strong></td>
+                        <td>Material</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Date of Occurrence:</strong></td>
+                        <td>February 11, 2025</td>
+                        <td class="label"><strong>Department(s):</strong></td>
+                        <td>Warehouse</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Batch/Lot Number:</strong></td>
+                        <td>1000186, 1000187</td>
+                        <td class="label"><strong>Quantity Impacted:</strong></td>
+                        <td>160 units</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Planned Deviation:</strong></td>
+                        <td>No</td>
+                        <td class="label"><strong>Initiator:</strong></td>
+                        <td>Clara-Lea</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section user-input-section">
+                <h2 class="user-input-header">👤 User Input - Original Deviation Description</h2>
+                <div class="user-input-box">
+                    <div class="full-description">
+                        On 11 Feb 2025 Norepinephrine lot didn&#x27;t match sales orders. Was discovered as SAP was stating to pull from certain Lots, but there was not enough physical quantity of that Lot. For Lot 1000186 SAP showed a quantity of 187 but the physical count was 27. For Lot 1000187 SAP showed a quantity of 4 but the physical count was 164.
+                    </div>
+                </div>
+            </div>
+
+            <div class="ai-generated-container">
+                <h2 class="ai-main-header">🤖 AI-Generated Analysis</h2>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">📋 Deviation Summary</h2>
+                    <div class="ai-content">
+                        <p>On February 11, 2025, a discrepancy was identified in the warehouse department involving Norepinephrine lots 1000186 and 1000187. The SAP system indicated a quantity of 187 units for lot 1000186 and 4 units for lot 1000187, but the physical counts were 27 and 164 units, respectively. This resulted in a total quantity impact of 160 units. The deviation was discovered when the sales orders did not match the available physical inventory.</p>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">⏰ Event Timeline</h2>
+                    <div class="ai-content">
+                        <ul>
+<li>February 11, 2025: Discrepancy discovered between SAP system inventory and physical count for Norepinephrine lots 1000186 and 1000187.</li>
+</ul>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">🔍 Root Cause Analysis</h2>
+                    <div class="ai-content">
+                        <p>Root cause investigation focuses on the following areas based on the deviation details:</p>
+<ul>
+<li>Material: Norepinephrine lots 1000186 and 1000187 require verification of inventory management and tracking accuracy in the SAP system.</li>
+<li>Process: Inventory management process needs evaluation of data entry and reconciliation procedures to ensure alignment between system records and physical stock.</li>
+<li>Personnel: Review actions of staff responsible for inventory updates and reconciliation for compliance with relevant SOPs, focusing on data entry accuracy and verification practices.</li>
+</ul>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">⚠️ Impact Assessment</h2>
+                    <div class="ai-content">
+                        <ul>
+<li>Product Quality: No direct impact on product quality is identified from the inventory discrepancy.</li>
+<li>Batch Disposition: The affected lots require reconciliation and verification of inventory records to ensure accurate stock levels.</li>
+<li>Risk Level: Classified as Major due to the significant discrepancy in inventory records, which could affect order fulfillment and inventory management.</li>
+<li>Other Batches: Potential risk to other batches if similar discrepancies in inventory management are present across other products.</li>
+</ul>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">🔧 CAPA Plan</h2>
+                    <div class="ai-content">
+                        <p>Immediate Actions (24-48 hours):</p>
+<ul>
+<li>Quarantine lots 1000186 and 1000187 until inventory reconciliation is completed.</li>
+<li>Conduct a physical recount of all Norepinephrine lots to verify current stock levels.</li>
+</ul>
+<p>Corrective Actions:</p>
+<ul>
+<li>Reconcile SAP system data with physical inventory for lots 1000186 and 1000187.</li>
+<li>Retrain warehouse personnel on accurate data entry and inventory reconciliation procedures.</li>
+</ul>
+<p>Preventive Actions:</p>
+<ul>
+<li>Implement a double verification process for inventory data entry in the SAP system.</li>
+<li>Revise SOPs to include regular audits of inventory records and physical stock.</li>
+<li>Introduce automated alerts for significant discrepancies between SAP records and physical counts.</li>
+</ul>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="footer">
+                <p>Report Generated: August 08, 2025 02:45 PM | CostPlus Drug Company</p>
+                <p>CONFIDENTIAL - Do not copy and/or distribute without permission</p>
+            </div>
+        </body>
+        </html>
+        

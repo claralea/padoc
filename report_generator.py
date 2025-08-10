@@ -353,7 +353,7 @@ class SimplifiedReportGenerator:
         return '\n'.join(formatted_lines)
 
     def _get_html_css(self) -> str:
-        """Get CSS styles for HTML report with blue AI headers and gray user section"""
+        """Get CSS styles for HTML report with minimalist design"""
         return """
             * {
                 margin: 0;
@@ -362,166 +362,192 @@ class SimplifiedReportGenerator:
             }
 
             body {
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
                 line-height: 1.6;
-                color: #333;
+                color: #2c3e50;
                 max-width: 210mm;
                 margin: 0 auto;
                 padding: 20px;
-                background: white;
+                background: #ffffff;
             }
 
             .header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                border-bottom: 3px solid #0066cc;
+                border-bottom: 2px solid #e1e8ed;
                 padding-bottom: 15px;
                 margin-bottom: 30px;
             }
 
             .company-logo h1 {
-                color: #0066cc;
-                font-size: 24px;
-                font-weight: bold;
+                color: #34495e;
+                font-size: 22px;
+                font-weight: 400;
+                letter-spacing: 0.5px;
             }
 
             .confidential {
                 text-align: right;
-                font-size: 12px;
-                color: #666;
+                font-size: 11px;
+                color: #95a5a6;
+                letter-spacing: 0.3px;
             }
 
             .report-title {
                 text-align: center;
-                margin-bottom: 30px;
+                margin-bottom: 35px;
             }
 
             .report-title h1 {
-                font-size: 28px;
-                color: #0066cc;
+                font-size: 26px;
+                color: #2c3e50;
                 margin-bottom: 10px;
+                font-weight: 300;
+                letter-spacing: 1px;
             }
 
             .report-info {
                 display: flex;
                 justify-content: center;
                 gap: 40px;
-                font-size: 14px;
+                font-size: 13px;
+                color: #7f8c8d;
             }
 
             .section {
-                margin-bottom: 25px;
-                border: 1px solid #ddd;
-                border-radius: 8px;
+                margin-bottom: 20px;
+                border: 1px solid #e1e8ed;
+                border-radius: 3px;
                 overflow: hidden;
-                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+                box-shadow: 0 1px 2px rgba(0,0,0,0.04);
             }
 
             .section h2 {
-                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-                color: #333;
-                padding: 15px 20px;
+                background: #fafbfc;
+                color: #2c3e50;
+                padding: 14px 20px;
                 margin: 0;
-                border-bottom: 1px solid #ddd;
-                font-size: 18px;
-                font-weight: 600;
+                border-bottom: 1px solid #e1e8ed;
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 0.3px;
             }
 
-            /* User Input Section - Gray Theme */
+            /* User Input Section - Minimalist Light Gray */
             .user-input-section {
-                border: 1px solid #999;
-                background: #f5f5f5;
+                border: 1px solid #e8eaec;
+                background: #ffffff;
             }
 
             .user-input-header {
-                background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%) !important;
-                color: white !important;
-                padding: 15px 20px;
+                background: #f8f9fa !important;
+                color: #6c757d !important;
+                padding: 14px 20px;
                 margin: 0;
-                border-bottom: 1px solid #999;
-                font-size: 18px;
-                font-weight: 600;
+                border-bottom: 1px solid #e8eaec;
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 0.3px;
             }
 
             .user-input-box {
                 padding: 20px;
-                background: #fafafa;
+                background: #fafbfc;
                 margin: 0;
-                border-left: 4px solid #6c757d;
+                /* Removed the thick border-left */
+            }
+
+            .full-description-container {
+                width: 100%;
+                overflow: visible;
+            }
+
+            .description-label {
+                color: #95a5a6;
+                font-weight: 500;
+                margin-bottom: 12px;
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
             }
 
             .full-description {
-                color: #495057;
-                font-size: 15px;
+                color: #5a6c7d;
+                font-size: 14px;
                 line-height: 1.8;
                 white-space: pre-wrap;
                 word-wrap: break-word;
+                overflow-wrap: break-word;
                 max-width: 100%;
-                padding: 15px;
-                background: white;
-                border-radius: 5px;
-                box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+                padding: 16px;
+                background: #ffffff;
+                border-radius: 2px;
+                border: 1px solid #e8eaec;
+                min-height: 80px;
+                overflow: visible;
             }
 
-            /* AI-Generated Container */
+            /* AI-Generated Container - Minimalist */
             .ai-generated-container {
-                margin-top: 30px;
-                padding: 20px;
-                background: #f0f8ff;
-                border-radius: 10px;
-                border: 2px solid #0066cc;
+                margin-top: 25px;
+                padding: 0;
+                background: transparent;
+                border-radius: 0;
+                border: none;
             }
 
             .ai-main-header {
-                color: #0066cc;
-                font-size: 22px;
-                font-weight: 600;
+                color: #34495e;
+                font-size: 18px;
+                font-weight: 500;
                 margin-bottom: 20px;
                 padding-bottom: 10px;
-                border-bottom: 2px solid #0066cc;
+                border-bottom: 1px solid #e1e8ed;
+                letter-spacing: 0.3px;
             }
 
-            /* AI-Generated Sections - Blue Theme */
+            /* AI-Generated Sections - Subtle Blue */
             .ai-section {
-                margin-bottom: 25px;
-                border: 1px solid #0066cc;
-                border-radius: 8px;
+                margin-bottom: 20px;
+                border: 1px solid #d4dce4;
+                border-radius: 3px;
                 overflow: hidden;
-                background: white;
-                box-shadow: 0 3px 6px rgba(0, 102, 204, 0.1);
+                background: #ffffff;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.04);
             }
 
             .ai-header {
-                background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%) !important;
+                background: #516179 !important;
                 color: white !important;
-                padding: 15px 20px;
+                padding: 14px 20px;
                 margin: 0;
-                font-size: 18px;
-                font-weight: 600;
+                font-size: 16px;
+                font-weight: 500;
                 border-bottom: none;
+                letter-spacing: 0.3px;
             }
 
             .ai-content {
                 padding: 20px;
-                background: white;
+                background: #ffffff;
             }
 
             .ai-content p {
                 margin: 12px 0;
                 line-height: 1.7;
-                color: #333;
+                color: #4a5568;
                 font-size: 14px;
             }
 
             .ai-content ol, .ai-content ul {
-                margin: 15px 0 15px 25px;
+                margin: 15px 0 15px 20px;
             }
 
             .ai-content li {
                 margin-bottom: 8px;
                 line-height: 1.6;
-                color: #333;
+                color: #4a5568;
                 font-size: 14px;
             }
 
@@ -533,51 +559,62 @@ class SimplifiedReportGenerator:
 
             .info-table td {
                 padding: 12px 15px;
-                border-bottom: 1px solid #eee;
+                border-bottom: 1px solid #f0f3f5;
                 vertical-align: top;
+                font-size: 14px;
             }
 
             .info-table td.label {
-                background: #f8f9fa;
-                font-weight: 600;
+                background: #fafbfc;
+                font-weight: 500;
                 width: 25%;
-                color: #555;
+                color: #6c757d;
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 0.3px;
             }
 
             .priority-critical {
-                background: #dc3545;
+                background: #e74c3c;
                 color: white;
-                padding: 6px 12px;
-                border-radius: 6px;
-                font-weight: bold;
-                font-size: 12px;
+                padding: 4px 10px;
+                border-radius: 2px;
+                font-weight: 500;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
             }
 
             .priority-major {
-                background: #fd7e14;
+                background: #e67e22;
                 color: white;
-                padding: 6px 12px;
-                border-radius: 6px;
-                font-weight: bold;
-                font-size: 12px;
+                padding: 4px 10px;
+                border-radius: 2px;
+                font-weight: 500;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
             }
 
             .priority-minor {
-                background: #28a745;
+                background: #27ae60;
                 color: white;
-                padding: 6px 12px;
-                border-radius: 6px;
-                font-weight: bold;
-                font-size: 12px;
+                padding: 4px 10px;
+                border-radius: 2px;
+                font-weight: 500;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
             }
 
             .footer {
                 margin-top: 40px;
                 padding-top: 20px;
-                border-top: 2px solid #0066cc;
+                border-top: 1px solid #e1e8ed;
                 text-align: center;
-                font-size: 12px;
-                color: #666;
+                font-size: 11px;
+                color: #95a5a6;
+                letter-spacing: 0.3px;
             }
 
             .footer p {

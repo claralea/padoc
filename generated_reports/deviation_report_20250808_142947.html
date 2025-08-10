@@ -1,0 +1,438 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Deviation Report - DEV_20250808_142640</title>
+            <style>
+                
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+                line-height: 1.6;
+                color: #2c3e50;
+                max-width: 210mm;
+                margin: 0 auto;
+                padding: 20px;
+                background: #ffffff;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 2px solid #e1e8ed;
+                padding-bottom: 15px;
+                margin-bottom: 30px;
+            }
+
+            .company-logo h1 {
+                color: #34495e;
+                font-size: 22px;
+                font-weight: 400;
+                letter-spacing: 0.5px;
+            }
+
+            .confidential {
+                text-align: right;
+                font-size: 11px;
+                color: #95a5a6;
+                letter-spacing: 0.3px;
+            }
+
+            .report-title {
+                text-align: center;
+                margin-bottom: 35px;
+            }
+
+            .report-title h1 {
+                font-size: 26px;
+                color: #2c3e50;
+                margin-bottom: 10px;
+                font-weight: 300;
+                letter-spacing: 1px;
+            }
+
+            .report-info {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                font-size: 13px;
+                color: #7f8c8d;
+            }
+
+            .section {
+                margin-bottom: 20px;
+                border: 1px solid #e1e8ed;
+                border-radius: 3px;
+                overflow: hidden;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+            }
+
+            .section h2 {
+                background: #fafbfc;
+                color: #2c3e50;
+                padding: 14px 20px;
+                margin: 0;
+                border-bottom: 1px solid #e1e8ed;
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 0.3px;
+            }
+
+            /* User Input Section - Minimalist Light Gray */
+            .user-input-section {
+                border: 1px solid #e8eaec;
+                background: #ffffff;
+            }
+
+            .user-input-header {
+                background: #f8f9fa !important;
+                color: #6c757d !important;
+                padding: 14px 20px;
+                margin: 0;
+                border-bottom: 1px solid #e8eaec;
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 0.3px;
+            }
+
+            .user-input-box {
+                padding: 20px;
+                background: #fafbfc;
+                margin: 0;
+                /* Removed the thick border-left */
+            }
+
+            .full-description-container {
+                width: 100%;
+                overflow: visible;
+            }
+
+            .description-label {
+                color: #95a5a6;
+                font-weight: 500;
+                margin-bottom: 12px;
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .full-description {
+                color: #5a6c7d;
+                font-size: 14px;
+                line-height: 1.8;
+                white-space: pre-wrap;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                max-width: 100%;
+                padding: 16px;
+                background: #ffffff;
+                border-radius: 2px;
+                border: 1px solid #e8eaec;
+                min-height: 80px;
+                overflow: visible;
+            }
+
+            /* AI-Generated Container - Minimalist */
+            .ai-generated-container {
+                margin-top: 25px;
+                padding: 0;
+                background: transparent;
+                border-radius: 0;
+                border: none;
+            }
+
+            .ai-main-header {
+                color: #34495e;
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #e1e8ed;
+                letter-spacing: 0.3px;
+            }
+
+            /* AI-Generated Sections - Subtle Blue */
+            .ai-section {
+                margin-bottom: 20px;
+                border: 1px solid #d4dce4;
+                border-radius: 3px;
+                overflow: hidden;
+                background: #ffffff;
+                box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+            }
+
+            .ai-header {
+                background: #516179 !important;
+                color: white !important;
+                padding: 14px 20px;
+                margin: 0;
+                font-size: 16px;
+                font-weight: 500;
+                border-bottom: none;
+                letter-spacing: 0.3px;
+            }
+
+            .ai-content {
+                padding: 20px;
+                background: #ffffff;
+            }
+
+            .ai-content p {
+                margin: 12px 0;
+                line-height: 1.7;
+                color: #4a5568;
+                font-size: 14px;
+            }
+
+            .ai-content ol, .ai-content ul {
+                margin: 15px 0 15px 20px;
+            }
+
+            .ai-content li {
+                margin-bottom: 8px;
+                line-height: 1.6;
+                color: #4a5568;
+                font-size: 14px;
+            }
+
+            .info-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 0;
+            }
+
+            .info-table td {
+                padding: 12px 15px;
+                border-bottom: 1px solid #f0f3f5;
+                vertical-align: top;
+                font-size: 14px;
+            }
+
+            .info-table td.label {
+                background: #fafbfc;
+                font-weight: 500;
+                width: 25%;
+                color: #6c757d;
+                font-size: 13px;
+                text-transform: uppercase;
+                letter-spacing: 0.3px;
+            }
+
+            .priority-critical {
+                background: #e74c3c;
+                color: white;
+                padding: 4px 10px;
+                border-radius: 2px;
+                font-weight: 500;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .priority-major {
+                background: #e67e22;
+                color: white;
+                padding: 4px 10px;
+                border-radius: 2px;
+                font-weight: 500;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .priority-minor {
+                background: #27ae60;
+                color: white;
+                padding: 4px 10px;
+                border-radius: 2px;
+                font-weight: 500;
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .footer {
+                margin-top: 40px;
+                padding-top: 20px;
+                border-top: 1px solid #e1e8ed;
+                text-align: center;
+                font-size: 11px;
+                color: #95a5a6;
+                letter-spacing: 0.3px;
+            }
+
+            .footer p {
+                margin: 5px 0;
+            }
+
+            @media print {
+                body {
+                    max-width: none;
+                    margin: 0;
+                    padding: 15px;
+                }
+
+                .ai-section {
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+
+                .section {
+                    page-break-inside: avoid;
+                    break-inside: avoid;
+                }
+                
+                .full-description {
+                    page-break-inside: auto;
+                }
+            }
+        
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <div class="company-logo">
+                    <h1>CostPlus Drug Company</h1>
+                </div>
+                <div class="confidential">
+                    <p>Do not copy and/or distribute without permission.<br>
+                    <strong>CONFIDENTIAL</strong></p>
+                </div>
+            </div>
+
+            <div class="report-title">
+                <h1>Deviation Report</h1>
+                <div class="report-info">
+                    <p><strong>Record ID:</strong> DEV_20250808_142640</p>
+                    <p><strong>Generated:</strong> August 08, 2025 02:29 PM</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📊 Report Information</h2>
+                <table class="info-table">
+                    <tr>
+                        <td class="label"><strong>Title:</strong></td>
+                        <td>Skipped step 6.4.12 for Norepinephrine formulation operation in lot 10000311</td>
+                        <td class="label"><strong>Priority:</strong></td>
+                        <td class="priority-major">Major</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Status:</strong></td>
+                        <td>In Progress</td>
+                        <td class="label"><strong>Deviation Type:</strong></td>
+                        <td>Process</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Date of Occurrence:</strong></td>
+                        <td>June 09, 2025</td>
+                        <td class="label"><strong>Department(s):</strong></td>
+                        <td>Manufacturing</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Batch/Lot Number:</strong></td>
+                        <td>10000311</td>
+                        <td class="label"><strong>Quantity Impacted:</strong></td>
+                        <td>N/A</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><strong>Planned Deviation:</strong></td>
+                        <td>No</td>
+                        <td class="label"><strong>Initiator:</strong></td>
+                        <td>Matt</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="section user-input-section">
+                <h2 class="user-input-header">👤 User Input - Original Deviation Description</h2>
+                <div class="user-input-box">
+                    <div class="full-description">
+                        Skipped the step 6.4.12 for Norepinephrine formulation operation in lot 10000311 on 09 Jun 2025. During batch record review it was noted that step 6.4.12 was listed as N/A (not applicable). The step states to initiate mixing of the vessel using an agitator setting of NLT 30% and to ensure proper agitation is observed without aeration of the product. Note: This step occurs prior to addition of any components.
+                    </div>
+                </div>
+            </div>
+
+            <div class="ai-generated-container">
+                <h2 class="ai-main-header">🤖 AI-Generated Analysis</h2>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">📋 Deviation Summary</h2>
+                    <div class="ai-content">
+                        <p>A deviation occurred in the manufacturing process of Norepinephrine for lot 10000311 on June 9, 2025, when step 6.4.12 was incorrectly marked as not applicable. This step involves initiating mixing with an agitator setting of not less than 30% to ensure proper agitation without aeration. The deviation was identified during a batch record review. The quantity impacted is not applicable, and the current status involves ongoing investigation.</p>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">⏰ Event Timeline</h2>
+                    <div class="ai-content">
+                        <ul>
+<li>June 9, 2025: Step 6.4.12 was skipped during the Norepinephrine formulation operation for lot 10000311.</li>
+<li>Post-June 9, 2025: Deviation identified during batch record review when step 6.4.12 was marked as N/A.</li>
+</ul>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">🔍 Root Cause Analysis</h2>
+                    <div class="ai-content">
+                        <p>Root cause investigation focuses on the following areas based on the deviation details:</p>
+<ul>
+<li>Process: Step 6.4.12 needs evaluation of the agitator setting and mixing parameters to ensure compliance with the required process conditions.</li>
+<li>Personnel: Review the decision to mark step 6.4.12 as N/A for compliance with the relevant SOP.</li>
+<li>Equipment: The agitator requires review to ensure it is capable of achieving the specified setting of not less than 30% without causing aeration.</li>
+</ul>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">⚠️ Impact Assessment</h2>
+                    <div class="ai-content">
+                        <ul>
+<li>Product Quality: The deviation in mixing speed may affect the content uniformity and stability of the Norepinephrine formulation.</li>
+<li>Batch Disposition: The batch requires additional testing to assess content uniformity and ensure product quality.</li>
+<li>Risk Level: Classified as Major due to potential impact on product quality and process integrity.</li>
+<li>Other Batches: No immediate risk to other batches identified, as this deviation is specific to lot 10000311.</li>
+</ul>
+                    </div>
+                </div>
+                
+                <div class="ai-section">
+                    <h2 class="ai-header">🔧 CAPA Plan</h2>
+                    <div class="ai-content">
+                        <p>Immediate Actions (24-48 hours):</p>
+<ul>
+<li>Quarantine batch 10000311 pending further investigation and testing.</li>
+<li>Initiate sampling of the batch for content uniformity and stability testing.</li>
+</ul>
+<p>Corrective Actions:</p>
+<ul>
+<li>Reprocess batch 10000311 using the correct mixing parameters as specified in step 6.4.12.</li>
+<li>Retrain operators on the importance of adhering to all process steps and the correct procedure for marking steps as N/A.</li>
+</ul>
+<p>Preventive Actions:</p>
+<ul>
+<li>Revise SOP to include a mandatory verification step for critical process parameters, such as mixing speed.</li>
+<li>Implement an automated alarm system to alert operators if the agitator setting deviates from the specified range.</li>
+<li>Conduct regular audits of batch records to ensure compliance with all process steps.</li>
+</ul>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="footer">
+                <p>Report Generated: August 08, 2025 02:29 PM | CostPlus Drug Company</p>
+                <p>CONFIDENTIAL - Do not copy and/or distribute without permission</p>
+            </div>
+        </body>
+        </html>
+        
