@@ -1,16 +1,20 @@
 #!/bin/bash
-
-# exit immediately if a command exits with a non-zero status
 set -e
 
-# Set variables
+# Set variables (NO SECRETS HERE)
 export BASE_DIR=$(pwd)
 export PERSISTENT_DIR=$(pwd)/../persistent-folder/
 export SECRETS_DIR=$(pwd)/secrets/
-export GCP_PROJECT="rag-test-467013" # CHANGE TO YOUR PROJECT ID
+export GCP_PROJECT="${GCP_PROJECT:-rag-test-467013}"
 export GOOGLE_APPLICATION_CREDENTIALS="/secrets/cl-rag-docs.json"
-export OPENAI_API_KEY=$(cat ./secrets/openai-key.txt)
 export IMAGE_NAME="llm-rag-cli"
+
+# Check if OPENAI_API_KEY is set
+if [ -z "$OPENAI_API_KEY" ]; then
+    echo "❌ Error: OPENAI_API_KEY environment variable not set"
+    echo "Please set it with: export OPENAI_API_KEY='your-key-here'"
+    exit 1
+fi
 
 # Create the network if we don't have it yet
 docker network inspect llm-rag-network >/dev/null 2>&1 || docker network create llm-rag-network

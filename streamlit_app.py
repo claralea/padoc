@@ -5,19 +5,75 @@ import os
 import sys
 from datetime import datetime
 
-# Import your existing modules
-from cli import (
-    vertexai, 
-    GCP_PROJECT, 
-    GCP_LOCATION,
-    embedding_model,
-    generative_model,
-    generate_query_embedding,
-    PersistentClient
-)
+# Cloud deployment configuration
+def setup_cloud_environment():
+    """Setup environment for cloud deployment"""
+    
+    # Check if running on Streamlit Cloud
+    if 'streamlit' in str(st.__file__).lower() or 'STREAMLIT_SHARING' in os.environ:
+        st.write("🌐 Running on Streamlit Cloud")
+        
+        # Use Streamlit secrets for cloud deployment
+        try:
+            os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
+            os.environ['GCP_PROJECT'] = st.secrets.get('GCP_PROJECT', 'rag-test-467013')
+            
+            # Handle GCP credentials for cloud
+            if 'GCP_SERVICE_ACCOUNT_JSON' in st.secrets:
+                import json
+                import tempfile
+                
+                # Create temporary credentials file
+                gcp_creds = st.secrets['GCP_SERVICE_ACCOUNT_JSON']
+                with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as f:
+                    if isinstance(gcp_creds, str):
+                        f.write(gcp_creds)
+                    else:
+                        json.dump(gcp_creds, f)
+                    os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = f.name
+            
+        except Exception as e:
+            st.error(f"Error setting up cloud secrets: {e}")
+            return False
+    else:
+        st.write("💻 Running locally")
+        # Use local environment variables
+        pass
+    
+    return True
 
-from run_integrated_agent import SimplifiedDeviationAgent
-from deviation_structures import DeviationType, Priority, Status, Department
+# Import your existing modules (these will need to be included in your repo)
+try:
+    # For cloud deployment, we need to handle missing local modules
+    if setup_cloud_environment():
+        # Try importing your modules
+        from cli import (
+            vertexai, 
+            GCP_PROJECT, 
+            GCP_LOCATION,
+            embedding_model,
+            generative_model,
+            generate_query_embedding,
+            PersistentClient
+        )
+        
+        from run_integrated_agent import SimplifiedDeviationAgent
+        from deviation_structures import DeviationType, Priority, Status, Department
+    
+except ImportError as e:
+    st.error(f"""
+    ❌ **Missing Dependencies for Cloud Deployment**
+    
+    Error: {e}
+    
+    **For Streamlit Cloud deployment, you need to:**
+    1. Include all your Python modules in the repository
+    2. Create a requirements.txt file
+    3. Handle ChromaDB differently (cloud storage or vector DB service)
+    
+    **Alternative: Use local development only**
+    """)
+    st.stop()
 
 def initialize_session_state():
     """Initialize session state variables"""
@@ -34,28 +90,34 @@ def initialize_session_state():
     if 'initialization_error' not in st.session_state:
         st.session_state.initialization_error = None
 
-def initialize_agent():
-    """Initialize your deviation report agent"""
+def initialize_agent_cloud():
+    """Initialize agent for cloud deployment"""
     try:
         # Check for OpenAI API key
         openai_api_key = os.getenv("OPENAI_API_KEY")
         if not openai_api_key:
-            st.error("❌ OPENAI_API_KEY environment variable not set")
+            st.error("❌ OPENAI_API_KEY not found in secrets")
             return False
         
         with st.spinner("Initializing Vertex AI..."):
             # Initialize Vertex AI
-            vertexai.init(project=GCP_PROJECT, location=GCP_LOCATION)
+            vertexai.init(project=os.getenv('GCP_PROJECT', 'rag-test-467013'), location=GCP_LOCATION)
         
-        with st.spinner("Connecting to ChromaDB..."):
-            # Connect to ChromaDB
-            client = PersistentClient(path="./chroma")
-            collection = client.get_collection(name="char-split-collection")
-            st.session_state.chroma_collection = collection
+        with st.spinner("Setting up ChromaDB..."):
+            # For cloud deployment, you'll need to handle ChromaDB differently
+            # Option 1: Download from cloud storage
+            # Option 2: Use a hosted vector database
+            # Option 3: Rebuild ChromaDB from documents
             
-            # Display collection info
-            doc_count = collection.count()
-            st.success(f"✅ Connected to ChromaDB ({doc_count} documents)")
+            st.warning("⚠️ ChromaDB setup needed for cloud deployment")
+            
+            # For now, create an empty collection (you'll need to populate this)
+            from chromadb import Client
+            client = Client()
+            collection = client.create_collection(name="temp-collection")
+            
+            st.session_state.chroma_collection = collection
+            st.info("📚 Using temporary ChromaDB collection")
         
         with st.spinner("Initializing AI Agent..."):
             # Initialize the simplified agent
@@ -68,7 +130,7 @@ def initialize_agent():
             st.session_state.agent = agent
             st.session_state.agent_initialized = True
             
-        st.success("✅ Agent initialized successfully!")
+        st.success("✅ Agent initialized for cloud deployment!")
         return True
         
     except Exception as e:
@@ -76,6 +138,49 @@ def initialize_agent():
         st.session_state.initialization_error = error_msg
         st.error(error_msg)
         return False
+    
+# def initialize_agent():
+#     """Initialize your deviation report agent"""
+#     try:
+#         # Check for OpenAI API key
+#         openai_api_key = os.getenv("OPENAI_API_KEY")
+#         if not openai_api_key:
+#             st.error("❌ OPENAI_API_KEY environment variable not set")
+#             return False
+        
+#         with st.spinner("Initializing Vertex AI..."):
+#             # Initialize Vertex AI
+#             vertexai.init(project=GCP_PROJECT, location=GCP_LOCATION)
+        
+#         with st.spinner("Connecting to ChromaDB..."):
+#             # Connect to ChromaDB
+#             client = PersistentClient(path="./chroma")
+#             collection = client.get_collection(name="char-split-collection")
+#             st.session_state.chroma_collection = collection
+            
+#             # Display collection info
+#             doc_count = collection.count()
+#             st.success(f"✅ Connected to ChromaDB ({doc_count} documents)")
+        
+#         with st.spinner("Initializing AI Agent..."):
+#             # Initialize the simplified agent
+#             agent = SimplifiedDeviationAgent(
+#                 openai_api_key=openai_api_key,
+#                 collection=collection,
+#                 embed_func=generate_query_embedding,
+#                 vertex_model=generative_model
+#             )
+#             st.session_state.agent = agent
+#             st.session_state.agent_initialized = True
+            
+#         st.success("✅ Agent initialized successfully!")
+#         return True
+        
+#     except Exception as e:
+#         error_msg = f"Failed to initialize agent: {str(e)}"
+#         st.session_state.initialization_error = error_msg
+#         st.error(error_msg)
+#         return False
 
 def display_chat_message(role: str, content: str):
     """Display a chat message"""
@@ -207,11 +312,17 @@ def main():
     # Sidebar for configuration and status
     with st.sidebar:
         st.title("🔧 Configuration")
+
+        # Environment info
+        if 'streamlit' in str(st.__file__).lower():
+            st.success("🌐 Cloud Deployment Active")
+        else:
+            st.info("💻 Local Development")
         
         # Environment variables check
         st.subheader("🔑 Environment")
         openai_key = os.getenv("OPENAI_API_KEY")
-        gcp_project = os.getenv("GCP_PROJECT", GCP_PROJECT)
+        gcp_project = os.getenv("GCP_PROJECT")
         
         if openai_key:
             st.success("✅ OpenAI API Key Set")
@@ -290,7 +401,7 @@ def main():
         else:
             st.warning("⚠️ Agent Not Initialized")
             if st.button("🚀 Initialize Agent"):
-                if initialize_agent():
+                if initialize_agent_cloud():
                     st.rerun()
         
         st.divider()
