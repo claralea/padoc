@@ -6,12 +6,15 @@ services:
     llm-rag-cli:
         image: llm-rag-cli
         container_name: llm-rag-cli
+        ports:
+            - 8501:8501  # Streamlit default port
         volumes:
-            - ../secrets:/secrets
+            - ./secrets:/secrets
             - ../pharma-rag:/app
         environment:
             GOOGLE_APPLICATION_CREDENTIALS: $GOOGLE_APPLICATION_CREDENTIALS
             GCP_PROJECT: $GCP_PROJECT
+            OPENAI_API_KEY: $OPENAI_API_KEY
         depends_on:
             - chromadb
     chromadb:

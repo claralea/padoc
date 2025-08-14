@@ -1,0 +1,24 @@
+[global]
+# Set to false to disable the warning about a newer version of Streamlit
+showWarningOnDirectExecution = false
+
+[server]
+# Port where the server will listen for browser connections
+port = 8501
+
+# IP address where the server will listen for browser connections  
+address = "0.0.0.0"
+
+# Whether to enable CORS protection
+enableCORS = false
+
+# Whether to enable XSRF protection
+enableXsrfProtection = false
+
+[browser]
+# Whether to automatically open the browser tab when Streamlit starts
+gatherUsageStats = false
+
+[theme]
+# The preset Streamlit theme that your custom theme inherits from
+base = "light"
