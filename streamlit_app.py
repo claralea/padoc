@@ -1,18 +1,26 @@
-# Fix SQLite issue for Streamlit Cloud (MUST BE FIRST)
-import sys
-try:
-    import pysqlite3
-    sys.modules['sqlite3'] = pysqlite3
-except ImportError:
-    pass
-
-import streamlit as st
 import sys
 import os
 from pathlib import Path
 
-# Add modules to path
+# Add modules to path FIRST
 sys.path.append('./modules')
+sys.path.append('.')
+
+# Import SQLite fix BEFORE anything else
+try:
+    from modules.sqlite_fix import fix_sqlite
+except ImportError:
+    # Fallback inline fix
+    try:
+        import pysqlite3
+        sys.modules['sqlite3'] = pysqlite3
+        print("✅ SQLite fixed (inline)")
+    except ImportError:
+        print("⚠️ SQLite fix not available")
+
+import streamlit as st
+
+
 
 def is_cloud_environment():
     """Check if running on Streamlit Cloud"""
