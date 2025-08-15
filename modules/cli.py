@@ -1,9 +1,17 @@
+# modules/cli.py
 import sys
 import os
 
 # CRITICAL: Apply SQLite fix first before ANY other imports
-__import__('pysqlite3')
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+try:
+    __import__('pysqlite3')
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    try:
+        __import__('pysqlite3')
+        sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+    except ImportError:
+        pass  # Will fail later with ChromaDB if SQLite is too old
 
 # Now safe to import other standard modules
 import argparse
