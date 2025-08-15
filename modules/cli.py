@@ -1,25 +1,11 @@
-# modules/cli.py
-# Fix SQLite issue FIRST before any other imports
 import sys
 import os
 
-# Add parent directory to path to import sqlite_fix
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# CRITICAL: Apply SQLite fix first before ANY other imports
+__import__('pysqlite3')
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
-# Import SQLite fix BEFORE chromadb
-try:
-    from sqlite_fix import ensure_sqlite_compatibility
-    ensure_sqlite_compatibility()
-except ImportError:
-    # Fallback if sqlite_fix.py is not available
-    try:
-        import pysqlite3
-        sys.modules['sqlite3'] = pysqlite3
-        print("✅ Applied SQLite fix directly in cli.py")
-    except ImportError:
-        print("⚠ Could not apply SQLite fix")
-
-# Now safe to import other modules
+# Now safe to import other standard modules
 import argparse
 import pandas as pd
 import json

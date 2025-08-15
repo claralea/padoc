@@ -1,27 +1,18 @@
 import sys
 import os
 
-# SQLite fix MUST come first, before any ChromaDB imports
-# Import the sqlite_fix module which applies the fix immediately
-try:
-    from sqlite_fix import ensure_sqlite_compatibility
-    ensure_sqlite_compatibility()
-except ImportError:
-    # Fallback: Apply SQLite fix directly here
-    try:
-        import pysqlite3
-        sys.modules['sqlite3'] = pysqlite3
-        print("✅ Applied SQLite fix in streamlit_app.py")
-    except ImportError:
-        print("⚠ pysqlite3-binary not available - SQLite fix could not be applied")
+# CRITICAL: SQLite fix MUST be the very first thing, before ANY other imports
+__import__('pysqlite3')
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
+# Now we can safely proceed with other imports
 from pathlib import Path
+import streamlit as st
 
 # Add modules to path
 sys.path.append('./modules')
 sys.path.append('.')
 
-import streamlit as st
 
 # Modern CSS styling
 st.markdown("""
