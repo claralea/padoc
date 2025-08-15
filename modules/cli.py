@@ -1,10 +1,31 @@
 # Fix SQLite issue for Streamlit Cloud
 import sys
-try:
-    import pysqlite3
-    sys.modules['sqlite3'] = pysqlite3
-except ImportError:
-    pass
+
+# Enhanced SQLite fix for Streamlit Cloud
+def ensure_sqlite_compatibility():
+    """Ensure SQLite compatibility for ChromaDB"""
+    try:
+        # Check if we already have the right sqlite3
+        import sqlite3
+        version = sqlite3.sqlite_version_info
+        if version >= (3, 35, 0):
+            print(f"✅ SQLite {sqlite3.sqlite_version} is compatible")
+            return True
+    except:
+        pass
+    
+    # Try to use pysqlite3-binary
+    try:
+        import pysqlite3
+        sys.modules['sqlite3'] = pysqlite3
+        print("✅ Replaced sqlite3 with pysqlite3-binary")
+        return True
+    except ImportError:
+        print("❌ pysqlite3-binary not available")
+        return False
+
+# Apply the fix immediately
+ensure_sqlite_compatibility()
 
 import os
 import argparse
