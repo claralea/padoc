@@ -1,29 +1,18 @@
 import sys
-import os
 
-def fix_sqlite():
-    """Enhanced SQLite fix with multiple fallback strategies"""
-    
-    # Strategy 1: Try pysqlite3-binary first
+def ensure_sqlite_compatibility():
+    """Ensure SQLite compatibility for ChromaDB - Must run before chromadb import"""
     try:
+        # Try to use pysqlite3-binary first
         import pysqlite3
         sys.modules['sqlite3'] = pysqlite3
-        print("✅ SQLite3 replaced with pysqlite3-binary")
+        print("✅ Replaced sqlite3 with pysqlite3-binary")
         return True
     except ImportError:
-        print("⚠️ pysqlite3-binary not available, trying alternatives...")
-    
-    # Strategy 2: Try regular pysqlite3
+        print("⚠ pysqlite3-binary not available, checking system sqlite3...")
+        
     try:
-        import pysqlite3
-        sys.modules['sqlite3'] = pysqlite3
-        print("✅ SQLite3 replaced with pysqlite3")
-        return True
-    except ImportError:
-        print("⚠️ pysqlite3 not available")
-    
-    # Strategy 3: Check if existing sqlite3 is compatible
-    try:
+        # Check if system sqlite3 is compatible
         import sqlite3
         version = sqlite3.sqlite_version_info
         if version >= (3, 35, 0):
@@ -31,43 +20,10 @@ def fix_sqlite():
             return True
         else:
             print(f"❌ System SQLite {sqlite3.sqlite_version} is too old (need >= 3.35.0)")
+            return False
     except Exception as e:
-        print(f"❌ Error checking SQLite version: {e}")
-    
-    # Strategy 4: Try to force ChromaDB to use different backend
-    try:
-        os.environ['CHROMA_DB_IMPL'] = 'duckdb'
-        print("🦆 Set ChromaDB to use DuckDB backend")
-        return True
-    except:
-        pass
-    
-    # Strategy 5: Set environment variables for ChromaDB
-    try:
-        os.environ['SQLITE_THREADSAFE'] = '1'
-        os.environ['CHROMA_SERVER_SSL_ENABLED'] = 'false'
-        print("🔧 Set ChromaDB environment variables")
-        return True
-    except:
-        pass
-    
-    print("❌ All SQLite fix strategies failed")
-    return False
-
-# Execute the fix immediately when this module is imported
-success = fix_sqlite()
-
-# Additional ChromaDB configuration
-def configure_chromadb():
-    """Configure ChromaDB with optimal settings for cloud deployment"""
-    try:
-        # Set ChromaDB to use in-memory database if persistent fails
-        os.environ['CHROMA_DB_IMPL'] = 'duckdb+parquet'
-        os.environ['CHROMA_API_IMPL'] = 'local'
-        print("🔧 ChromaDB configured for cloud deployment")
-        return True
-    except Exception as e:
-        print(f"❌ ChromaDB configuration failed: {e}")
+        print(f"❌ Error checking SQLite: {e}")
         return False
 
-configure_chromadb()
+# Apply the fix immediately when module is imported
+ensure_sqlite_compatibility()

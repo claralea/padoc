@@ -1,35 +1,23 @@
 import sys
+import os
 
-# Enhanced SQLite fix for Streamlit Cloud
-def ensure_sqlite_compatibility():
-    """Ensure SQLite compatibility for ChromaDB"""
-    try:
-        # Check if we already have the right sqlite3
-        import sqlite3
-        version = sqlite3.sqlite_version_info
-        if version >= (3, 35, 0):
-            print(f"✅ SQLite {sqlite3.sqlite_version} is compatible")
-            return True
-    except:
-        pass
-    
-    # Try to use pysqlite3-binary
+# SQLite fix MUST come first, before any ChromaDB imports
+# Import the sqlite_fix module which applies the fix immediately
+try:
+    from sqlite_fix import ensure_sqlite_compatibility
+    ensure_sqlite_compatibility()
+except ImportError:
+    # Fallback: Apply SQLite fix directly here
     try:
         import pysqlite3
         sys.modules['sqlite3'] = pysqlite3
-        print("✅ Replaced sqlite3 with pysqlite3-binary")
-        return True
+        print("✅ Applied SQLite fix in streamlit_app.py")
     except ImportError:
-        print("⚠ pysqlite3-binary not available")
-        return False
+        print("⚠ pysqlite3-binary not available - SQLite fix could not be applied")
 
-# Apply the fix immediately
-ensure_sqlite_compatibility()
-
-import os
 from pathlib import Path
 
-# Add modules to path FIRST
+# Add modules to path
 sys.path.append('./modules')
 sys.path.append('.')
 
@@ -320,20 +308,31 @@ if setup_environment():
             embedding_model,
             generative_model,
             generate_query_embedding,
-            PersistentClient  # Import from modules.cli instead of just 'cli'
+            PersistentClient,
+            CHROMADB_AVAILABLE,
+            VERTEX_AI_AVAILABLE
         )
         
         from modules.run_integrated_agent import SimplifiedDeviationAgent
         from modules.deviation_structures import DeviationType, Priority, Status, Department
         
-        # For cloud deployment, we'll use the original ChromaDB setup
+        # For cloud deployment, check if we need special ChromaDB setup
         if is_cloud_environment():
-            from data.init_chroma import get_chroma_setup
+            try:
+                from data.init_chroma import get_chroma_setup
+                CLOUD_CHROMA_AVAILABLE = True
+            except ImportError:
+                CLOUD_CHROMA_AVAILABLE = False
+                st.warning("Cloud ChromaDB setup not available, will use local setup")
+        else:
+            CLOUD_CHROMA_AVAILABLE = False
         
         MODULES_LOADED = True
         
     except ImportError as e:
         st.error(f"Module import failed: {e}")
+        import traceback
+        st.code(traceback.format_exc())
         st.info("Make sure all modules are in the 'modules' directory or available in your environment")
         MODULES_LOADED = False
 else:
@@ -360,6 +359,14 @@ def initialize_agent():
     if not MODULES_LOADED:
         st.error("Modules not loaded - cannot initialize agent")
         return False
+    
+    if not CHROMADB_AVAILABLE:
+        st.error("ChromaDB not available - cannot initialize agent")
+        return False
+    
+    if not VERTEX_AI_AVAILABLE:
+        st.error("Vertex AI not available - cannot initialize agent")
+        return False
         
     try:
         # Check for OpenAI API key
@@ -369,19 +376,20 @@ def initialize_agent():
             return False
         
         with st.spinner("Initializing Vertex AI..."):
-            # Initialize Vertex AI
-            import vertexai
-            vertexai.init(project=os.getenv('GCP_PROJECT', 'rag-test-467013'), location=GCP_LOCATION)
+            # Vertex AI should already be initialized in cli.py
+            if not embedding_model or not generative_model:
+                st.error("Vertex AI models not initialized properly")
+                return False
         
         with st.spinner("Connecting to ChromaDB..."):
-            if is_cloud_environment():
-                # For cloud deployment
+            if is_cloud_environment() and CLOUD_CHROMA_AVAILABLE:
+                # For cloud deployment with special setup
                 client, collection = get_chroma_setup()
                 if client is None or collection is None:
                     st.error("Failed to initialize ChromaDB")
                     return False
             else:
-                # For local development
+                # For local development or cloud without special setup
                 client = PersistentClient(path="./chroma")
                 collection = client.get_collection(name="char-split-collection")
             
@@ -407,6 +415,8 @@ def initialize_agent():
         error_msg = f"Failed to initialize agent: {str(e)}"
         st.session_state.initialization_error = error_msg
         st.error(error_msg)
+        import traceback
+        st.code(traceback.format_exc())
         return False
 
 def display_chat_message(role: str, content: str):
@@ -526,7 +536,7 @@ def main():
         st.markdown("### ⚙️ Configuration")
         
         # Environment variables check
-        st.markdown("#### 🔐 Environment Status")
+        st.markdown("#### 🔍 Environment Status")
         
         # Check environment setup
         openai_key = os.getenv('OPENAI_API_KEY')
@@ -548,12 +558,30 @@ def main():
             
             col1, col2 = st.columns([1, 3])
             with col1:
-                if gcp_creds and os.path.exists(gcp_creds):
+                if gcp_creds and (os.path.exists(gcp_creds) or is_cloud_environment()):
                     st.success("✅")
                 else:
                     st.error("❌")
             with col2:
                 st.write("GCP Credentials")
+            
+            col1, col2 = st.columns([1, 3])
+            with col1:
+                if CHROMADB_AVAILABLE:
+                    st.success("✅")
+                else:
+                    st.error("❌")
+            with col2:
+                st.write("ChromaDB")
+            
+            col1, col2 = st.columns([1, 3])
+            with col1:
+                if VERTEX_AI_AVAILABLE:
+                    st.success("✅")
+                else:
+                    st.error("❌")
+            with col2:
+                st.write("Vertex AI")
             
             st.info(f"Project: {gcp_project}")
         
