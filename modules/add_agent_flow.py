@@ -3,7 +3,7 @@ from google.protobuf import struct_pb2
 
 project = "rag-test-467013"
 location = "us-central1"
-agent_id = "YOUR_AGENT_ID"  # Replace with the one printed earlier
+# agent_id = "YOUR_AGENT_ID"  # Replace with the one printed earlier
 
 client = aiplatform.AgentServiceClient()
 parent = f"projects/{project}/locations/{location}/agents/{agent_id}"

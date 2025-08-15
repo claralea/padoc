@@ -1,3 +1,11 @@
+# Fix SQLite issue for Streamlit Cloud (MUST BE FIRST)
+import sys
+try:
+    import pysqlite3
+    sys.modules['sqlite3'] = pysqlite3
+except ImportError:
+    pass
+
 import streamlit as st
 import sys
 import os

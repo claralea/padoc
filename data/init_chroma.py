@@ -1,4 +1,12 @@
-# init_chroma.py - Initialize ChromaDB from backup data
+# Initialize ChromaDB from backup data with SQLite fix
+
+# Fix SQLite issue for Streamlit Cloud
+import sys
+try:
+    import pysqlite3
+    sys.modules['sqlite3'] = pysqlite3
+except ImportError:
+    pass
 
 import streamlit as st
 import chromadb
