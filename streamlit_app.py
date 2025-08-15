@@ -1,17 +1,26 @@
 import streamlit as st
-import asyncio
-from typing import Dict, Any
-import os
 import sys
-from datetime import datetime
+import os
+from pathlib import Path
 
-# Cloud deployment configuration
-def setup_cloud_environment():
-    """Setup environment for cloud deployment"""
+# Add modules to path
+sys.path.append('./modules')
+
+def is_cloud_environment():
+    """Check if running on Streamlit Cloud"""
+    try:
+        # Check if we have secrets available (cloud environment)
+        if hasattr(st, 'secrets') and len(st.secrets) > 0:
+            return True
+        return False
+    except:
+        return False
+
+def setup_environment():
+    """Setup environment for both local and cloud deployment"""
     
-    # Check if running on Streamlit Cloud
-    if 'streamlit' in str(st.__file__).lower() or 'STREAMLIT_SHARING' in os.environ:
-        st.write("🌐 Running on Streamlit Cloud")
+    if is_cloud_environment():
+        st.info("🌐 Running on Streamlit Cloud")
         
         # Use Streamlit secrets for cloud deployment
         try:
@@ -32,48 +41,66 @@ def setup_cloud_environment():
                         json.dump(gcp_creds, f)
                     os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = f.name
             
+            return True
+                
         except Exception as e:
             st.error(f"Error setting up cloud secrets: {e}")
             return False
     else:
-        st.write("💻 Running locally")
+        st.info("💻 Running locally")
+        
         # Use local environment variables
-        pass
-    
-    return True
+        openai_key = os.getenv('OPENAI_API_KEY')
+        if not openai_key:
+            st.error("❌ OPENAI_API_KEY environment variable not set locally")
+            st.info("Set it with: `export OPENAI_API_KEY='your-key-here'`")
+            return False
+        
+        gcp_project = os.getenv('GCP_PROJECT')
+        if not gcp_project:
+            st.warning("⚠️ GCP_PROJECT not set, using default")
+            os.environ['GCP_PROJECT'] = 'rag-test-467013'
+        
+        # Check GCP credentials file
+        gcp_creds = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
+        if not gcp_creds or not os.path.exists(gcp_creds):
+            st.error("❌ GOOGLE_APPLICATION_CREDENTIALS not set or file not found")
+            st.info("Set it with: `export GOOGLE_APPLICATION_CREDENTIALS='./secrets/cl-rag-docs.json'`")
+            return False
+        
+        return True
 
-# Import your existing modules (these will need to be included in your repo)
-try:
-    # For cloud deployment, we need to handle missing local modules
-    if setup_cloud_environment():
-        # Try importing your modules
-        from cli import (
-            vertexai, 
+# Import your modules after environment setup
+if setup_environment():
+    try:
+        from modules.cli import (
             GCP_PROJECT, 
             GCP_LOCATION,
             embedding_model,
             generative_model,
             generate_query_embedding,
-            PersistentClient
         )
         
-        from run_integrated_agent import SimplifiedDeviationAgent
-        from deviation_structures import DeviationType, Priority, Status, Department
-    
-except ImportError as e:
-    st.error(f"""
-    ❌ **Missing Dependencies for Cloud Deployment**
-    
-    Error: {e}
-    
-    **For Streamlit Cloud deployment, you need to:**
-    1. Include all your Python modules in the repository
-    2. Create a requirements.txt file
-    3. Handle ChromaDB differently (cloud storage or vector DB service)
-    
-    **Alternative: Use local development only**
-    """)
-    st.stop()
+        from modules.run_integrated_agent import SimplifiedDeviationAgent
+        from modules.deviation_structures import DeviationType, Priority, Status, Department
+        
+        # For local testing, we'll use the original ChromaDB setup
+        if not is_cloud_environment():
+            from cli import PersistentClient
+        else:
+            from data.init_chroma import get_chroma_setup
+        
+        MODULES_LOADED = True
+        
+    except ImportError as e:
+        st.error(f"❌ Error importing modules: {e}")
+        st.info("Make sure all modules are in the 'modules' directory or available in your environment")
+        MODULES_LOADED = False
+else:
+    MODULES_LOADED = False
+
+from typing import Dict, Any
+from datetime import datetime
 
 def initialize_session_state():
     """Initialize session state variables"""
@@ -83,41 +110,44 @@ def initialize_session_state():
         st.session_state.agent = None
     if 'agent_initialized' not in st.session_state:
         st.session_state.agent_initialized = False
-    if 'current_step' not in st.session_state:
-        st.session_state.current_step = 'initial'
     if 'chroma_collection' not in st.session_state:
         st.session_state.chroma_collection = None
     if 'initialization_error' not in st.session_state:
         st.session_state.initialization_error = None
 
-def initialize_agent_cloud():
-    """Initialize agent for cloud deployment"""
+def initialize_agent():
+    """Initialize your deviation report agent"""
+    if not MODULES_LOADED:
+        st.error("❌ Modules not loaded - cannot initialize agent")
+        return False
+        
     try:
         # Check for OpenAI API key
         openai_api_key = os.getenv("OPENAI_API_KEY")
         if not openai_api_key:
-            st.error("❌ OPENAI_API_KEY not found in secrets")
+            st.error("❌ OPENAI_API_KEY not found")
             return False
         
         with st.spinner("Initializing Vertex AI..."):
             # Initialize Vertex AI
+            import vertexai
             vertexai.init(project=os.getenv('GCP_PROJECT', 'rag-test-467013'), location=GCP_LOCATION)
         
-        with st.spinner("Setting up ChromaDB..."):
-            # For cloud deployment, you'll need to handle ChromaDB differently
-            # Option 1: Download from cloud storage
-            # Option 2: Use a hosted vector database
-            # Option 3: Rebuild ChromaDB from documents
-            
-            st.warning("⚠️ ChromaDB setup needed for cloud deployment")
-            
-            # For now, create an empty collection (you'll need to populate this)
-            from chromadb import Client
-            client = Client()
-            collection = client.create_collection(name="temp-collection")
+        with st.spinner("Connecting to ChromaDB..."):
+            if is_cloud_environment():
+                # For cloud deployment
+                client, collection = get_chroma_setup()
+                if client is None or collection is None:
+                    st.error("❌ Failed to initialize ChromaDB")
+                    return False
+            else:
+                # For local development
+                client = PersistentClient(path="./chroma")
+                collection = client.get_collection(name="char-split-collection")
             
             st.session_state.chroma_collection = collection
-            st.info("📚 Using temporary ChromaDB collection")
+            doc_count = collection.count()
+            st.success(f"✅ Connected to ChromaDB ({doc_count} documents)")
         
         with st.spinner("Initializing AI Agent..."):
             # Initialize the simplified agent
@@ -130,7 +160,7 @@ def initialize_agent_cloud():
             st.session_state.agent = agent
             st.session_state.agent_initialized = True
             
-        st.success("✅ Agent initialized for cloud deployment!")
+        st.success("✅ Agent initialized successfully!")
         return True
         
     except Exception as e:
@@ -138,49 +168,6 @@ def initialize_agent_cloud():
         st.session_state.initialization_error = error_msg
         st.error(error_msg)
         return False
-    
-# def initialize_agent():
-#     """Initialize your deviation report agent"""
-#     try:
-#         # Check for OpenAI API key
-#         openai_api_key = os.getenv("OPENAI_API_KEY")
-#         if not openai_api_key:
-#             st.error("❌ OPENAI_API_KEY environment variable not set")
-#             return False
-        
-#         with st.spinner("Initializing Vertex AI..."):
-#             # Initialize Vertex AI
-#             vertexai.init(project=GCP_PROJECT, location=GCP_LOCATION)
-        
-#         with st.spinner("Connecting to ChromaDB..."):
-#             # Connect to ChromaDB
-#             client = PersistentClient(path="./chroma")
-#             collection = client.get_collection(name="char-split-collection")
-#             st.session_state.chroma_collection = collection
-            
-#             # Display collection info
-#             doc_count = collection.count()
-#             st.success(f"✅ Connected to ChromaDB ({doc_count} documents)")
-        
-#         with st.spinner("Initializing AI Agent..."):
-#             # Initialize the simplified agent
-#             agent = SimplifiedDeviationAgent(
-#                 openai_api_key=openai_api_key,
-#                 collection=collection,
-#                 embed_func=generate_query_embedding,
-#                 vertex_model=generative_model
-#             )
-#             st.session_state.agent = agent
-#             st.session_state.agent_initialized = True
-            
-#         st.success("✅ Agent initialized successfully!")
-#         return True
-        
-#     except Exception as e:
-#         error_msg = f"Failed to initialize agent: {str(e)}"
-#         st.session_state.initialization_error = error_msg
-#         st.error(error_msg)
-#         return False
 
 def display_chat_message(role: str, content: str):
     """Display a chat message"""
@@ -193,6 +180,7 @@ def get_generated_files():
     reports_dir = "./generated_reports"
     
     if not os.path.exists(reports_dir):
+        os.makedirs(reports_dir, exist_ok=True)
         return files
     
     # Supported file types and their display names
@@ -278,25 +266,6 @@ def clear_generated_files():
         except Exception as e:
             st.error(f"Error clearing files: {str(e)}")
 
-def extract_file_paths_from_response(response: str) -> list:
-    """Extract file paths from agent response"""
-    import re
-    
-    # Look for file paths in the response
-    file_patterns = [
-        r'HTML Report:\s*([^\n]+)',
-        r'PDF Report:\s*([^\n]+)', 
-        r'Word Report:\s*([^\n]+)',
-        r'generated_reports/[^\s]+'
-    ]
-    
-    file_paths = []
-    for pattern in file_patterns:
-        matches = re.findall(pattern, response)
-        file_paths.extend(matches)
-    
-    return [path.strip() for path in file_paths if path.strip()]
-
 def main():
     # Page configuration
     st.set_page_config(
@@ -306,31 +275,56 @@ def main():
         initial_sidebar_state="expanded"
     )
     
+    if not MODULES_LOADED:
+        st.stop()
+    
     # Initialize session state
     initialize_session_state()
     
     # Sidebar for configuration and status
     with st.sidebar:
         st.title("🔧 Configuration")
-
-        # Environment info
-        if 'streamlit' in str(st.__file__).lower():
-            st.success("🌐 Cloud Deployment Active")
-        else:
-            st.info("💻 Local Development")
         
         # Environment variables check
         st.subheader("🔑 Environment")
-        openai_key = os.getenv("OPENAI_API_KEY")
-        gcp_project = os.getenv("GCP_PROJECT")
+        
+        # Check environment setup
+        openai_key = os.getenv('OPENAI_API_KEY')
+        gcp_project = os.getenv('GCP_PROJECT', 'rag-test-467013')
+        gcp_creds = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
         
         if openai_key:
             st.success("✅ OpenAI API Key Set")
         else:
             st.error("❌ OpenAI API Key Missing")
-            st.info("Set OPENAI_API_KEY environment variable")
+        
+        if gcp_creds and os.path.exists(gcp_creds):
+            st.success("✅ GCP Credentials Set")
+        else:
+            st.error("❌ GCP Credentials Missing")
         
         st.info(f"📍 GCP Project: {gcp_project}")
+        
+        if is_cloud_environment():
+            st.success("🌐 Cloud Environment")
+        else:
+            st.info("💻 Local Environment")
+        
+        st.divider()
+        
+        # Agent status
+        if st.session_state.agent_initialized:
+            st.success("✅ Agent Ready")
+            
+            # Show ChromaDB info
+            if st.session_state.chroma_collection:
+                doc_count = st.session_state.chroma_collection.count()
+                st.info(f"📚 Knowledge Base: {doc_count} documents")
+        else:
+            st.warning("⚠️ Agent Not Initialized")
+            if st.button("🚀 Initialize Agent"):
+                if initialize_agent():
+                    st.rerun()
         
         st.divider()
         
@@ -363,7 +357,7 @@ def main():
                                 file_data = f.read()
                                 
                             # Get appropriate MIME type
-                            mime_type = get_mime_type(file_type.lower())
+                            mime_type = get_mime_type(file_info['extension'][1:])  # Remove the dot
                             
                             st.download_button(
                                 label="⬇️",
@@ -390,22 +384,6 @@ def main():
         
         st.divider()
         
-        # Agent status
-        if st.session_state.agent_initialized:
-            st.success("✅ Agent Ready")
-            
-            # Show ChromaDB info
-            if st.session_state.chroma_collection:
-                doc_count = st.session_state.chroma_collection.count()
-                st.info(f"📚 Knowledge Base: {doc_count} documents")
-        else:
-            st.warning("⚠️ Agent Not Initialized")
-            if st.button("🚀 Initialize Agent"):
-                if initialize_agent_cloud():
-                    st.rerun()
-        
-        st.divider()
-        
         # Current session info
         if st.session_state.agent and hasattr(st.session_state.agent, 'current_session'):
             session = st.session_state.agent.current_session
@@ -422,12 +400,15 @@ def main():
             if st.session_state.agent:
                 st.session_state.agent.current_session = None
             st.session_state.messages = []
-            st.session_state.current_step = 'initial'
             st.rerun()
     
     # Main content area
     st.title("📊 Pharmacy Manufacturing Deviation Report Generator")
-    st.markdown("Welcome! This AI agent will help you generate comprehensive deviation reports by asking relevant questions and using RAG to find supporting information.")
+    
+    if is_cloud_environment():
+        st.markdown("🌐 **Cloud Deployment** - AI-powered deviation reporting with RAG")
+    else:
+        st.markdown("💻 **Local Development** - AI-powered deviation reporting with RAG")
     
     # Check if agent is initialized
     if not st.session_state.agent_initialized:
@@ -438,21 +419,21 @@ def main():
         # Show setup instructions
         with st.expander("🛠️ Setup Instructions"):
             st.markdown("""
-            **Required Environment Variables:**
+            **For Local Development:**
             
-            1. **OPENAI_API_KEY** - Your OpenAI API key for AI report generation
-            2. **GOOGLE_APPLICATION_CREDENTIALS** - Path to your GCP service account JSON
-            3. **GCP_PROJECT** - Your Google Cloud Project ID
+            Set these environment variables:
+            ```bash
+            export OPENAI_API_KEY='your-openai-api-key'
+            export GOOGLE_APPLICATION_CREDENTIALS='./secrets/cl-rag-docs.json'
+            export GCP_PROJECT='rag-test-467013'
+            ```
             
             **ChromaDB Setup:**
-            - Ensure your ChromaDB collection 'char-split-collection' exists in `./chroma` directory
-            - The collection should contain your pharmaceutical regulatory documents
-            
-            **Docker Setup:**
-            - Make sure you're running this inside the Docker container with all dependencies
+            - Ensure your ChromaDB collection exists at `./chroma`
+            - Collection name should be `char-split-collection`
             """)
         return
-    
+
     # Display chat history
     for message in st.session_state.messages:
         display_chat_message(message["role"], message["content"])
@@ -486,61 +467,10 @@ def main():
                 # Check if session is complete and files were generated
                 if "Reports Generated Successfully" in response:
                     st.balloons()
-                    st.success("🎉 Reports completed! Check the generated files.")
+                    st.success("🎉 Reports completed!")
                     
-                    # Extract file paths from the response if available
-                    file_paths = extract_file_paths_from_response(response)
-                    
-                    # Show download options
-                    if file_paths or os.path.exists("./generated_reports"):
-                        st.subheader("📥 Download Your Reports")
-                        
-                        # Create download buttons for each generated file
-                        download_files = []
-                        
-                        # Check the generated_reports directory
-                        if os.path.exists("./generated_reports"):
-                            for file in os.listdir("./generated_reports"):
-                                if file.endswith(('.pdf', '.html', '.docx')):
-                                    download_files.append(f"./generated_reports/{file}")
-                        
-                        # Add any specific file paths from the response
-                        if file_paths:
-                            download_files.extend(file_paths)
-                        
-                        # Create download buttons
-                        if download_files:
-                            col1, col2, col3 = st.columns(3)
-                            
-                            for i, file_path in enumerate(download_files):
-                                if os.path.exists(file_path):
-                                    file_name = os.path.basename(file_path)
-                                    file_ext = file_name.split('.')[-1].upper()
-                                    
-                                    # Determine MIME type
-                                    mime_types = {
-                                        'pdf': 'application/pdf',
-                                        'docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-                                        'html': 'text/html'
-                                    }
-                                    mime_type = mime_types.get(file_ext.lower(), 'application/octet-stream')
-                                    
-                                    # Choose column
-                                    with [col1, col2, col3][i % 3]:
-                                        try:
-                                            with open(file_path, "rb") as f:
-                                                file_data = f.read()
-                                                st.download_button(
-                                                    label=f"📄 {file_ext} Report",
-                                                    data=file_data,
-                                                    file_name=file_name,
-                                                    mime=mime_type,
-                                                    use_container_width=True
-                                                )
-                                        except Exception as e:
-                                            st.error(f"Error reading {file_name}: {str(e)}")
-                        else:
-                            st.warning("No report files found. Please try generating the report again.")
+                    # Show a message directing users to the sidebar
+                    st.info("📥 **Download your reports from the sidebar** ➡️")
                 
             except Exception as e:
                 error_msg = f"❌ Error processing input: {str(e)}"

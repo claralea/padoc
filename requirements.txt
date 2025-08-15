@@ -35,3 +35,8 @@ pydantic>=2.0.0
 
 # For agent functionality
 smolagents
+
+# Additional for cloud deployment
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
