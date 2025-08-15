@@ -320,15 +320,14 @@ if setup_environment():
             embedding_model,
             generative_model,
             generate_query_embedding,
+            PersistentClient  # Import from modules.cli instead of just 'cli'
         )
         
         from modules.run_integrated_agent import SimplifiedDeviationAgent
         from modules.deviation_structures import DeviationType, Priority, Status, Department
         
-        # For local testing, we'll use the original ChromaDB setup
-        if not is_cloud_environment():
-            from cli import PersistentClient
-        else:
+        # For cloud deployment, we'll use the original ChromaDB setup
+        if is_cloud_environment():
             from data.init_chroma import get_chroma_setup
         
         MODULES_LOADED = True

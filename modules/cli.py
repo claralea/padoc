@@ -49,8 +49,12 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from semantic_splitter import SemanticChunker
 import agent_tools
 
-# Setup
-GCP_PROJECT = os.environ["GCP_PROJECT"]
+# Setup - Handle missing environment variables gracefully
+try:
+    GCP_PROJECT = os.environ.get("GCP_PROJECT", "rag-test-467013")
+except KeyError:
+    GCP_PROJECT = "rag-test-467013"
+    
 GCP_LOCATION = "us-central1"
 EMBEDDING_MODEL = "gemini-embedding-001"
 EMBEDDING_DIMENSION = 256
@@ -59,15 +63,23 @@ INPUT_FOLDER = "input-datasets"
 OUTPUT_FOLDER = "outputs"
 CHROMADB_HOST = "llm-rag-chromadb"
 CHROMADB_PORT = 8000
-vertexai.init(project=GCP_PROJECT, location=GCP_LOCATION)
-# https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text-embeddings-api#python
-embedding_model = TextEmbeddingModel.from_pretrained(EMBEDDING_MODEL)
+
+# Initialize Vertex AI only if GCP_PROJECT is set
+try:
+    vertexai.init(project=GCP_PROJECT, location=GCP_LOCATION)
+    # https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/text-embeddings-api#python
+    embedding_model = TextEmbeddingModel.from_pretrained(EMBEDDING_MODEL)
+except Exception as e:
+    print(f"Warning: Could not initialize Vertex AI: {e}")
+    embedding_model = None
+
 # Configuration settings for the content generation
 generation_config = {
     "max_output_tokens": 8192,  # Maximum number of tokens for output
     "temperature": 0.25,  # Control randomness in output
     "top_p": 0.95,  # Use nucleus sampling
 }
+
 # Initialize the GenerativeModel with specific system instructions
 SYSTEM_INSTRUCTION = """
 You are an AI assistant specialized in pharmaceutical manufacturing. You help with interpreting standard operating procedures (SOPs), deviation handling policies, and documentation workflows. You ONLY rely on the provided document chunks.
@@ -84,10 +96,14 @@ Example queries:
 Stay factual and compliant.
 """
 
-generative_model = GenerativeModel(
-	GENERATIVE_MODEL,
-	system_instruction=[SYSTEM_INSTRUCTION]
-)
+try:
+    generative_model = GenerativeModel(
+        GENERATIVE_MODEL,
+        system_instruction=[SYSTEM_INSTRUCTION]
+    )
+except Exception as e:
+    print(f"Warning: Could not initialize GenerativeModel: {e}")
+    generative_model = None
 
 book_mappings = {
 	"21_CFR_Part_211-cleaned": {"author":"eCFR", "year": 2025},
@@ -522,6 +538,16 @@ def main(args=None):
 	if args.agent:
 		agent(method=args.chunk_type)
 
+
+# Export important variables and functions for external imports
+__all__ = [
+    'GCP_PROJECT',
+    'GCP_LOCATION', 
+    'embedding_model',
+    'generative_model',
+    'generate_query_embedding',
+    'PersistentClient'
+]
 
 if __name__ == "__main__":
 	# Generate the inputs arguments parser
