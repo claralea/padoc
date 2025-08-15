@@ -73,7 +73,7 @@ def setup_environment():
         gcp_creds = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
         if not gcp_creds or not os.path.exists(gcp_creds):
             st.error("❌ GOOGLE_APPLICATION_CREDENTIALS not set or file not found")
-            st.info("Set it with: `export GOOGLE_APPLICATION_CREDENTIALS='./secrets/cl-rag-docs.json'`")
+            st.info("Set it with: `export GOOGLE_APPLICATION_CREDENTIALS='../secrets/cl-rag-docs.json'`")
             return False
         
         return True

@@ -4,9 +4,9 @@ set -e
 # Set variables (NO SECRETS HERE)
 export BASE_DIR=$(pwd)
 export PERSISTENT_DIR=$(pwd)/../persistent-folder/
-export SECRETS_DIR=$(pwd)/secrets/
+export SECRETS_DIR=$(pwd)/../secrets/
 export GCP_PROJECT="${GCP_PROJECT:-rag-test-467013}"
-export GOOGLE_APPLICATION_CREDENTIALS="/secrets/cl-rag-docs.json"
+export GOOGLE_APPLICATION_CREDENTIALS="../secrets/cl-rag-docs.json"
 export IMAGE_NAME="llm-rag-cli"
 
 # Check if OPENAI_API_KEY is set

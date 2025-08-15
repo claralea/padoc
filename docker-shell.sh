@@ -6,10 +6,10 @@ set -e
 # Set vairables
 export BASE_DIR=$(pwd)
 export PERSISTENT_DIR=$(pwd)/../persistent-folder/
-export SECRETS_DIR=$(pwd)/secrets/
-export GCP_PROJECT="rag-test-467013" # CHANGE TO YOUR PROJECT ID
-export GOOGLE_APPLICATION_CREDENTIALS="/secrets/cl-rag-docs.json"
-export OPENAI_API_KEY=$(cat ./secrets/openai-key.txt)
+export SECRETS_DIR=$(pwd)/../secrets/
+export GCP_PROJECT="rag-test-467013" 
+export GOOGLE_APPLICATION_CREDENTIALS="../secrets/cl-rag-docs.json"
+export OPENAI_API_KEY=$(cat ../secrets/openai-key.txt)
 export IMAGE_NAME="llm-rag-cli"
 
 

@@ -30,8 +30,8 @@ from semantic_splitter import SemanticChunker
 import agent_tools
 
 # Setup
-#GCP_PROJECT = os.environ["GCP_PROJECT"]
-GCP_PROJECT = "${GCP_PROJECT:-rag-test-467013}"
+GCP_PROJECT = os.environ["GCP_PROJECT"]
+#GCP_PROJECT = "${GCP_PROJECT:-rag-test-467013}"
 GCP_LOCATION = "us-central1"
 EMBEDDING_MODEL = "gemini-embedding-001"
 EMBEDDING_DIMENSION = 256

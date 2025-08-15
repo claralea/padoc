@@ -9,7 +9,7 @@ services:
         ports:
             - 8501:8501  # Streamlit default port
         volumes:
-            - ./secrets:/secrets
+            - ../secrets:/secrets
             - ../padoc:/app
         environment:
             GOOGLE_APPLICATION_CREDENTIALS: $GOOGLE_APPLICATION_CREDENTIALS
