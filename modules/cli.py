@@ -3,7 +3,6 @@ import sys
 
 # Enhanced SQLite fix for Streamlit Cloud
 def ensure_sqlite_compatibility():
-    """Ensure SQLite compatibility for ChromaDB"""
     try:
         # Check if we already have the right sqlite3
         import sqlite3
@@ -52,7 +51,6 @@ import agent_tools
 
 # Setup
 GCP_PROJECT = os.environ["GCP_PROJECT"]
-#GCP_PROJECT = "${GCP_PROJECT:-rag-test-467013}"
 GCP_LOCATION = "us-central1"
 EMBEDDING_MODEL = "gemini-embedding-001"
 EMBEDDING_DIMENSION = 256
@@ -346,56 +344,6 @@ def load(method="char-split"):
 	#print("✅ Collection persisted to disk.")
 
 
-# def query(method="char-split"):
-# 	print("load()")
-
-# 	# Connect to chroma DB
-# 	# client = chromadb.HttpClient(host=CHROMADB_HOST, port=CHROMADB_PORT)
-# 	client = chromadb.Client()
-
-# 	# Get a collection object from an existing collection, by name. If it doesn't exist, create it.
-# 	collection_name = f"{method}-collection"
-
-# 	query = "Tolminc cheese"
-# 	query_embedding = generate_query_embedding(query)
-# 	print("Embedding values:", query_embedding)
-
-# 	# Get the collection
-# 	collection = client.get_or_create_collection(name=collection_name)
-
-# 	print("Checking sample data in collection...")
-# 	all_data = collection.get()
-# 	print("Sample IDs:", all_data["ids"][:3])
-# 	print("Sample metadata:", all_data["metadatas"][:3])
-# 	print("Sample docs:", all_data["documents"][:1])
-
-# 	# 1: Query based on embedding value 
-# 	results = collection.query(
-# 		query_embeddings=[query_embedding],
-# 		n_results=10
-# 	)
-# 	print("Query:", query)
-# 	print("\n\nResults:", results)
-
-# 	# 2: Query based on embedding value + metadata filter
-# 	results = collection.query(
-# 		query_embeddings=[query_embedding],
-# 		n_results=10,
-# 		where={"book":"The Complete Book of Cheese"}
-# 	)
-# 	print("Query:", query)
-# 	print("\n\nResults:", results)
-
-# 	# 3: Query based on embedding value + lexical search filter
-# 	search_string = "Italian"
-# 	results = collection.query(
-# 		query_embeddings=[query_embedding],
-# 		n_results=10,
-# 		where_document={"$contains": search_string}
-# 	)
-# 	print("Query:", query)
-# 	print("\n\nResults:", results)
-
 def query(method="char-split"):
 	print("query()")
 
@@ -460,11 +408,12 @@ def chat(method="char-split"):
 
 	print(len(results["documents"][0]))
 
+	# FIX: Instead of using \n directly in f-string, join outside or use a variable
+	documents_text = "\n".join(results["documents"][0])
 	INPUT_PROMPT = f"""
 	{query}
-	{"\n".join(results["documents"][0])}
+	{documents_text}
 	"""
-
 	print("INPUT_PROMPT: ",INPUT_PROMPT)
 	response = generative_model.generate_content(
 		[INPUT_PROMPT],  # Input prompt

@@ -20,12 +20,11 @@ def ensure_sqlite_compatibility():
         print("✅ Replaced sqlite3 with pysqlite3-binary")
         return True
     except ImportError:
-        print("❌ pysqlite3-binary not available")
+        print("⚠ pysqlite3-binary not available")
         return False
 
 # Apply the fix immediately
 ensure_sqlite_compatibility()
-
 
 import os
 from pathlib import Path
@@ -36,7 +35,217 @@ sys.path.append('.')
 
 import streamlit as st
 
-
+# Modern CSS styling
+st.markdown("""
+<style>
+    /* Import modern font */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+    
+    /* Main app styling */
+    .main .block-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        max-width: 1200px;
+    }
+    
+    /* Custom font */
+    html, body, [class*="css"] {
+        font-family: 'Inter', sans-serif;
+    }
+    
+    /* Hide Streamlit branding */
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    
+    /* Modern color scheme - Light blue-gray theme */
+    :root {
+        --primary-blue-gray: #64748b;
+        --light-blue-gray: #94a3b8;
+        --very-light-blue-gray: #e2e8f0;
+        --background-gray: #f8fafc;
+        --text-dark: #1e293b;
+        --success-color: #10b981;
+        --warning-color: #f59e0b;
+        --accent-blue: #3b82f6;
+    }
+    
+    /* Success message styling */
+    .stSuccess {
+        background-color: rgba(16, 185, 129, 0.1) !important;
+        border: 1px solid rgba(16, 185, 129, 0.2) !important;
+        border-left: 4px solid var(--success-color) !important;
+        color: #065f46 !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Info message styling */
+    .stInfo {
+        background-color: rgba(148, 163, 184, 0.1) !important;
+        border: 1px solid rgba(148, 163, 184, 0.2) !important;
+        border-left: 4px solid var(--primary-blue-gray) !important;
+        color: var(--text-dark) !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Warning message styling */
+    .stWarning {
+        background-color: rgba(245, 158, 11, 0.1) !important;
+        border: 1px solid rgba(245, 158, 11, 0.2) !important;
+        border-left: 4px solid var(--warning-color) !important;
+        color: #92400e !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Error message styling - now blue-gray instead of red */
+    .stException, [data-testid="stException"] {
+        background-color: rgba(100, 116, 139, 0.1) !important;
+        border: 1px solid rgba(100, 116, 139, 0.2) !important;
+        border-left: 4px solid var(--primary-blue-gray) !important;
+        color: var(--text-dark) !important;
+        border-radius: 8px !important;
+    }
+    
+    .stError {
+        background-color: rgba(100, 116, 139, 0.1) !important;
+        border: 1px solid rgba(100, 116, 139, 0.2) !important;
+        border-left: 4px solid var(--primary-blue-gray) !important;
+        color: var(--text-dark) !important;
+        border-radius: 8px !important;
+    }
+    
+    /* Button styling */
+    .stButton > button {
+        background: linear-gradient(135deg, var(--primary-blue-gray), var(--light-blue-gray)) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 8px !important;
+        padding: 0.5rem 1rem !important;
+        font-weight: 500 !important;
+        font-size: 0.875rem !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    }
+    
+    .stButton > button:hover {
+        transform: translateY(-1px) !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15) !important;
+        background: linear-gradient(135deg, #475569, var(--primary-blue-gray)) !important;
+    }
+    
+    .stButton > button[kind="primary"] {
+        background: linear-gradient(135deg, var(--accent-blue), #2563eb) !important;
+    }
+    
+    .stButton > button[kind="primary"]:hover {
+        background: linear-gradient(135deg, #2563eb, #1d4ed8) !important;
+    }
+    
+    .stButton > button[kind="secondary"] {
+        background: transparent !important;
+        border: 2px solid var(--primary-blue-gray) !important;
+        color: var(--primary-blue-gray) !important;
+    }
+    
+    .stButton > button[kind="secondary"]:hover {
+        background: var(--very-light-blue-gray) !important;
+        border-color: var(--light-blue-gray) !important;
+    }
+    
+    /* Download button styling */
+    .stDownloadButton > button {
+        background: linear-gradient(135deg, var(--success-color), #059669) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 6px !important;
+        padding: 0.25rem 0.5rem !important;
+        font-size: 0.75rem !important;
+        min-height: auto !important;
+    }
+    
+    .stDownloadButton > button:hover {
+        background: linear-gradient(135deg, #059669, #047857) !important;
+        transform: translateY(-1px) !important;
+    }
+    
+    /* Sidebar styling */
+    .css-1d391kg, .css-1544g2n {
+        background-color: var(--background-gray) !important;
+        border-right: 1px solid var(--very-light-blue-gray) !important;
+    }
+    
+    /* Chat message styling */
+    .stChatMessage {
+        background-color: transparent !important;
+        border: 1px solid var(--very-light-blue-gray) !important;
+        border-radius: 12px !important;
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Chat input styling */
+    .stChatInput > div > div > input {
+        border: 2px solid var(--very-light-blue-gray) !important;
+        border-radius: 25px !important;
+        padding: 0.75rem 1rem !important;
+        font-size: 0.9rem !important;
+        transition: border-color 0.3s ease !important;
+    }
+    
+    .stChatInput > div > div > input:focus {
+        border-color: var(--primary-blue-gray) !important;
+        box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.1) !important;
+    }
+    
+    /* Expander styling */
+    .streamlit-expanderHeader {
+        background-color: var(--very-light-blue-gray) !important;
+        border-radius: 8px !important;
+        border: 1px solid var(--light-blue-gray) !important;
+    }
+    
+    /* Divider styling */
+    hr {
+        border-color: var(--very-light-blue-gray) !important;
+        opacity: 0.5 !important;
+    }
+    
+    /* Spinner styling */
+    .stSpinner {
+        color: var(--primary-blue-gray) !important;
+    }
+    
+    /* Container styling */
+    .element-container {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    /* Caption styling */
+    .caption {
+        color: var(--light-blue-gray) !important;
+        font-size: 0.8rem !important;
+    }
+    
+    /* Metric styling */
+    [data-testid="metric-container"] {
+        background-color: var(--very-light-blue-gray) !important;
+        border: 1px solid var(--light-blue-gray) !important;
+        border-radius: 8px !important;
+        padding: 1rem !important;
+    }
+    
+    /* Header styling */
+    h1, h2, h3 {
+        color: var(--text-dark) !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Code block styling */
+    .stCodeBlock {
+        border-radius: 8px !important;
+    }
+</style>
+""", unsafe_allow_html=True)
 
 def is_cloud_environment():
     """Check if running on Streamlit Cloud"""
@@ -76,7 +285,7 @@ def setup_environment():
             return True
                 
         except Exception as e:
-            st.error(f"Error setting up cloud secrets: {e}")
+            st.error(f"Environment setup failed: {e}")
             return False
     else:
         st.info("💻 Running locally")
@@ -84,19 +293,19 @@ def setup_environment():
         # Use local environment variables
         openai_key = os.getenv('OPENAI_API_KEY')
         if not openai_key:
-            st.error("❌ OPENAI_API_KEY environment variable not set locally")
+            st.error("OPENAI_API_KEY environment variable not set")
             st.info("Set it with: `export OPENAI_API_KEY='your-key-here'`")
             return False
         
         gcp_project = os.getenv('GCP_PROJECT')
         if not gcp_project:
-            st.warning("⚠️ GCP_PROJECT not set, using default")
+            st.warning("GCP_PROJECT not set, using default")
             os.environ['GCP_PROJECT'] = 'rag-test-467013'
         
         # Check GCP credentials file
         gcp_creds = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
         if not gcp_creds or not os.path.exists(gcp_creds):
-            st.error("❌ GOOGLE_APPLICATION_CREDENTIALS not set or file not found")
+            st.error("GOOGLE_APPLICATION_CREDENTIALS not set or file not found")
             st.info("Set it with: `export GOOGLE_APPLICATION_CREDENTIALS='../secrets/cl-rag-docs.json'`")
             return False
         
@@ -125,7 +334,7 @@ if setup_environment():
         MODULES_LOADED = True
         
     except ImportError as e:
-        st.error(f"❌ Error importing modules: {e}")
+        st.error(f"Module import failed: {e}")
         st.info("Make sure all modules are in the 'modules' directory or available in your environment")
         MODULES_LOADED = False
 else:
@@ -150,14 +359,14 @@ def initialize_session_state():
 def initialize_agent():
     """Initialize your deviation report agent"""
     if not MODULES_LOADED:
-        st.error("❌ Modules not loaded - cannot initialize agent")
+        st.error("Modules not loaded - cannot initialize agent")
         return False
         
     try:
         # Check for OpenAI API key
         openai_api_key = os.getenv("OPENAI_API_KEY")
         if not openai_api_key:
-            st.error("❌ OPENAI_API_KEY not found")
+            st.error("OPENAI_API_KEY not found")
             return False
         
         with st.spinner("Initializing Vertex AI..."):
@@ -170,7 +379,7 @@ def initialize_agent():
                 # For cloud deployment
                 client, collection = get_chroma_setup()
                 if client is None or collection is None:
-                    st.error("❌ Failed to initialize ChromaDB")
+                    st.error("Failed to initialize ChromaDB")
                     return False
             else:
                 # For local development
@@ -179,7 +388,7 @@ def initialize_agent():
             
             st.session_state.chroma_collection = collection
             doc_count = collection.count()
-            st.success(f"✅ Connected to ChromaDB ({doc_count} documents)")
+            st.success(f"Connected to ChromaDB ({doc_count} documents)")
         
         with st.spinner("Initializing AI Agent..."):
             # Initialize the simplified agent
@@ -192,7 +401,7 @@ def initialize_agent():
             st.session_state.agent = agent
             st.session_state.agent_initialized = True
             
-        st.success("✅ Agent initialized successfully!")
+        st.success("Agent initialized successfully")
         return True
         
     except Exception as e:
@@ -315,59 +524,72 @@ def main():
     
     # Sidebar for configuration and status
     with st.sidebar:
-        st.title("🔧 Configuration")
+        st.markdown("### ⚙️ Configuration")
         
         # Environment variables check
-        st.subheader("🔑 Environment")
+        st.markdown("#### 🔐 Environment Status")
         
         # Check environment setup
         openai_key = os.getenv('OPENAI_API_KEY')
         gcp_project = os.getenv('GCP_PROJECT', 'rag-test-467013')
         gcp_creds = os.getenv('GOOGLE_APPLICATION_CREDENTIALS')
         
-        if openai_key:
-            st.success("✅ OpenAI API Key Set")
-        else:
-            st.error("❌ OpenAI API Key Missing")
-        
-        if gcp_creds and os.path.exists(gcp_creds):
-            st.success("✅ GCP Credentials Set")
-        else:
-            st.error("❌ GCP Credentials Missing")
-        
-        st.info(f"📍 GCP Project: {gcp_project}")
+        # Create status indicators
+        status_container = st.container()
+        with status_container:
+            col1, col2 = st.columns([1, 3])
+            
+            with col1:
+                if openai_key:
+                    st.success("✅")
+                else:
+                    st.error("❌")
+            with col2:
+                st.write("OpenAI API Key")
+            
+            col1, col2 = st.columns([1, 3])
+            with col1:
+                if gcp_creds and os.path.exists(gcp_creds):
+                    st.success("✅")
+                else:
+                    st.error("❌")
+            with col2:
+                st.write("GCP Credentials")
+            
+            st.info(f"Project: {gcp_project}")
         
         if is_cloud_environment():
-            st.success("🌐 Cloud Environment")
+            st.info("🌐 Cloud Environment")
         else:
             st.info("💻 Local Environment")
         
         st.divider()
         
         # Agent status
+        st.markdown("#### 🤖 Agent Status")
         if st.session_state.agent_initialized:
-            st.success("✅ Agent Ready")
+            st.success("Agent Ready")
             
             # Show ChromaDB info
             if st.session_state.chroma_collection:
                 doc_count = st.session_state.chroma_collection.count()
-                st.info(f"📚 Knowledge Base: {doc_count} documents")
+                st.info(f"Knowledge Base: {doc_count} documents")
         else:
-            st.warning("⚠️ Agent Not Initialized")
-            if st.button("🚀 Initialize Agent"):
+            st.warning("Agent Not Initialized")
+            if st.button("Initialize Agent", type="primary", use_container_width=True):
                 if initialize_agent():
                     st.rerun()
         
         st.divider()
         
         # Generated Files Download Section
-        st.subheader("📥 Generated Reports")
+        st.markdown("#### 📥 Generated Reports")
         
         # Check for generated files
         generated_files = get_generated_files()
         
         if generated_files:
-            st.success(f"✅ {len(generated_files)} file(s) available")
+            st.success(f"{len(generated_files)} file(s) available")
             
             for file_info in generated_files:
                 file_path = file_info['path']
@@ -375,39 +597,35 @@ def main():
                 file_type = file_info['type']
                 file_size = file_info['size']
                 
-                # Create a container for each file
+                # Create a clean file display
                 with st.container():
-                    col1, col2 = st.columns([3, 1])
+                    st.markdown(f"**{file_type}**")
+                    st.caption(f"{file_name} • {file_size}")
                     
-                    with col1:
-                        st.write(f"**{file_type}**")
-                        st.caption(f"{file_name} ({file_size})")
-                    
-                    with col2:
-                        try:
-                            with open(file_path, "rb") as f:
-                                file_data = f.read()
-                                
-                            # Get appropriate MIME type
-                            mime_type = get_mime_type(file_info['extension'][1:])  # Remove the dot
+                    try:
+                        with open(file_path, "rb") as f:
+                            file_data = f.read()
                             
-                            st.download_button(
-                                label="⬇️",
-                                data=file_data,
-                                file_name=file_name,
-                                mime=mime_type,
-                                help=f"Download {file_type} report",
-                                use_container_width=True
-                            )
-                        except Exception as e:
-                            st.error(f"❌ Error loading {file_name}")
-                    
-                    st.divider()
+                        # Get appropriate MIME type
+                        mime_type = get_mime_type(file_info['extension'][1:])  # Remove the dot
+                        
+                        st.download_button(
+                            label="Download",
+                            data=file_data,
+                            file_name=file_name,
+                            mime=mime_type,
+                            help=f"Download {file_type}",
+                            use_container_width=True
+                        )
+                    except Exception as e:
+                        st.error(f"Error loading {file_name}")
+                
+                st.divider()
             
             # Clear files button
-            if st.button("🗑️ Clear All Files", use_container_width=True):
+            if st.button("Clear All Files", type="secondary", use_container_width=True):
                 clear_generated_files()
-                st.success("Files cleared!")
+                st.success("Files cleared")
                 st.rerun()
                 
         else:
@@ -420,7 +638,7 @@ def main():
         if st.session_state.agent and hasattr(st.session_state.agent, 'current_session'):
             session = st.session_state.agent.current_session
             if session:
-                st.subheader("📈 Current Session")
+                st.markdown("#### 📈 Current Session")
                 st.write(f"**ID:** {session['id']}")
                 st.write(f"**Stage:** {session['stage']}")
                 st.write(f"**Started:** {session['start_time'].strftime('%H:%M:%S')}")
@@ -428,19 +646,20 @@ def main():
         st.divider()
         
         # Reset button
-        if st.button("🔄 Reset Session", type="secondary"):
+        if st.button("Reset Session", type="secondary", use_container_width=True):
             if st.session_state.agent:
                 st.session_state.agent.current_session = None
             st.session_state.messages = []
             st.rerun()
     
     # Main content area
-    st.title("📊 Pharmacy Manufacturing Deviation Report Generator")
+    st.markdown("# Deviation Report Generator")
+    st.markdown("### AI-powered deviation reporting with advanced document retrieval")
     
     if is_cloud_environment():
-        st.markdown("🌐 **Cloud Deployment** - AI-powered deviation reporting with RAG")
+        st.info("🌐 Cloud Deployment Active")
     else:
-        st.markdown("💻 **Local Development** - AI-powered deviation reporting with RAG")
+        st.info("💻 Local Development Mode")
     
     # Check if agent is initialized
     if not st.session_state.agent_initialized:
@@ -451,18 +670,18 @@ def main():
         # Show setup instructions
         with st.expander("🛠️ Setup Instructions"):
             st.markdown("""
-            **For Local Development:**
+            **Environment Configuration:**
             
-            Set these environment variables:
             ```bash
             export OPENAI_API_KEY='your-openai-api-key'
             export GOOGLE_APPLICATION_CREDENTIALS='./secrets/cl-rag-docs.json'
             export GCP_PROJECT='rag-test-467013'
             ```
             
-            **ChromaDB Setup:**
-            - Ensure your ChromaDB collection exists at `./chroma`
-            - Collection name should be `char-split-collection`
+            **Requirements:**
+            - ChromaDB collection at `./chroma`
+            - Collection name: `char-split-collection`
+            - Valid GCP service account credentials
             """)
         return
 
@@ -476,21 +695,24 @@ def main():
     
     # If no active session, start one
     if not current_session:
-        if st.button("🚀 Start New Deviation Report", type="primary", use_container_width=True):
-            with st.spinner("Starting new session..."):
-                greeting = agent.start_new_session()
-                st.session_state.messages.append({"role": "assistant", "content": greeting})
-                st.rerun()
+        st.markdown("---")
+        col1, col2, col3 = st.columns([1, 2, 1])
+        with col2:
+            if st.button("🚀 Start New Deviation Report", type="primary", use_container_width=True):
+                with st.spinner("Starting new session..."):
+                    greeting = agent.start_new_session()
+                    st.session_state.messages.append({"role": "assistant", "content": greeting})
+                    st.rerun()
         return
     
     # Handle ongoing conversation
-    if prompt := st.chat_input("Type your response here..."):
+    if prompt := st.chat_input("Type your response here...", key="chat_input"):
         # Add user message to chat
         st.session_state.messages.append({"role": "user", "content": prompt})
         display_chat_message("user", prompt)
         
         # Process with agent
-        with st.spinner("🤖 Agent is processing..."):
+        with st.spinner("Processing your request..."):
             try:
                 response = agent.process_input(prompt)
                 st.session_state.messages.append({"role": "assistant", "content": response})
@@ -499,13 +721,13 @@ def main():
                 # Check if session is complete and files were generated
                 if "Reports Generated Successfully" in response:
                     st.balloons()
-                    st.success("🎉 Reports completed!")
+                    st.success("🎉 Reports completed successfully!")
                     
                     # Show a message directing users to the sidebar
                     st.info("📥 **Download your reports from the sidebar** ➡️")
                 
             except Exception as e:
-                error_msg = f"❌ Error processing input: {str(e)}"
+                error_msg = f"Error processing request: {str(e)}"
                 st.session_state.messages.append({"role": "assistant", "content": error_msg})
                 display_chat_message("assistant", error_msg)
         
